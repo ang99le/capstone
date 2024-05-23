@@ -30,7 +30,7 @@ function Navbar(){
      </div>
      <div className={`w-full block flex-grow lg:flex ${isOpen ? "block" : "hidden"}`}>
        <div className="text-sm lg:flex-grow ">
-        <ul className="lg:grid col-start-1 px-5 text-lg "> 
+        <ul className="lg:grid col-start-1 px-5 text-base "> 
           <li>
           <a href="/Home" onClick={()=>{Navigate('/Home')}} className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Home</a>
           </li>
