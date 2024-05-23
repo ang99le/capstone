@@ -1,7 +1,17 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 function Home() {
     return (
-      <div className="App">
-    <h1>Hello</h1>
+      <div>
+        <header>
+       HOME
+          <nav>
+          <Navbar/>
+          </nav>
+        </header>
+        <footer>
+          <Footer/>
+        </footer>
       </div>
     );
   }
