@@ -9,7 +9,7 @@ function Navbar(){
 
     {/* humburger postion */}
      <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72"></div>
-     <div className="block lg:hidden">
+     <div className="block  lg:hidden">
        <button
          onClick={() => setIsOpen(!isOpen)}
          className="flex items-center px-3 py-2 rounded text-sky-800 hover:text-sky-800"
@@ -32,23 +32,23 @@ function Navbar(){
        <div className="text-sm lg:flex-grow ">
         <ul className="lg:grid col-start-1 px-5 text-base "> 
           <li>
-          <a href="/Home" onClick={()=>{Navigate('/Home')}} className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Home</a>
+          <a href="/Home" onClick={()=>{Navigate('/Home')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Home</a>
           </li>
           <li>
-          <a href="/Civilizations" onClick={()=>{Navigate('/Civilizations')}} className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Civilizations</a>
+          <a href="/Civilizations" onClick={()=>{Navigate('/Civilizations')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Civilizations</a>
           </li>
           <li>
-          <a href="/Events" onClick={()=>{Navigate('/Events')}} className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Events</a>
+          <a href="/Events" onClick={()=>{Navigate('/Events')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Events</a>
           </li>
           <li>
-          <a href="/Programmes" onClick={()=>{Navigate('/Programmes')}} className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Programmes</a>
+          <a href="/Programmes" onClick={()=>{Navigate('/Programmes')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Programmes</a>
           </li>
           <div className="lg:grid col-end-12">
           <li>
-          <a href="/Signup" onClick={()=>{Navigate('/Signup')}} className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Signup</a>
+          <a href="/Signup" onClick={()=>{Navigate('/Signup')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Signup</a>
           </li>
           <li>
-          <a href="/Login" onClick={()=>{Navigate('/Login')}} className="block mt-4 lg:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Login</a>
+          <a href="/Login" onClick={()=>{Navigate('/Login')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Login</a>
           </li>
           </div>
         </ul>
