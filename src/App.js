@@ -6,6 +6,7 @@ import Programmes from './pages/Programmes';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AboutUs from './pages/Aboutus';
+import Progdetails from './components/Progdetails';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='Login' element={<Login/>}></Route>
       <Route path='/Signup' element={<Signup/>}></Route>
       <Route path='/AboutUs' element={<AboutUs/>}></Route>
+      <Route path='/Progdetails' element={<Progdetails/>}></Route>
       </Routes>
       </BrowserRouter>
 

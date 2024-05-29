@@ -45,8 +45,6 @@ function Login() {
 </div>
 </main>
 
-
-     
       <footer>
           <Footer/>
         </footer>

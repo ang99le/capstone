@@ -1,8 +1,10 @@
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 function AboutUs(){
     return(
         <>
-      <h1>ABOUTUS</h1>
+        <Navbar/>
+        <Footer/>
         </>
     )
 }
