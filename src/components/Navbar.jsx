@@ -9,7 +9,7 @@ function Navbar(){
 
     {/* humburger postion */}
      <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72"></div>
-     <div className="block  lg:hidden">
+     <div className="block lg:hidden">
        <button
          onClick={() => setIsOpen(!isOpen)}
          className="flex items-center px-3 py-2 rounded text-sky-800 hover:text-sky-800"
