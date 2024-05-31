@@ -1,20 +1,73 @@
 import { Link } from "react-router-dom";
 
-const EventCard=({data})=>{
-    
+const EventCard=()=>{
+    const cardList = [
+        {
+            img: "https://blog.dubaicityguide.com/site/wp-content/uploads/2022/12/Rahma-Riad.jpg",
+            title: "Rahma Riad Concert",
+            description:
+              "join Rahma Riad concert on Baghdad palm ",
+            Time:"12:00pm",
+            Date: "On Fridy",
+          },
+        
+            {
+                img: "https://blog.dubaicityguide.com/site/wp-content/uploads/2022/12/Rahma-Riad.jpg",
+                title: "Rahma Riad Concert",
+                description:
+                  "join Rahma Riad concert on Baghdad palm ",
+                Time:"12:00pm",
+                Date: "On Fridy",
+              },
 
+          {
+            img: "https://blog.dubaicityguide.com/site/wp-content/uploads/2022/12/Rahma-Riad.jpg",
+            title: "Rahma Riad Concert",
+            description:
+              "join Rahma Riad concert on Baghdad palm ",
+            Time:"12:00pm",
+            Date: "On Fridy",
+          },
 
-return(
-    <>
-    <h1>{data.Title}</h1>
-    <Link to={`/EventsDetails/${data.id}`} state={data}>
-        <img src={data.image} alt={data.Title}></img>
-        <p>{data.description}</p>
-    </Link>
+            {
+            img: "https://blog.dubaicityguide.com/site/wp-content/uploads/2022/12/Rahma-Riad.jpg",
+            title: "Rahma Riad Concert",
+            description:
+              "join Rahma Riad concert on Baghdad palm ",
+            Time:"12:00pm",
+            Date: "On Fridy",
+          }
+      ];
+        return (
+          <>
+             {cardList.map((card, id) => (
+              <div
+                key={id}
+                className="flex flex-col cursor-pointer bg-white justify-center py-6 px-10 text-center items-center mt-12 rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] w-full card-item-div max-w-screen-md min-h-[260px]"
+              >
+                <img src={card.img} alt="box_img" className=" w-[293px] mb-4 flex flex-col cursor-pointer rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px]  card-item-div max-w-screen-md min-h-[260px]" />
+                <p className="text-[24px] text-sky-800 font-bold uppercase mb-7">{card.title}</p>
+                <p className="text-[15px]  text-sky-600 font-medium leading-2 w-full">
+                  {card.description}
+                </p>
+                <div className="flex mt-5 gap-3">
+                <p className=" text-sky-800 text-[15px] font-medium leading-2">
+                  {card.Date}
+                </p>
+                <p className=" text-sky-800 text-[15px] font-medium leading-2">
+                  {card.Time}
+                </p>
+                </div>
+            
+                <div className="">
+                <button type="submit" class=" mt-4 mb-2 flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Show Details</button>
+                <button type="submit" class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
+                </div>
+               
+              </div>
+            ))}
+          </>
+        );
+      }
 
-    <button>Show Details</button>
-    <button>Book Now</button>
-    </>
-)
-}
 export default EventCard;
