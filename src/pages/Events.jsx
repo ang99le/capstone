@@ -1,11 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import EventCard from "../components/Cards";
 import { useState } from "react";
 import { eventsinformation } from "../Events";
 
 
-const Events =({})=> {
-  const [eventlist, setEventList] = useState(eventsinformation);
+function Events ({}){
+const [event,setEvent]=useState('');
+const [eventlist, setEventList] = useState([]);
+
 
     return (
       <div className="App">
@@ -18,9 +21,14 @@ const Events =({})=> {
      <main>
      
       <div className="shadow">
+    
+      <ul>
+        {eventlist.map(m => (
+          <li key={m.id}>{m.event}</li>
+        ))}
+      </ul>
+   
 
-     
-      
       </div>
     
     
