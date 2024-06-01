@@ -10,7 +10,6 @@ function Home() {
           <div className="sm:block Lg:hidden xl:hidden 2xl:hidden text-2xl text-center mb-3">
            <h1 className="bg-gradient-to-b from-sky-800 to-sky-200 inline-block text-transparent bg-clip-text">WELCOME TO IRAQ</h1>
           </div>
-
           <div className="hidden lg:block text-5xl text-center">
            <h1 className="bg-gradient-to-b from-sky-800 to-sky-200 inline-block text-transparent bg-clip-text">WELCOME TO IRAQ</h1>
           </div>

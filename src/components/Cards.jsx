@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import ShowDetails from "./ShowDetails";
 
 const EventCard=()=>{
+    const [popUp, setPopUp] = useState(false)
+
     const cardList = [
         {
             img: "https://blog.dubaicityguide.com/site/wp-content/uploads/2022/12/Rahma-Riad.jpg",
             title: "Rahma Riad Concert",
             description:
               "join Rahma Riad concert on Baghdad palm ",
-            Time:"12:00pm",
-            Date: "On Fridy",
+            Time:"7:00pm",
+            Date: "16th june",
           },
         
             {
@@ -43,9 +46,9 @@ const EventCard=()=>{
              {cardList.map((card, id) => (
               <div
                 key={id}
-                className="flex flex-col cursor-pointer bg-white justify-center py-6 px-10 text-center items-center mt-12 rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] w-full card-item-div max-w-screen-md min-h-[260px]"
+                className=" flex flex-col cursor-pointer bg-white py-5 px-10 text-center items-center mt-6 rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] w-full card-item-div max-w-screen-md min-h-[260px]"
               >
-                <img src={card.img} alt="box_img" className=" w-[293px] mb-4 flex flex-col cursor-pointer rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px]  card-item-div max-w-screen-md min-h-[260px]" />
+                <img src={card.img} alt="box_img" className=" w-[293px] mb-4 flex flex-col cursor-pointer rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px]  card-item-div max-w-screen-md min-h-[260px] " />
                 <p className="text-[24px] text-sky-800 font-bold uppercase mb-7">{card.title}</p>
                 <p className="text-[15px]  text-sky-600 font-medium leading-2 w-full">
                   {card.description}
@@ -60,7 +63,8 @@ const EventCard=()=>{
                 </div>
             
                 <div className="">
-                <button type="submit" class=" mt-4 mb-2 flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Show Details</button>
+                <button type="submit" onClick={() => setPopUp(true)} class=" mt-4 mb-2 flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Show Details</button>
+                {popUp && <ShowDetails setPopUp={setPopUp} />}
                 <button type="submit" class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
                 </div>
                

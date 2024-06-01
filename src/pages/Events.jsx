@@ -12,14 +12,15 @@ function Events (){
           <nav>
           <Navbar/>
           </nav>
-          <h1 className="text-center font-medium text-xl text-sky-800">What's Going on <br/>
+          <h1 className="text-center font-medium text-xl text-sky-800 pb-12">What's Going on
           In Iraq</h1>
         </header>
      <main>
-     <section className=" container mx-auto flex flex-col justify-between gap-2 pb-[3rem]">
-      <div className="w-full  px-[2.5rem]">
+     <h3 className="text-sky-800 pl-11 text-md font-medium md:pl-40"> Upcoming Events</h3>
+     <section className="container mx-auto flex flex-col justify-between gap-2 pb-[3rem]">
+      <div className="w-full px-[2rem]">
         {/* about cards */}
-        <div className="about-cards flex gap-10 flex-col md:flex-row">
+        <div className=" about-cards flex gap-10 flex-col md:grid grid-cols-2">
           <EventCard/>
         </div>
       </div>
