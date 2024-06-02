@@ -7,7 +7,7 @@ function Progdetails(){
     <nav>
     <Navbar/>
     </nav>
-    <h1 className="text-center text-sky-800">Babylon City Tour</h1>
+    <h1 className="text-center text-sky-800 pb-3 font-medium text-lg">Babylon City Tour</h1>
 
    <div class=" md:block l:block lg:block min-h-screen py-6  flex-col justify-center">
           <div class="lg:py-3 w-full px-2 ">
@@ -142,6 +142,9 @@ function Progdetails(){
 
 </div>
 </div>
+<div class="grid place-items-center">
+        <button type="submit" class="grid justify-items-center ... mb-5 rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
+        </div>
 
     <footer>
     <Footer/>

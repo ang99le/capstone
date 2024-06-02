@@ -1,8 +1,11 @@
 import { useState } from "react";
 import ShowDetails from "./ShowDetails";
 
-const EventCard=()=>{
-    const [popUp, setPopUp] = useState(false)
+import EventDetails from "./EventDetails";
+
+const EventCard = ()=>{
+    const [popUp, setPopUp] = useState(false);
+    const [booking,setBooking] = useState(false);
 
     const cardList = [
         {
@@ -62,13 +65,17 @@ const EventCard=()=>{
                 </p>
                 </div>
             
-                <div className="">
-                <button type="submit" onClick={() => setPopUp(true)} class=" mt-4 mb-2 flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Show Details</button>
+         <div className="md:flex gap-5 mt-3">
+         <button type="submit" onClick={() => setPopUp(true)} class=" mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Show Details</button>
                 {popUp && <ShowDetails setPopUp={setPopUp} />}
-                <button type="submit" class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
+                
+                <button type="submit" onClick={() =>setBooking(true)} class=" mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Book Now</button>
+                {booking && <EventDetails setBooking={setBooking} />}
+         </div>
+            
+                
                 </div>
-               
-              </div>
+        
             ))}
           </>
         );

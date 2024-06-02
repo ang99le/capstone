@@ -1,11 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import EventCard from "../components/Cards";
-import { useState } from "react";
-
 
 function Events (){
-  
     return (
       <div className="App">
         <header>

@@ -26,5 +26,4 @@ function ShowDetails ({setPopUp}){
     )
 }
 
-
 export default ShowDetails;

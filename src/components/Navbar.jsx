@@ -27,28 +27,31 @@ function Navbar(){
            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
          </svg>
        </button>
+
      </div>
      <div className={`w-full block flex-grow lg:flex ${isOpen ? "block" : "hidden"}`}>
-       <div className="text-sm lg:flex-grow ">
-        <ul className="lg:grid col-start-1 px-5 text-base "> 
+       <div className="text-sm lg:flex-grow  ">
+        <ul className="flex text-lg justify-center mb-4 bg-sky-50 text-emerald-500 font-medium p-4"> 
+        <div className="flex mr-80">
           <li>
-          <a href="/Home" onClick={()=>{Navigate('/Home')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Home</a>
+          <a href="/Home" onClick={()=>{Navigate('/Home')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-3">Home</a>
           </li>
           <li>
-          <a href="/Civilizations" onClick={()=>{Navigate('/Civilizations')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Civilizations</a>
+          <a href="/Civilizations" onClick={()=>{Navigate('/Civilizations')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-3">Civilizations</a>
           </li>
           <li>
-          <a href="/Events" onClick={()=>{Navigate('/Events')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Events</a>
+          <a href="/Events" onClick={()=>{Navigate('/Events')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 border-b-blue-300 px-3">Events</a>
           </li>
           <li>
-          <a href="/Programmes" onClick={()=>{Navigate('/Programmes')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Programmes</a>
+          <a href="/Programmes" onClick={()=>{Navigate('/Programmes')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-3">Programmes</a>
           </li>
-          <div className="lg:grid col-end-12">
+          </div>
+          <div className="flex text-lg ml-80">
           <li>
-          <a href="/Signup" onClick={()=>{Navigate('/Signup')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Signup</a>
+          <a href="/Signup" onClick={()=>{Navigate('/Signup')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-3">Signup</a>
           </li>
           <li>
-          <a href="/Login" onClick={()=>{Navigate('/Login')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 mr-2 lg:border-2 border-b-blue-300 px-3">Login</a>
+          <a href="/Login" onClick={()=>{Navigate('/Login')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 border-b-blue-300 px-3">Login</a>
           </li>
           </div>
         </ul>
