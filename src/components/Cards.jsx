@@ -11,9 +11,8 @@ const EventCard = ()=>{
         {
             img: "https://blog.dubaicityguide.com/site/wp-content/uploads/2022/12/Rahma-Riad.jpg",
             title: "Rahma Riad Concert",
-            description:
-              "join Rahma Riad concert on Baghdad palm ",
-            Time:"7:00pm",
+            description:"join Rahma Riad concert on Baghdad palm ",
+            location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.0738277012306!2d44.359980675547384!3d33.264559473463756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1559d561d6f1a171%3A0x6875c0693d809fe4!2sPalms%20Of%20Baghdad!5e0!3m2!1sen!2siq!4v1717356317979!5m2!1sen!2siq",
             Date: "16th june",
           },
         
@@ -63,9 +62,11 @@ const EventCard = ()=>{
                 <p className=" text-sky-800 text-[15px] font-medium leading-2">
                   {card.Time}
                 </p>
+
+
                 </div>
             
-         <div className="md:flex gap-5 mt-3">
+         <div className="md:flex gap-3 mt-3">
          <button type="submit" onClick={() => setPopUp(true)} class=" mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Show Details</button>
                 {popUp && <ShowDetails setPopUp={setPopUp} />}
                 

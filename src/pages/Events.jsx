@@ -17,7 +17,7 @@ function Events (){
      <section className="container mx-auto flex flex-col justify-between gap-2 pb-[3rem]">
       <div className="w-full px-[2rem]">
         {/* about cards */}
-        <div className=" about-cards flex gap-10 flex-col md:grid grid-cols-2">
+        <div className=" about-cards flex gap-10 flex-col md:grid grid-cols-2; lg:grid grid-cols-3">
           <EventCard/>
         </div>
       </div>
