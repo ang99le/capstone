@@ -51,10 +51,9 @@ const Navigate=useNavigate();
   return (
     <>
     
-    
+    <div className="lg:grid grid-cols-2 gap-5 ml-6 mr-6">
     {Cards.map((Cards,id)=>(
-        <div key={id} class="flex flex-col  justify-center rounded-xl">
-
+   <div key={id} class="flex flex-col justify-center rounded-xl">
 	<div class="relative flex flex-col mb-7 md:flex-row md:space-x-5 space-y-1 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-white bg-white">
 		<div class="w-full md:w-1/3 bg-white grid place-items-center">
 			<img src="https://th.bing.com/th/id/R.ff936af40057cc6afab210285b181509?rik=CHE9ALKU7%2bIZ9w&riu=http%3a%2f%2fjustfunfacts.com%2fwp-content%2fuploads%2f2016%2f11%2fbabylon-ishtar-gate.jpg&ehk=F636nFuYgQaBlp7CvHjqesQqdDHjkeVGB%2f5slgEYtMk%3d&risl=&pid=ImgRaw&r=0" alt="tailwind logo" class="rounded-xl" />
@@ -95,7 +94,7 @@ const Navigate=useNavigate();
     
     
    
-    
+    </div>
     
     
     

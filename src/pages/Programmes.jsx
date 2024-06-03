@@ -1,9 +1,11 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProgCards from "../components/ProgsCards"
+import CustomizeProg from "../components/CustomizeProg";
+import { useNavigate,Navigate } from "react-router-dom";
 
 function Programmes() {
-
+const Navigate=useNavigate();
     return (
       <div>
         <header>
@@ -12,13 +14,15 @@ function Programmes() {
           </nav>
         </header>
        <main>
-        <h1 className="text-center text-2xl mb-6 text-sky-800 font-medium">Where To Go In Iraq</h1>
-       <div className=" about-cards flex flex-col ">
-       <ProgCards/>
+       <h1 className=" flex justify-center text-2xl pb-3 font-medium text-sky-800">Where To Go In Iraq </h1>
+       <div className="grid justify-center sm:flex justify-center gap-3 mt-3">
+         <button type="submit" onClick={()=>{Navigate('/Programmes')}} class=" mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Our Programmes</button>
+         <button type="submit" onClick={()=>{Navigate('/CustomizeProg')}} class="sm:mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Customize Your Programme</button>
         </div>
-        <div class="grid place-items-center">
-        <button type="submit" class="grid justify-items-center ... mb-5 rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Customize your Tour</button>
-        </div>
+    <div className="about-cards flex flex-col ">
+    <ProgCards/>
+   </div>
+
        </main>
 
         <footer>

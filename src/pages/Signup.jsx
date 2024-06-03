@@ -1,5 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import sarjon from "../assests/sarjon.png";
+import NebuchadnezzarII from "../assests/NebuchadnezzarII.png"
+
 function Signup() {
     return (
       <div className="App">
@@ -9,9 +12,9 @@ function Signup() {
           </nav>
         </header>
        <main>
-       <main>
-<div class="flex min-h-full flex-col justify-center items-center w-[100%] h-[81vh] lg:h-[79vh] px-4  lg:px-8"  >
+   <div>
 
+<div class="flex min-h-full flex-col justify-center items-center w-[100%] h-[81vh] lg:h-[79vh] px-4  lg:px-8"  >
   <div class="sm:mx-auto sm:w-full sm:max-w-sm ">
     <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-sky-800">Create New Account</h2>
   </div>
@@ -63,12 +66,9 @@ function Signup() {
     </form>
   </div>
 </div>
+
+</div>    
 </main>
-
-       </main>
-
-
-
 
         <footer>
           <Footer/>

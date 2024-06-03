@@ -7,9 +7,11 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AboutUs from './pages/Aboutus';
 import Progdetails from './components/Progdetails';
-import {BrowserRouter,Routes, Route} from "react-router-dom";
 import EventsDetails from './components/EventDetails';
-import ShowDetails from './components/ShowDetails';
+import CustomizeProg from './components/CustomizeProg';
+import {BrowserRouter,Routes, Route} from "react-router-dom";
+
+
 function App() {
   return (
     <div className="App">
@@ -25,8 +27,8 @@ function App() {
       <Route path='/Signup' element={<Signup/>}></Route>
       <Route path='/AboutUs' element={<AboutUs/>}></Route>
       <Route path='/Progdetails' element={<Progdetails/>}></Route>
-      <Route path='/EventDetails' element={<EventsDetails />}></Route>
-      <Route path='/ShowDetails' element={<ShowDetails />}></Route>
+      <Route path='/CustomizeProg' element={<CustomizeProg/>}></Route>
+    
       </Routes>
       </BrowserRouter>
 

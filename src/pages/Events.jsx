@@ -24,19 +24,6 @@ function Events (){
     </section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         <footer>
           <Footer/>
         </footer>

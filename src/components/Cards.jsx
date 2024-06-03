@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ShowDetails from "./ShowDetails";
-
 import EventDetails from "./EventDetails";
 
 const EventCard = ()=>{
