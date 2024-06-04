@@ -38,7 +38,7 @@ function CustomizeProg (){
 
 
     <div>
-      <label for="email" class="block text-sm font-medium leading-6 text-sky-800">last Name</label>
+      <label for="text" class="block text-sm font-medium leading-6 text-sky-800">last Name</label>
       <div class="mt-2">
         <input id="text" name="text" type="text"  required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
       </div>
@@ -57,7 +57,7 @@ function CustomizeProg (){
       
       </div>
    <h5 className="font-medium text-sm text-sky-800 pt-3">Please Enter the date of your trip</h5>
-  <div date-rangepicker class="flex items-center pb-3">
+  <div date-rangepicker datepicker-autoselect-today class="flex items-center pb-3">
   <div class="relative">
  <div class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
       <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png"></img>

@@ -9,12 +9,12 @@ function Progdetails(){
     </nav>
     <h1 className="text-center text-sky-800 pb-3 font-medium text-lg">Babylon City Tour</h1>
 
-   <div class=" md:block l:block lg:block min-h-screen py-6  flex-col justify-center">
+   <div class="sm:block min-h-screen py-6 flex-col justify-center">
           <div class="lg:py-3 w-full px-2 ">
           <div class="lg:relative text-sky-800 antialiased text-sm font-semibold">
           
         {/* <!-- Vertical bar running through middle --> */}
-          <div class=" w-1 bg-sky-800 absolute h-full left-1/3 transform "></div>
+          <div class="h-full left-4/2 w-1 bg-sky-800 absolute transform sm:h-full left-1/3"></div>
           
           <div class="mt-6 sm:mt-0 sm:mb-12">
         <div class="flex flex-col sm:flex-row items-center">
