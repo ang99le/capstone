@@ -1,10 +1,10 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import sarjon from "../assests/sarjon.png";
-import { useNavigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function CustomizeProg (){
-    const Navigate=useNavigate();
+  
     return(
 
 <div className="">
@@ -18,8 +18,9 @@ function CustomizeProg (){
 <main>
 <h1 className=" flex justify-center text-2xl pb-3 font-medium text-sky-800">Where To Go In Iraq </h1>
 <div className="grid justify-center sm:flex sm:justify-center gap-3 mt-3;">
-         <button type="submit" onClick={()=>{Navigate('/Programmes')}} class=" mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Our Programmes </button>
-         <button type="submit" onClick={()=>{Navigate('/CustomizeProg')}} class="sm:mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Customize your Programme</button>
+  <Link to={`/Programmes`}><button type="submit" class=" mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Our Programmes </button></Link>
+  <Link to={`/CustomizeProg`}><button type="submit" class="sm:mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Customize your Programme</button>
+</Link>  
         </div>
 <div className="flex justify-center">
 <img  className="sm:flex flex-col justify-center hidden md:block" alt="Sarjon" src={sarjon}></img> 
@@ -67,7 +68,7 @@ function CustomizeProg (){
   <span class="mx-4 font-medium text-sky-800">to</span>
   <div class="relative">
     <div class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-      <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png" alt="date logo"></img>
+      <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png" alt="date"></img>
     </div>
     <input name="end" type="text" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end"/>
 </div>

@@ -1,7 +1,7 @@
-import { useNavigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const ProgCards= ()=>{
-const Navigate=useNavigate();
+
 
      const Cards=[
     {
@@ -83,8 +83,9 @@ const Navigate=useNavigate();
 					<span class="font-normal text-sky-600 text-base">/day</span>
 				</p>
         <div className="flex gap-4 pt-3">
-        <button  className="text-sky-800 font-medium hover:bg-yellow-300 " type="submit" onClick={()=> {Navigate("/Progdetails")}}>Show Details</button>
-        <button  className="text-sky-800 font-medium " type="submit" onClick={()=> {Navigate("#/")}}>Book Now</button>
+          <Link to={`/Progdetails`}><button  className="text-sky-800 font-medium hover:bg-yellow-300 " type="submit">Show Details</button></Link>
+          <Link to={`/#`}><button className="text-sky-800 font-medium " type="submit">Book Now</button></Link>
+      
         </div>
       
 			</div>

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
-  const Navigate=useNavigate();
+ 
  return (
    <nav className="flex items-center justify-between flex-wrap p-6">
 
@@ -32,15 +32,16 @@ function Navbar(){
      <div className={`shadow-sm pb-3 w-full block flex-grow lg:flex ${isOpen ? "block" : "hidden"}`}>
      
         <div className="flex flex-col text-center font-medium md:flex-grow md:flex md:justify-start md:flex-row md:text-lg">
-          <a href="/Home" onClick={()=>{Navigate('/Home')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Home</a>
-          <a href="/Civilizations" onClick={()=>{Navigate('/Civilizations')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Civilizations</a>
-          <a href="/Events" onClick={()=>{Navigate('/Events')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Events</a>
-          <a href="/Programmes" onClick={()=>{Navigate('/Programmes')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Programmes</a>
+         <Link to={`/Home`}><a href="/Home" className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Home</a></Link>
+         <Link to={`/Civilizations`}><a href="/Civilizations" className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Civilizations</a></Link>
+         <Link to={`/Events`}><a href="/Events"className="block mt-4 l:inline-block lg:mt-0 text-sky-800 border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Events</a></Link>
+         <Link to={`/Programmes`}><a href="/Programmes" className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Programmes</a></Link>
           </div>
 
           <div className="flex flex-col text-center font-medium md:flex md:flex-row md:justify-end md:text-lg">
-          <a href="/Signup" onClick={()=>{Navigate('/Signup')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Signup</a>
-          <a href="/Login" onClick={()=>{Navigate('/Login')}} className="block mt-4 l:inline-block lg:mt-0 text-sky-800 border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Login</a>
+         <Link to={`/Signup`}><a href="/Signup"className="block mt-4 l:inline-block lg:mt-0 text-sky-800  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Signup</a></Link>
+         <Link to={`/Login`}><a href="/Login"className="block mt-4 l:inline-block lg:mt-0 text-sky-800 border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Login</a></Link>
+       
        </div>
 
        <div>

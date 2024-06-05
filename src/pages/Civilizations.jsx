@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import sarjon from "../assests/sarjon.png"
 import gigamesh from "../assests/gigamesh.png"
 import sanhareeb from "../assests/sanhareeb.png"
 import NebuchadnezzarII from "../assests/NebuchadnezzarII.png"
 
 function Civilization() {
-const Navigate=useNavigate();
+
     return (
      
       <div className="App">
@@ -23,9 +23,10 @@ const Navigate=useNavigate();
           <section>
           <div className="px-5 sm:block  md:hidden l:hidden ">
           <div className="relative">
-            <img class="rounded-xl contrast-50 drop-shadow-sm py-2 scale-100 hover:scale-105 ease-in duration-300"
-            src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" alt="Akd" onClick={()=>{Navigate('/Progdetails')}}></img>
-            <h4 className="absolute text-xl text-white top-2/4 left-1/4">Akkdian Civilization</h4>
+          <Link to={`/Progdetails'`}> <img class="rounded-xl contrast-50 drop-shadow-sm py-2 scale-100 hover:scale-105 ease-in duration-300"
+            src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" alt="Akd"></img>
+            <h4 className="absolute text-xl text-white top-2/4 left-1/4">Akkdian Civilization</h4></Link>
+           
             </div>  
 
             <div className="relative">
