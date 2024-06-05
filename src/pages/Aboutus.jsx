@@ -8,10 +8,10 @@ function AboutUs(){
         <nav>
         <Navbar/>
         </nav>
-        <h1 className="font-bold ...  -mb-2  text-center sm:text-left  sm:ml-11 mb-3 text-xl text-sky-800">About Us</h1>
+        <h1 className="font-bold ...  -mb-2  text-center sm:text-left  sm:ml-11 sm:mb-3 text-xl text-sky-800">About Us</h1>
         </header>
        <main>
-       <p className="text-justify ...  p-5 -mb-2 sm:text-left sm:ml-11 text-sky-700 mb-4">
+       <p className="text-justify ...  p-5 -mb-2 sm:text-left sm:ml-11 text-sky-700 sm:mb-4">
         We are an Iraqi web application  who wants to show the
         world how beautiful Iraq is and to let them explore the
         the history of our country and give them the chance to 

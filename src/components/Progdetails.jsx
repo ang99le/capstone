@@ -9,7 +9,7 @@ function Progdetails(){
     </nav>
     <h1 className="text-center text-sky-800 font-medium text-lg mb-3 ">Babylon City Tour</h1>
 
-    <div class=" relative mb-20">
+    <div class=" relative">
          <div class="w-100 mx-auto">
             {/* <!-- first --> */}
             <div class="">
@@ -17,7 +17,7 @@ function Progdetails(){
                {/* <!-- content #1 --> */}
                <div
                   class=" absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0 md:w-[600px]">
-                  <img class="rounded-lg h-65 md:w-[600px]" src="https://listverse.com/wp-content/uploads/2012/11/Gate-of-Ishtar.jpg" alt="" />
+                  <img class="rounded-lg h-65 md:w-[600px]" src="https://listverse.com/wp-content/uploads/2012/11/Gate-of-Ishtar.jpg"/>
                  
                   {/* <!-- controls --> */}
                   <div class="absolute top-1/2 w-full flex justify-between z-20">
@@ -40,7 +40,7 @@ function Progdetails(){
                {/* <!-- content #2 --> */}
                <div
                   class="absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0 md:w-[600px]">
-                  <img class="rounded-lg h-65 md:w-[600px]" src="https://listverse.com/wp-content/uploads/2012/11/Gate-of-Ishtar.jpg" alt="" />
+                  <img class="rounded-lg h-65 md:w-[600px]" src="https://listverse.com/wp-content/uploads/2012/11/Gate-of-Ishtar.jpg"/>
                  
                   {/* <!-- controls --> */}
                   <div class="absolute top-1/2 w-full flex justify-between z-20">
@@ -64,7 +64,7 @@ function Progdetails(){
                {/* <!-- content #3 --> */}
                <div
                   class=" absolute top-1/4 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0 md:w-[600px]">
-                  <img class="rounded-lg h-65 md:w-[600px]" src="https://listverse.com/wp-content/uploads/2012/11/Gate-of-Ishtar.jpg" alt="" />
+                  <img class="rounded-lg h-65 md:w-[600px]" src="https://listverse.com/wp-content/uploads/2012/11/Gate-of-Ishtar.jpg"  />
                  
                   {/* <!-- controls --> */}
                   <div class="absolute top-1/2 w-full flex justify-between z-20">
