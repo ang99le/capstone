@@ -7,12 +7,11 @@ function Progdetails(){
     <nav>
     <Navbar/>
     </nav>
-    <h1 className="text-center text-sky-800 font-medium text-lg mb-3 ">Babylon City Tour</h1>
+    <h1 className="text-center text-sky-800 font-medium text-lg ">Babylon City Tour</h1>
 
-
-    <div class=" p-6 lg:relative  text-sky-800 antialiased text-sm font-semibold md:mt-80 sm:flex justify-center">
+    <div class=" p-6 lg:relative text-sky-800 antialiased text-sm font-semibold sm:flex justify-center">
           
-          <div class="p-6 relative mt-6 text-left ">
+          <div class="p-6 relative text-left ">
              
           <div class="flex items-center">
                  <div class="hidden md:block w-20">
@@ -26,7 +25,7 @@ function Progdetails(){
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
                  <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png"></img>
+       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -52,7 +51,7 @@ function Progdetails(){
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
                  <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png"></img>
+       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -78,7 +77,7 @@ function Progdetails(){
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
                  <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png"></img>
+       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -104,7 +103,7 @@ function Progdetails(){
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
                  <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png"></img>
+       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -130,7 +129,7 @@ function Progdetails(){
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
                  <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png"></img>
+       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -157,7 +156,7 @@ function Progdetails(){
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
                  <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png"></img>
+       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png"alt="car"></img>
        </div>
 
                  <div class="ml-10">

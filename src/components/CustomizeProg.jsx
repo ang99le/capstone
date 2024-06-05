@@ -1,8 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import sarjon from "../assests/sarjon.png";
-import Programmes from "../pages/Programmes";
-import { useNavigate,Navigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 function CustomizeProg (){
     const Navigate=useNavigate();
@@ -23,7 +22,7 @@ function CustomizeProg (){
          <button type="submit" onClick={()=>{Navigate('/CustomizeProg')}} class="sm:mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Customize your Programme</button>
         </div>
 <div className="flex justify-center">
-<img  className="sm:flex flex-col justify-center hidden md:block" src={sarjon}></img> 
+<img  className="sm:flex flex-col justify-center hidden md:block" alt="Sarjon" src={sarjon}></img> 
 
  <div class="grid justify-center md:pt-12 md:pr-40">
 <div class="p-8 mt-1 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -60,7 +59,7 @@ function CustomizeProg (){
   <div date-rangepicker datepicker-autoselect-today class="flex items-center pb-3">
   <div class="relative">
  <div class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-      <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png"></img>
+      <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png" alt="date logo"></img>
     </div>
     
     <input name="start" type="text" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date start"/>
@@ -68,7 +67,7 @@ function CustomizeProg (){
   <span class="mx-4 font-medium text-sky-800">to</span>
   <div class="relative">
     <div class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
-      <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png"></img>
+      <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png" alt="date logo"></img>
     </div>
     <input name="end" type="text" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date end"/>
 </div>

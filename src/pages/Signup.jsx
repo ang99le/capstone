@@ -1,7 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import sarjon from "../assests/sarjon.png";
-import NebuchadnezzarII from "../assests/NebuchadnezzarII.png"
 
 function Signup() {
     return (

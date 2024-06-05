@@ -21,7 +21,7 @@ function AboutUs(){
         to challenge its readers to explore Iraq
         </p>  
    <div className="grid justify-items-center... sm:grid sm:ustify-items-start... ml-7">
-   <img src={aboutus} className="rounded-xl mt-5 w-80 h-80 mb-11 "></img>
+   <img src={aboutus} className="rounded-xl mt-5 w-80 h-80 mb-11" alt="iraq"></img>
    </div>
    
    <h2 className="font-bold ... -mt-4  text-center sm:text-left sm:ml-11 text-xl text-sky-800 mb-2 ">Contact Us</h2>
