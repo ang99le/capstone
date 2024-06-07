@@ -25,29 +25,36 @@ function CustomizeProg (){
 <div className="flex justify-center">
 <img  className="sm:flex flex-col justify-center hidden md:block" alt="Sarjon" src={sarjon}></img> 
 
- <div class="grid justify-center md:pt-12 md:pr-40">
+ <div class="grid justify-center md:pt-5 md:pr-40">
 <div class="p-8 mt-1 sm:mx-auto sm:w-full sm:max-w-sm">
   <form class="space-y-2" action="#" method="POST">
 
   <div>
       <label for="text" class="block text-sm font-medium leading-6 text-sky-800">First Name</label>
       <div class="mt-2">
-        <input id="text" name="text" type="text"  required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
+        <input id="text" name="text" type="text"  required class="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
       </div>
     </div>
 
 
     <div>
-      <label for="text" class="block text-sm font-medium leading-6 text-sky-800">last Name</label>
+      <label for="text" class="pl-2 block text-sm font-medium leading-6 text-sky-800">last Name</label>
       <div class="mt-2">
         <input id="text" name="text" type="text"  required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
       </div>
     </div>
 
     <div>
+      <label for="number" class="block text-sm font-medium leading-6 text-sky-800">How many People are you?</label>
+      <div class="mt-2">
+        <input id="number" name="number" type="number"  required class="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
+      </div>
+    </div>
+
+    <div>
       <label for="guides" class="block text-sm font-medium leading-6 text-sky-800 pt-3">Choose your Guide</label>
      
-      <select className="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6">
+      <select className="email" name="email" type="email" autocomplete="email" required class=" pl-2 block w-full rounded-md border-0 py-1.5 text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6">
       <option selected>Choose your guide </option>
        <option value="al">Ali Hassan</option>
        <option value="mu">Muhanned Ahmed</option>
@@ -59,7 +66,7 @@ function CustomizeProg (){
    <h5 className="font-medium text-sm text-sky-800 pt-3">Please Enter the date of your trip</h5>
   <div date-rangepicker datepicker-autoselect-today class="flex items-center pb-3">
   <div class="relative">
- <div class="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+ <div class="pl-2 absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
       <img className="w-[30px]" src="https://anatomisebiostats.com/wp-content/uploads/2020/09/statistical-retainer-for-clinical-trials-300x300.png" alt="date logo"></img>
     </div>
     
@@ -86,8 +93,8 @@ function CustomizeProg (){
 </main>
 
 <footer>
-          <Footer/>
-        </footer>
+<Footer/>
+</footer>
 </div> 
 
 

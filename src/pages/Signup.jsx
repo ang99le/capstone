@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+import { Link } from "react-router-dom";
 function Signup() {
     return (
       <div className="App">
@@ -59,7 +59,8 @@ function Signup() {
         <button type="submit" class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Sign in</button>
       </div>
       <div class="text-sm">
-            <a href="/Login" class="font-semibold text-sky-800 hover:text-sky-600">Already have an account</a>
+        <Link to={`/Login`}><a href="/Login" class="font-semibold text-sky-800 hover:text-sky-600">Already have an account</a></Link>
+      
           </div>
     </form>
   </div>

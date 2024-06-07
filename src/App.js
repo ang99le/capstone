@@ -9,7 +9,9 @@ import AboutUs from './pages/Aboutus';
 import Progdetails from './components/Progdetails';
 import EventsDetails from './components/EventDetails';
 import CustomizeProg from './components/CustomizeProg';
+
 import {BrowserRouter,Routes, Route} from "react-router-dom";
+import BookNow from './components/BookNow';
 
 
 function App() {
@@ -28,7 +30,7 @@ function App() {
       <Route path='/AboutUs' element={<AboutUs/>}></Route>
       <Route path='/Progdetails' element={<Progdetails/>}></Route>
       <Route path='/CustomizeProg' element={<CustomizeProg/>}></Route>
-    
+      <Route path='/BookNow' element={<BookNow/>}></Route>
       </Routes>
       </BrowserRouter>
 

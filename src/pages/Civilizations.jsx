@@ -63,16 +63,17 @@ function Civilization() {
       <div class="mt-6  lg:mb-12">
         <div class="flex flex-col sm:flex-row items-center">
           <div class="flex justify-start w-full mx-auto items-center">
+           
             <div class="w-full sm:w-1/2 sm:pr-10 pl-7">
               <img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" alt="Akd" className="rounded-md"></img>
+
               <div class="p-4 bg-white rounded text-center">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>
+           
               </div>
             </div>
           </div>
-         
-          <img  alt="Sarjon" className="lg:rounded-full border-white border-5 w-21 h-20 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
-         
+         <img alt="Sarjon" className="lg:rounded-full border-white border-5 w-21 h-20 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
         </div>
         <div className="text-center ml-60 -translate-y-60">
         <h4 > The Akaddian civilization</h4>
