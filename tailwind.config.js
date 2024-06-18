@@ -2,7 +2,10 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+
+
+    },
   },
   plugins: [],
 }
@@ -12,7 +15,7 @@ module.exports =  {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {fontFamily:{'primary':['Dancing Script']}},
   },
   plugins: [],
 }

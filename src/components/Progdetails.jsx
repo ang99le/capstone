@@ -1,13 +1,37 @@
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import {Carousel} from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Progdetails(){
     return(
-        <div>
+    <div>
     <nav>
     <Navbar/>
     </nav>
+
+    <main>
     <h1 className="text-center text-sky-800 font-medium text-lg ">Babylon City Tour</h1>
+<section className="w-[660px] mx-auto mt-8">
+       <Carousel autoPlay>
+                <div>
+                    <img src="https://th.bing.com/th/id/OIP.YDMCSFNxPkdcdHMMfcg4XgHaE7?rs=1&pid=ImgDetMain" alt="ancient babylon" className="rounded-lg"/>
+                 
+                </div>
+                <div>
+                    <img src="https://th.bing.com/th/id/OIP.-mJ4JbhowA5g7gM4byHihAHaFb?w=500&h=367&rs=1&pid=ImgDetMain" alt="Ishtar Gate"className="rounded-lg " />
+                  
+                </div>
+                <div>
+                    <img src="https://i2.wp.com/etc.ancient.eu/wp-content/uploads/2014/11/Figure-4.jpg" alt="ancints" className="rounded-lg"/>
+              
+                </div>
+            </Carousel>
+</section>
+
+
+
 
     <div class=" p-6 lg:relative text-sky-800 antialiased text-sm font-semibold sm:flex justify-center">
           
@@ -172,12 +196,12 @@ function Progdetails(){
 
 
          </div>
-  
-
 </div>
-<div class="grid place-items-center">
-        <button type="submit" class="grid justify-items-center ... mb-5 rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
-        </div>
+
+        <div class="grid place-items-center">
+        <Link to={`/BookNow`}><button className="text-white mb-6 p-3 font-medium text-sm bg-sky-800 rounded-xl px-5 hover:bg-sky-600 " type="submit">Book Now</button></Link>        </div>
+
+        </main>
 
     <footer>
     <Footer/>

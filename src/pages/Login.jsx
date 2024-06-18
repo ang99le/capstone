@@ -1,7 +1,17 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import Context from "../Context/Context";
 function Login() {
+  const {setEmail,setPassword}=useContext(Context)
+  const Navigate=useNavigate();
+
+
+
+  const onChangeEmail=(e)=>{setEmail(e.target.value)}
+  const onChangePassword=(e)=>{setPassword(e.target.value)}
     return (
       <div className="App">
      
@@ -21,7 +31,7 @@ function Login() {
       <div>
         <label for="email" class="block text-sm font-medium leading-6 text-sky-800">Email address</label>
         <div class="mt-2">
-          <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+          <input id="email" name="email" onChange={onChangeEmail} type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
         </div>
       </div>
 
@@ -31,12 +41,12 @@ function Login() {
          
         </div>
         <div class="mt-2">
-        <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+        <input id="password" onChange={onChangePassword} name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
         </div>
       </div>
 
       <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+        <button type="submit" onClick={()=>{Navigate('/Home')}} class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
       </div>
       <div class="text-sm">
         <Link to={`/SignUp`}><a href="/SignUp" class="font-semibold text-sky-800 hover:text-sky-600">Don't have an account</a></Link>

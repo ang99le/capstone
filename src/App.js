@@ -9,14 +9,15 @@ import AboutUs from './pages/Aboutus';
 import Progdetails from './components/Progdetails';
 import EventsDetails from './components/EventDetails';
 import CustomizeProg from './components/CustomizeProg';
-
-import {BrowserRouter,Routes, Route} from "react-router-dom";
 import BookNow from './components/BookNow';
+import {BrowserRouter,Routes, Route} from "react-router-dom";
+import { Userprovider } from './Context/Context';
 
 
 function App() {
   return (
     <div className="App">
+      <Userprovider>
       <BrowserRouter>
       <Routes>
       <Route path='/' element={<Home />}></Route>
@@ -33,7 +34,7 @@ function App() {
       <Route path='/BookNow' element={<BookNow/>}></Route>
       </Routes>
       </BrowserRouter>
-
+      </Userprovider>
     </div>
   );
 }

@@ -5,6 +5,8 @@ import sarjon from "../assests/sarjon.png"
 import gigamesh from "../assests/gigamesh.png"
 import sanhareeb from "../assests/sanhareeb.png"
 import NebuchadnezzarII from "../assests/NebuchadnezzarII.png"
+import { Tooltip } from 'react-tooltip'
+
 
 function Civilization() {
 
@@ -65,17 +67,20 @@ function Civilization() {
           <div class="flex justify-start w-full mx-auto items-center">
            
             <div class="w-full sm:w-1/2 sm:pr-10 pl-7">
-              <img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" alt="Akd" className="rounded-md"></img>
-
+              <img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" id="my-tooltip" alt="Akd" className="rounded-md"></img>
               <div class="p-4 bg-white rounded text-center">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>
            
               </div>
             </div>
           </div>
-         <img alt="Sarjon" className="lg:rounded-full border-white border-5 w-21 h-20 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
+          <a data-tooltip-id="my-tooltip"  data-tooltip-place="top" data-tooltip-content="Sarjon AL-Akdy"><img alt="Sarjon" className="lg:rounded-full border-white border-5 w-21 h-20 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
+          </a>
+        <Tooltip id="my-tooltip" style={{ backgroundColor: "rgb(0, 70, 100)" }} className="-mx-[700px]">
+         <h1>Sarjon Al-akady </h1>
+        </Tooltip> 
         </div>
-        <div className="text-center ml-60 -translate-y-60">
+        <div className="text-center ml-60 -translate-y-48">
         <h4 > The Akaddian civilization</h4>
          <h6>(2334 -2047 BCE)</h6>
          </div>
@@ -93,6 +98,7 @@ function Civilization() {
           </div>
           <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-10 h-10 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <img src={sanhareeb} alt="sanhareeb"></img>
+        
           </div>
         </div>
         <div className="text-center mr-60 -translate-y-56">
