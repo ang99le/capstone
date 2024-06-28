@@ -9,8 +9,11 @@ function Events (){
           <nav>
           <Navbar/>
           </nav>
-          <h1 className="text-center font-medium text-xl text-sky-800 pb-12">What's Going on
-          In Iraq</h1>
+          <div className="flex justify-center mt-11">
+          <h1 className="text-center font-medium text-xl text-sky-800 pb-12">What's Going on In Iraq</h1>
+          <h1 className="text-center font-medium text-5xl font-primary text-yellow-500 ml-3">Iraq</h1>
+          </div>
+        
         </header>
      <main>
      <h3 className="text-sky-800 pl-11 text-md font-medium md:pl-40"> Upcoming Events</h3>

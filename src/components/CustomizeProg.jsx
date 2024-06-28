@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import sarjon from "../assests/sarjon.png";
+
 import { Link} from "react-router-dom";
 
 function CustomizeProg (){
@@ -16,14 +16,18 @@ function CustomizeProg (){
 
 
 <main>
-<h1 className=" flex justify-center text-2xl pb-3 font-medium text-sky-800">Where To Go In Iraq </h1>
+  <div className="flex justify-center mb-6">
+  <h1 className="text-2xl font-medium text-sky-800 mt-9">Where To Go In </h1>
+  <h1 className="text-5xl font-medium text-yellow-500 font-primary mt-9 ml-4 ">Iraq </h1>
+  </div>
+
 <div className="grid justify-center sm:flex sm:justify-center gap-3 mt-3;">
   <Link to={`/Programmes`}><button type="submit" class=" mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Our Programmes </button></Link>
-  <Link to={`/CustomizeProg`}><button type="submit" class="sm:mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Customize your Programme</button>
+  <Link to={`/CustomizeProg`}><button type="submit" class="sm:mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Customize Your Programme</button>
 </Link>  
         </div>
-<div className="flex justify-center">
-<img  className="sm:flex flex-col justify-center hidden md:block" alt="Sarjon" src={sarjon}></img> 
+<div className="flex justify-center gap-11">
+<img  className="sm:flex flex-col justify-center hidden md:block md:w-[500px] -ml-6" alt="Sarjon" src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26648.jpg"/> 
 
 <div class="grid justify-center  md:pr-40">
 <div class="p-8 mt-1 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -80,14 +84,7 @@ function CustomizeProg (){
 </div>
 </div>
    
-<div class="flex items-center mb-4">
-    <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-white bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label for="default-radio-1" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300">Guide</label>
-</div>
-<div class="flex items-center">
-    <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label for="default-radio-2" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300">Tourest</label>
-</div>
+
 
     <div>
       <button type="submit" class="mb-3 flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Submit</button>

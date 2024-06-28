@@ -13,8 +13,11 @@ function Programmes() {
           </nav>
         </header>
        <main>
-       <h1 className=" flex justify-center text-2xl pb-3 font-medium text-sky-800">Where To Go In Iraq </h1>
-       <div className="grid justify-center sm:flex sm:justify-center gap-3 mt-3">
+       <div className="flex justify-center mb-6">
+  <h1 className="text-2xl font-medium text-sky-800 mt-9">Where To Go In </h1>
+  <h1 className="text-5xl font-medium text-yellow-500 font-primary mt-9 ml-4 ">Iraq </h1>
+  </div>
+       <div className="grid justify-center sm:flex sm:justify-center gap-3 mt-3 mb-3">
         <Link to={`/Programmes`}><button type="submit" class="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Our Programmes</button></Link>
       <Link to={`/CustomizeProg`}><button type="submit" class="sm:mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >Customize Your Programme</button></Link>
         </div>

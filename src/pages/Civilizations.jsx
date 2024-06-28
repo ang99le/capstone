@@ -19,6 +19,10 @@ function Civilization() {
           <nav>
           <Navbar/>
           </nav>
+          <div className="flex justify-center mt-12">
+          <h1 className="text-center font-medium text-sky-800 text-2xl">Learn More About </h1>
+          <h1 className="text-center font-medium text-yellow-500  text-5xl ml-2 mt-1 font-primary" >Iraq</h1>
+          </div>
           </header>
           <main>
             {/* mobile UI Design */}
@@ -62,25 +66,25 @@ function Civilization() {
       
           
       {/* <!-- Left section, set by justify-start and sm:pr-8 --> */}
-      <div class="mt-6  lg:mb-12">
+      <div class="mt-6  lg:mb-20">
         <div class="flex flex-col sm:flex-row items-center">
           <div class="flex justify-start w-full mx-auto items-center">
            
             <div class="w-full sm:w-1/2 sm:pr-10 pl-7">
-              <img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" id="my-tooltip" alt="Akd" className="rounded-md"></img>
-              <div class="p-4 bg-white rounded text-center">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>
+            <Link to={`/Akkad`}><img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" id="my-tooltip" alt="Akd" className="rounded-md"></img></Link>
+               
+              <div class="p-4 bg-white rounded text-justifiy">
+               <p>Akkad was the seat of the Akkadian Empire (2334-2218 BCE), the first multi-national political entity in the world, founded by Sargon the Great (2334-2279 BCE) who unified Mesopotamia under his rule and set the model for later Mesopotamian kings to follow or attempt to surpass. The Akkadian Empire set a number of "firsts' which would later become standard.</p>
            
               </div>
             </div>
           </div>
-          <a data-tooltip-id="my-tooltip"  data-tooltip-place="top" data-tooltip-content="Sarjon AL-Akdy"><img alt="Sarjon" className="lg:rounded-full border-white border-5 w-21 h-20 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
-          </a>
+        <img alt="Sarjon" className="lg:rounded-full border-white border-5 w-21 h-20 absolute left-1/2 -translate-y-4 sm:-translate-y-6 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
         <Tooltip id="my-tooltip" style={{ backgroundColor: "rgb(0, 70, 100)" }} className="-mx-[700px]">
          <h1>Sarjon Al-akady </h1>
         </Tooltip> 
         </div>
-        <div className="text-center ml-60 -translate-y-48">
+        <div className="text-center ml-60 -translate-y-72">
         <h4 > The Akaddian civilization</h4>
          <h6>(2334 -2047 BCE)</h6>
          </div>

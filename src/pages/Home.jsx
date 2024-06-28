@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+
 function Home() {
 
     return (
@@ -23,7 +24,7 @@ function Home() {
 <h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12">WELCOME TO IRAQ</h1>
 </div>
 <h2 className="text-sky-700 text-lg text-center -mt-11">Where Exploration Never Ends</h2>
-<div className="flex justify-center gap-60">
+<div className="flex justify-center gap-48">
 <div className="py-40 ">
 <h2 className="text-yellow-500 font-medium text-3xl">Your Guide To See The Beauty Of Iraq</h2>
   <p className="text-sky-800 pt-2">We are here to tell you the story of the first civilization in history<br/>
@@ -32,7 +33,7 @@ function Home() {
   
   </p>
 
-  <button className="bg-yellow-500 rounded-lg text-white p-2 -ml-2 m-8 "> start the journey </button>
+  <button className="bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 -ml-2 m-8 "> start the journey </button>
 </div>
 {/* <img src="https://cdn-icons-png.flaticon.com/512/3655/3655147.png" className=" mt-3" alt="mosque"/> */}
 <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="w-[400px] h-[400px] rounded-full mt-16" alt="mosque"/>
@@ -247,15 +248,6 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
         </footer>
     </div>
     </div>
-
-
-
-
-
-
-
-
-
 
     </div>
 

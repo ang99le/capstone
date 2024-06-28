@@ -1,9 +1,20 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
+import {signOut} from 'firebase/auth';
+import {auth} from '../firebase';
+import { useNavigate } from "react-router-dom";
+
 
 function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
- 
+  const navigate=useNavigate();
+  const handlelogut =()=>{
+    signOut(auth).then(()=>{
+      navigate('/');
+    })
+    
+  }
+
  return (
    <nav className="flex items-center justify-between flex-wrap ">
 
@@ -29,19 +40,20 @@ function Navbar(){
        </button>
 
      </div>
-     <div className={`shadow-sm pb-3 w-full block flex-grow lg:flex ${isOpen ? "block" : "hidden"}`}>
+     <div className={`shadow-xl  w-full block flex-grow lg:flex ${isOpen ? "block" : "hidden"}`}>
      
         <div className="flex flex-col text-center font-medium md:flex-grow md:flex md:justify-start md:flex-row md:text-lg bg-sky-800 pb-3 pt-3">
-         <Link to={`/Home`}><a href="/Home" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Home</a></Link>
-         <Link to={`/Civilizations`}><a href="/Civilizations" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Civilizations</a></Link>
-         <Link to={`/Events`}><a href="/Events"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Events</a></Link>
-         <Link to={`/Programmes`}><a href="/Programmes" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Programmes</a></Link>
+         <Link to={`/Home`}><a href="/Home" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2 ml-3">Home</a></Link>
+         <Link to={`/Civilizations`}><a href="/Civilizations" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Civilizations</a></Link>
+         <Link to={`/Events`}><a href="/Events"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Events</a></Link>
+         <Link to={`/Programmes`}><a href="/Programmes" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Programmes</a></Link>
           </div>
 
           <div className="flex flex-col text-center font-medium md:flex md:flex-row md:justify-end md:text-lg bg-sky-800 pb-3 pt-3">
-         <Link to={`/Signup`}><a href="/Signup"className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Signup</a></Link>
-         <Link to={`/Login`}><a href="/Login"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-100 rounded-lg p-2">Login</a></Link>
+         <Link to={`/Signup`}><a href="/Signup"className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Signup</a></Link>
+         <Link to={`/Login`}><a href="/Login"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Login</a></Link>
        
+         <button className="text-white" onClick={handlelogut}>logout</button>
        </div>
 
        <div>

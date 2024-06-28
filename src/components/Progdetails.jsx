@@ -13,7 +13,7 @@ function Progdetails(){
 
     <main>
     <h1 className="text-center text-sky-800 font-medium text-lg ">Babylon City Tour</h1>
-<section className="w-[660px] mx-auto mt-8">
+     <section className="w-[660px] mx-auto mt-8">
        <Carousel autoPlay>
                 <div>
                     <img src="https://th.bing.com/th/id/OIP.YDMCSFNxPkdcdHMMfcg4XgHaE7?rs=1&pid=ImgDetMain" alt="ancient babylon" className="rounded-lg"/>

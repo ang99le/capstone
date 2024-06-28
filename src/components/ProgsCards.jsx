@@ -84,8 +84,8 @@ const ProgCards= ()=>{
 				</p>
 
         <div className="flex gap-4 pt-3">
-          <Link to={`/Progdetails`}><button  className="text-white  font-medium text-sm border-2 bg-sky-600 border-sky-600 p-1  rounded-lg hover:bg-sky-800 " type="submit">Show Details</button></Link>
-          <Link to={`/BookNow`}><button className="text-white  font-medium text-sm border-2 bg-sky-600 border-sky-600 p-1  rounded-lg hover:bg-sky-800 " type="submit">Book Now</button></Link>
+          <Link to={`/Progdetails`}><button  className="text-white  font-medium text-sm bg-sky-800 p-2 rounded-lg hover:bg-sky-600 " type="submit">Show Details</button></Link>
+          <Link to={`/BookNow`}><button className="text-white  font-medium text-sm  bg-sky-800 p-2 rounded-lg hover:bg-sky-600 " type="submit">Book Now</button></Link>
       
         </div>
       
