@@ -1,8 +1,21 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
+// import { onAuthStateChanged } from "firebase/auth";
+// import { useEffect } from "react";
+// import { auth } from "../firebase";
 
 function Home() {
+// useEffect(()=>{
+//   onAuthStateChanged(auth,(user)=>{
+//     if (user){
+//     const uid=user.uid;
+//     console.log("uid",uid)
+//     }else
+//     {
+//       console.log("user is logged out")
+//     }
+//   })
+// },[])
 
     return (
       <div>
@@ -10,38 +23,39 @@ function Home() {
           <nav>
           <Navbar/>
           </nav>
-          <div className="sm:block Lg:hidden xl:hidden 2xl:hidden text-2xl text-center mb-3">
+          {/* <div className="sm:block md:hidden  text-2xl text-center mb-3">
            <h1 className="bg-gradient-to-b from-sky-800 to-sky-200 inline-block text-transparent bg-clip-text">WELCOME TO IRAQ</h1>
-          </div>
+          </div> */}
          
         </header>
 
 <main>
 <section>
 <div className=" p-6 -mt-14 ">
-<div className="hidden lg:block text-5xl text-center pt-20">
+<div className="pt-16 text-3xl md:text-5xl text-center md:pt-20">
   
 <h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12">WELCOME TO IRAQ</h1>
 </div>
-<h2 className="text-sky-700 text-lg text-center -mt-11">Where Exploration Never Ends</h2>
-<div className="flex justify-center gap-48">
-<div className="py-40 ">
-<h2 className="text-yellow-500 font-medium text-3xl">Your Guide To See The Beauty Of Iraq</h2>
-  <p className="text-sky-800 pt-2">We are here to tell you the story of the first civilization in history<br/>
-  read our blogs to get know more about our history then you can  <br/>
+<h2 className="text-sky-700 -mt-16 md:text-lg text-center md:-mt-11">Where Exploration Never Ends</h2>
+<div className="md:flex justify-center md:gap-48">
+<div className="flex flex-col md:py-40">
+<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="mb-9 mx-auto w-[300px] h-[300px] md:hidden rounded-full mt-9" alt="Sumerian calender"/>
+
+<h2 className="text-center text-lg text-yellow-500 font-medium md:text-3xl md:text-left">Your Guide To See The Beauty Of Iraq</h2>
+  <p className="text-sky-800 pt-2 text-center md:text-left">We are here to tell you the story of the first civilization in history<br/>
+  read our blogs to get know more about our history then you can <br/>
   join our tours to see the Iraq from our prespective.
-  
   </p>
 
-  <button className="bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 -ml-2 m-8 "> start the journey </button>
+  <button className="mt-8 bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8"> start the journey </button>
 </div>
 {/* <img src="https://cdn-icons-png.flaticon.com/512/3655/3655147.png" className=" mt-3" alt="mosque"/> */}
-<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="w-[400px] h-[400px] rounded-full mt-16" alt="mosque"/>
- 
+<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[400px] md:h-[400px] rounded-full mt-16" alt="mosque"/>
+
 </div>
 
 </div>
-<div className="bg-sky-800 h-[13rem] w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md mt-40">
+<div className="bg-sky-800 mt-6 md:h-[13rem] md:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md md:mt-40">
 <h1 className="text-center font-medium text-2xl text-white mb-2">Learn About Us</h1>
 
 <p className="text-center text-white mb-5">
@@ -49,17 +63,17 @@ We are an Iraqi web application who wants to show the world how beautiful Iraq<b
  is and to let them explore the the history of our country and give them the chance <br/>
 
 to visit the first civilization of Mesopotamia.we are trusted source for adventure <br/>
-& experiential travel inspiration, producing original, insightful and passionate <br/>
+and experiential travel inspiration, producing original, insightful and passionate <br/>
 storytelling to challenge its readers to explore Iraq</p>
 </div>
-<div className="bg-yellow-500 p-[8rem] mb-20">
+<div className="bg-yellow-500 mb-40 md:p-[8rem] md:mb-20">
 
 </div>
 
 </section>
 {/* home page in mobile and tablet screen  */}
-<div  className="sm:block lg:hidden">
-  <div> 
+{/* <div  className="sm:block lg:hidden"> */}
+  {/* <div> 
     <img src="https://www.asor.org/wp-content/uploads/2023/04/Gries_Fig9.jpg" alt="Ishtar Gate"></img>
     <p className="text-white text-left text-sm absolute bottom-50 -translate-y-12 left-0 right-0 px-4 py-1 bg-sky-800 opacity-55">
       Ishtar Gate - Babylon city <br/>
@@ -97,17 +111,17 @@ storytelling to challenge its readers to explore Iraq</p>
        Built about 575 BC
     </p>
   </div>
-</div>
+</div> */}
 
 {/* home page in pc screen */}
-<div className="hidden sm:block">
-  <h1 className="text-center text-sky-800 font-medium text-3xl font-primary">Iraqi Landmarks</h1>
+<div className=" block">
+  <h1 className="text-center text-sky-800 font-medium text-3xl">Iraqi Landmarks</h1>
   <hr class="w-40 h-1 mx-auto bg-sky-800 rounded mt-2"/>
 
-<div className="flex flex-wrap justify-center gap-24 mt-10 mb-14">
+<div className="flex flex-col gap-24 mt-10 mb-14 md:flex-row md:flex-wrap md:justify-center">
   <div>
-  <div class=" h-[40rem] w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="-mt-[40rem] h-[40rem] w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
+  <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
         <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
@@ -122,12 +136,12 @@ storytelling to challenge its readers to explore Iraq</p>
             {/* <p class="text-center text-5xl font-extrabold text-gray-900">Online Test (Physics)</p>
             <p class="text-center text-4xl font-extrabold text-[#FE5401]">2 hours</p> */}
         </div>
-
         <footer class="mb-10 flex justify-center">
         <p className="text-sky-800 text-justify ">
-    The Ishtar Gate was constructed by the Babylonian King NebuchadnezzarII
+        The Ishtar Gate was constructed by the Babylonian King NebuchadnezzarII
     (575 BCE). It was the eighth gate of the city of Babylon and was the main
-    entrance into the city.The Ishtar Gate was part of Nebuchadnezzar's plan to beautify his empire's capital and during the first half of the 6th century BCE
+    entrance into the city.The Ishtar Gate was part of Nebuchadnezzar's plan 
+    to beautify his empire's capital and during the first half of the 6th century BCE
     </p> 
         </footer>
     </div>
@@ -136,8 +150,8 @@ storytelling to challenge its readers to explore Iraq</p>
 
 
 <div>
-    <div class=" h-[40rem] w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="-mt-[40rem] h-[40rem] w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
+    <div class="w-72 mx-auto h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
         <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
@@ -165,11 +179,9 @@ storytelling to challenge its readers to explore Iraq</p>
     </div>
 
 
-
     <div>
-    <div class=" h-[40rem] w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="-mt-[40rem] h-[40rem] w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
-        <div class="flex justify-end">
+    <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"> <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
 
@@ -195,9 +207,8 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
 
 
     <div>
-    <div class=" h-[40rem] w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="-mt-[40rem] h-[40rem] w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
-        <div class="flex justify-end">
+    <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"><div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
 
@@ -222,9 +233,8 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
     </div>
 
     <div>
-    <div class=" h-[40rem] w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="-mt-[40rem] h-[40rem] w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
-        <div class="flex justify-end">
+    <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"> <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
 

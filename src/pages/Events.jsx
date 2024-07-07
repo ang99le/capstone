@@ -10,7 +10,7 @@ function Events (){
           <Navbar/>
           </nav>
           <div className="flex justify-center mt-11">
-          <h1 className="text-center font-medium text-xl text-sky-800 pb-12">What's Going on In Iraq</h1>
+          <h1 className="text-center font-medium text-xl text-sky-800 pb-12">What's Going on In</h1>
           <h1 className="text-center font-medium text-5xl font-primary text-yellow-500 ml-3">Iraq</h1>
           </div>
         

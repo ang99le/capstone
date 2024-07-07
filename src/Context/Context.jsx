@@ -1,16 +1,16 @@
-import{ createContext,useState } from "react";
+// import{ createContext,useState } from "react";
 
-const Context =createContext()
+// const Context =createContext()
 
-export function Userprovider({children}){
+// export function Userprovider({children}){
 
-    const [Email,setEmail]=useState('');
-    const [password,setPassword]=useState('');
+    // const [Email,setEmail]=useState('');
+    // const [password,setPassword]=useState('');
    
 
-    return (
-    <Context.Provider value={{Email,password,setEmail,setPassword}}>{children}</Context.Provider>
-    )
-};
+//     return (
+//     <Context.Provider value={{Email,password,setEmail,setPassword}}>{children}</Context.Provider>
+//     )
+// };
 
-export default Context;
+// export default Context;
