@@ -1,21 +1,27 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-// import { onAuthStateChanged } from "firebase/auth";
-// import { useEffect } from "react";
-// import { auth } from "../firebase";
-
+import { onAuthStateChanged } from "firebase/auth";
+import { useEffect } from "react";
+import { auth } from "../firebase";
+import {Tooltip} from "react-tooltip";
 function Home() {
-// useEffect(()=>{
-//   onAuthStateChanged(auth,(user)=>{
-//     if (user){
-//     const uid=user.uid;
-//     console.log("uid",uid)
-//     }else
-//     {
-//       console.log("user is logged out")
-//     }
-//   })
-// },[])
+
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          const uid = user.uid;
+          // ...
+          console.log("uid", uid)
+        } else {
+          // User is signed out
+          // ...
+          console.log("user is logged out")
+        }
+      });
+     
+}, [])
 
     return (
       <div>
@@ -29,19 +35,20 @@ function Home() {
          
         </header>
 
-<main>
-<section>
+<main className="font-markazi">
+{/* <section className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]"> */}
+{/* <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
 <div className=" p-6 -mt-14 ">
 <div className="pt-16 text-3xl md:text-5xl text-center md:pt-20">
-  
-<h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12">WELCOME TO IRAQ</h1>
+  {/* <img className="absolute ml-80  blur-sm w-[500px] -z-20" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png" alt="sumeria" /> */}
+<h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12 font-markazi">WELCOME TO IRAQ</h1>
 </div>
-<h2 className="text-sky-700 -mt-16 md:text-lg text-center md:-mt-11">Where Exploration Never Ends</h2>
+<h2 className="text-sky-700 -mt-16 md:text-lg text-center md:-mt-11 font-markazi">Where Exploration Never Ends</h2>
 <div className="md:flex justify-center md:gap-48">
 <div className="flex flex-col md:py-40">
-<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="mb-9 mx-auto w-[300px] h-[300px] md:hidden rounded-full mt-9" alt="Sumerian calender"/>
+<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="mb-9 mx-auto w-[300px] h-[300px] md:hidden rounded-full mt-9 shadow-full" alt="Sumerian calender"/>
 
-<h2 className="text-center text-lg text-yellow-500 font-medium md:text-3xl md:text-left">Your Guide To See The Beauty Of Iraq</h2>
+<h2 className="text-center text-lg text-yellow-500 font-medium md:text-4xl md:text-left ">Your Guide To See The Beauty Of Iraq</h2>
   <p className="text-sky-800 pt-2 text-center md:text-left">We are here to tell you the story of the first civilization in history<br/>
   read our blogs to get know more about our history then you can <br/>
   join our tours to see the Iraq from our prespective.
@@ -49,9 +56,25 @@ function Home() {
 
   <button className="mt-8 bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8"> start the journey </button>
 </div>
-{/* <img src="https://cdn-icons-png.flaticon.com/512/3655/3655147.png" className=" mt-3" alt="mosque"/> */}
-<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[400px] md:h-[400px] rounded-full mt-16" alt="mosque"/>
 
+<div>
+
+<a id="notclickable" className="bg-sky-800">
+<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50" alt="sumerian calender"/>
+{/* <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[430px] md:h-[430px] rounded-full   ml-5 w-1/5 absolute top-1/3 right 1/4 place-items-center drop-shadow-2xl" alt="sumerian calender"/> */}
+
+  </a>
+<Tooltip anchorSelect="#notclickable">
+ The First Calender In History
+</Tooltip>
+
+
+
+
+
+</div>
+
+{/* <img src="https://cdn-icons-png.flaticon.com/512/3655/3655147.png" className=" mt-3" alt="mosque"/> */}
 </div>
 
 </div>
@@ -69,8 +92,8 @@ storytelling to challenge its readers to explore Iraq</p>
 <div className="bg-yellow-500 mb-40 md:p-[8rem] md:mb-20">
 
 </div>
-
-</section>
+{/* </div> */}
+{/* </section> */}
 {/* home page in mobile and tablet screen  */}
 {/* <div  className="sm:block lg:hidden"> */}
   {/* <div> 

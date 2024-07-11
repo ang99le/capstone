@@ -1,24 +1,24 @@
 import {useState } from "react";
 import {Link} from "react-router-dom";
-import { signOut } from 'firebase/auth';
-import { auth } from '../firebase';
-import {useNavigate } from "react-router-dom";
+// import { signOut } from 'firebase/auth';
+// import { auth } from '../firebase';
+// import {useNavigate } from "react-router-dom";
 
 
 
 function Navbar(){
-  const navigate= useNavigate();
+  // const navigate= useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLogout = () => {               
-    signOut(auth).then(() => {
-    // Sign-out successful.
-        navigate("/");
-        console.log("Signed out successfully")
-    }).catch((error) => {
-    // An error happened.
-    });
-}
+//   const handleLogout = () => {               
+//     signOut(auth).then(() => {
+//     // Sign-out successful.
+//         navigate("/");
+//         console.log("Signed out successfully")
+//     }).catch((error) => {
+//     // An error happened.
+//     });
+// }
  return (
   <div>
    
@@ -68,8 +68,8 @@ function Navbar(){
    
          <Link to={`/Signup`}><a href="/Signup"className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Signup</a></Link>
          <Link to={`/Login`}><a href="/Login"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Login</a></Link>
-         <button className="text-white" onClick={handleLogout}>Logout</button>
-         
+         {/* <button className="text-white" onClick={handleLogout}>Logout</button>
+          */}
    
     
        

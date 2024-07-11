@@ -14,18 +14,18 @@ function Signup() {
   
   const [fname,setFname]=useState('');
   const [lname,setLname]=useState(''); 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('');
+  const [email, setEmail]=useState('');
+  const [password, setPassword]=useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault()
    
-    await createUserWithEmailAndPassword(auth, email, password)
+    await createUserWithEmailAndPassword(auth, email,password)
       .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/login")
+          navigate("/Login")
           // ...
       })
       .catch((error) => {
@@ -56,11 +56,11 @@ function Signup() {
 
 
 <div className="md:flex gap-[4rem] justify-center">
-<img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26606.jpg" className="w-[580px] -ml-40" alt='sumerian people' />
+<img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26606.jpg" className="hidden md:block w-[580px] -ml-40" alt='sumerian people' />
 
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form class="space-y-6" action="#" method="POST" onSubmit={handleSubmit} >
+    <form class="space-y-6" action="#" method="POST">
     <div>
         <label for="text" class="block text-sm font-medium leading-6 text-sky-800">First Name</label>
         <div class="mt-2">
@@ -104,7 +104,7 @@ function Signup() {
 </div>
 
       <div>
-        <button type="submit" class="flex mb-2 w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">  SignUp{' '}</button>
+        <button type="submit" onClick={handleSubmit} class="flex mb-2 w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">SignUp</button>
       </div>
 
       {/* <h6 className="text-center text-gray-400 text-xs">--- or continue with google ---</h6>  */}

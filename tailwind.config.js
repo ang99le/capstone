@@ -15,7 +15,16 @@ module.exports =  {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {fontFamily:{'primary':['Dancing Script']}},
+    extend: {
+    fontFamily:
+    {
+      'primary':['Dancing Script'],
+      'markazi':['Markazi Text']
+    }
+   
+ 
+  },
+    
   },
   plugins: [],
 }

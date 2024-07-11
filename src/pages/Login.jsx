@@ -18,12 +18,13 @@ function Login() {
     .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        navigate("/home")
+        navigate("/Home")
         console.log(user);
     })
     .catch((error) => {
-        
-        console.log(error)
+        const errorCode=error.code;
+        const errorMessage =error.message;
+        console.log(errorCode,errorMessage)
     });
    
 }
@@ -44,10 +45,10 @@ function Login() {
     <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-sky-800">Log in to your account</h2>
   </div>
 <div className="flex gap-[4rem]">
-<img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26673.jpg" className="w-[580px] -ml-28" alt="sumerian people"/>
+<img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26673.jpg" className="hidden md:block w-[580px] -ml-28" alt="sumerian people"/>
 
   <div class="mt-40 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form class="space-y-6" action="#" method="POST" onSubmit={handleSubmit}>
+    <form class="space-y-6" action="#" method="POST">
       <div>
         <label for="email" class="block text-sm font-medium leading-6 text-sky-800 ">Email address</label>
         <div class="mt-2">
@@ -66,7 +67,7 @@ function Login() {
       </div>
 
       <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
+        <button type="submit" onClick={handleSubmit} class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
       </div>
 {/* <h6 className="text-center text-gray-400 text-xs">--- or continue with google ---</h6>  */}
     {/* <Signwithgoogle/> */}

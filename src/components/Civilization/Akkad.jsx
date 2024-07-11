@@ -1,7 +1,6 @@
 import Navbar from "../Navbar"
 import Footer from "../Footer"
 
-
 const Akkad= ()=>{
     return(
         <div>
@@ -11,9 +10,9 @@ const Akkad= ()=>{
                 </nav>
             </header>
 <main>
-    <div className="mt-9 flex gap-10 justify-center">
-    <img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" id="my-tooltip" alt="Akd" className=" w-[500px] h-[20rem] rounded-2xl shadow-2xl"></img>
-<p className="font-medium text-sky-800 text-5xl mt-20">Welcome To The <br/> Akkadian Civilization</p>
+    <div className="flex gap-10 justify-center bg-sky-800 pb-48">
+    {/* <img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" id="my-tooltip" alt="Akd" className=" w-[500px] h-[20rem] rounded-2xl shadow-2xl"></img> */}
+<p className="font-medium text-white text-5xl mt-20 text-center">Welcome To The <br/> Akkadian Civilization</p>
     </div>
 <div className="flex mt-5">
 {/* 
@@ -24,35 +23,16 @@ const Akkad= ()=>{
     {/* <img src="https://www.worldhistory.org/img/r/p/1500x1500/2997.jpg.webp?v=1715194864" className="w-[30rem] rounded-md" alt="sarjon" /> */}
 </div>
 
-{/* sneak peak to the akkad */}
-<section>
-    <div className="flex gap-3">
-    <h1 className="font-primary text-5xl opacity-1 text-yellow-500 font-medium ml-28">01</h1>
-    <hr class="w-20 my-6 border-yellow-500 border-1 -ml-20"/>
-    <h1 className="text-2xl mt-3 text-yellow-500 font-medium">Intro To Akkad Empire</h1>
-    </div>
 
-    <p className="text-justify p-8 text-sky-800 ml-24">
-     Akkad was the northern (or northwestern)
-     division of ancient Babylonia. The region was located roughly in the area where the Tigris and Euphrates
-      rivers (see Tigris-Euphrates river system) are closest to each other, and its northern limit extended beyond
-       the line of the modern cities of Al-Fallūjah and Baghdad. The early inhabitants of this region were predominantly
-        Semitic, and their speech is called Akkadian. To the south of the region of Akkad lay Sumer, the southern (or southeastern) 
-        division of ancient Babylonia, which was inhabited by a non-Semitic people known as Sumerians.The name Akkad was taken from
-         the city of Agade, which was founded by the Semitic conqueror Sargon about 2300 BCE. Sargon united the various city-states 
-         in the region and extended his rule to encompass much of Mesopotamia. After the fall of Sargon’s dynasty about 2150 BCE, the 
-         central Iraq region was ruled by a state jointly composed of Sumerians and Akkadians.
-    </p>
-</section>
 {/* The kings of Akkad */}
 <section>
-<div className="flex gap-3 mt-9">
-<h1 className="font-primary text-5xl opacity-1 text-yellow-500 font-medium ml-28">02</h1>
+ <div className="flex gap-3 -mt-40 z-50">
+ <h1 className="font-primary text-5xl opacity-1 text-yellow-500 font-medium ml-28">01</h1>
 <hr class="w-20 my-6 border-yellow-500 border-1 -ml-20"/>
-<h1 className="text-center text-xl font-medium text-yellow-500 mb-5 mt-3">The kings of Akkad</h1></div>
+<h1 className="text-center text-xl font-medium text-yellow-500 mb-5 mt-3">The kings of Akkad</h1></div> 
+ 
 
-
-<div className="flex justify-center gap-9 mb-6"> 
+<div className="flex justify-center gap-9 z-50 "> 
 <div class="overflow-hidden cursor-pointer relative group w-[400px] h-[360px] rounded-2xl">
   <div class="rounded-xl z-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out cursor-pointer absolute from-black/80 to-transparent bg-gradient-to-t inset-x-0 -bottom-2 pt-40 text-white flex"><div>
   <div class="p-4 space-y-3 text-xl group-hover:opacity-100 group-hover:translate-y-0  pb-10 transform transition duration-300 ease-in-out">
@@ -100,6 +80,28 @@ const Akkad= ()=>{
 </div>
 
 </section>
+
+{/* sneak peak to the akkad */}
+<section>
+    <div className="flex gap-3 mt-24">
+    <h1 className="font-primary text-5xl opacity-1 text-yellow-500 font-medium ml-28">02</h1>
+    <hr class="w-20 my-6 border-yellow-500 border-1 -ml-20"/>
+    <h1 className="text-2xl mt-3 text-yellow-500 font-medium">Intro To Akkad Empire</h1>
+    </div>
+
+    <p className="text-justify p-8 text-sky-800 ml-24">
+     Akkad was the northern (or northwestern)
+     division of ancient Babylonia. The region was located roughly in the area where the Tigris and Euphrates
+      rivers (see Tigris-Euphrates river system) are closest to each other, and its northern limit extended beyond
+       the line of the modern cities of Al-Fallūjah and Baghdad. The early inhabitants of this region were predominantly
+        Semitic, and their speech is called Akkadian. To the south of the region of Akkad lay Sumer, the southern (or southeastern) 
+        division of ancient Babylonia, which was inhabited by a non-Semitic people known as Sumerians.The name Akkad was taken from
+         the city of Agade, which was founded by the Semitic conqueror Sargon about 2300 BCE. Sargon united the various city-states 
+         in the region and extended his rule to encompass much of Mesopotamia. After the fall of Sargon’s dynasty about 2150 BCE, the 
+         central Iraq region was ruled by a state jointly composed of Sumerians and Akkadians.
+    </p>
+</section>
+
 {/* the akkadian ancients */}
  <section>
  <div className="flex gap-3 mt-20">

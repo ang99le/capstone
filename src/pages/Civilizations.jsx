@@ -20,11 +20,11 @@ function Civilization() {
           <Navbar/>
           </nav>
           <div className="flex justify-center mt-12">
-          <h1 className="text-center font-medium text-sky-800 text-2xl">Learn More About </h1>
-          <h1 className="text-center font-medium text-yellow-500  text-5xl ml-2 mt-1 font-primary" >Iraq</h1>
+          <h1 className="text-center font-medium text-sky-800 text-2xl md:text-5xl font-markazi">Learn More About </h1>
+          <h1 className="text-center font-medium text-yellow-500  text-5xl ml-3 font-primary md:text-6xl" >Iraq</h1>
           </div>
           </header>
-          <main>
+          <main className="font-markazi">
             {/* mobile UI Design */}
           <section>
           <div className="px-5 sm:block  md:hidden l:hidden ">
@@ -79,7 +79,7 @@ function Civilization() {
               </div>
             </div>
           </div>
-        <img alt="Sarjon" className="lg:rounded-full border-white border-5 w-21 h-20 absolute left-1/2 -translate-y-4 sm:-translate-y-6 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
+        <img alt="Sarjon" className="lg:rounded-full border-white border-5 w-40 h-24 absolute left-1/2 -translate-y-4 sm:-translate-y-6 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
         <Tooltip id="my-tooltip" style={{ backgroundColor: "rgb(0, 70, 100)" }} className="-mx-[700px]">
          <h1>Sarjon Al-akady </h1>
         </Tooltip> 

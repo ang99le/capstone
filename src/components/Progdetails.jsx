@@ -11,10 +11,13 @@ function Progdetails(){
     <Navbar/>
     </nav>
 
-    <main>
-    <h1 className="text-center text-sky-800 font-medium text-lg ">Babylon City Tour</h1>
-     <section className="w-[660px] mx-auto mt-8">
-       <Carousel autoPlay>
+    <main className="font-markazi">
+    <h1 className="text-center text-sky-800 font-medium text-lg md:text-4xl md:mt-10 font-Markazi Text ">Babylon City Tour</h1>
+    <h1 className="text-center mt-5 text-2xl font-medium text-yellow-500">price:100 IQD </h1>
+     <section className=" mx-auto mt-8">
+       <Carousel autoPlay className="w-[700px] mx-auto">
+
+
                 <div>
                     <img src="https://th.bing.com/th/id/OIP.YDMCSFNxPkdcdHMMfcg4XgHaE7?rs=1&pid=ImgDetMain" alt="ancient babylon" className="rounded-lg"/>
                  
@@ -27,6 +30,7 @@ function Progdetails(){
                     <img src="https://i2.wp.com/etc.ancient.eu/wp-content/uploads/2014/11/Figure-4.jpg" alt="ancints" className="rounded-lg"/>
               
                 </div>
+               
             </Carousel>
 </section>
 
@@ -48,8 +52,8 @@ function Progdetails(){
                  
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
-                 <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
+                 <div class=" w-10 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-12 mb-16">
+       <img src="https://www.clipartmax.com/png/full/30-305711_people-icon-blue-png.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -100,8 +104,8 @@ function Progdetails(){
                  
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
-                 <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
+                 <div class="-ml-5 w-8 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-20">
+       <img src="https://cdn-icons-png.freepik.com/512/7334/7334617.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -126,8 +130,8 @@ function Progdetails(){
                  
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
-                 <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
+                 <div class="-ml-5 w-9 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-20">
+       <img src="https://cdn-icons-png.freepik.com/512/5457/5457335.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -152,8 +156,8 @@ function Progdetails(){
                  
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
-                 <div class="-ml-5 w-6 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-16">
-       <img src="https://springfourdirect.com/content/media/caticons/Transportation_Savings.png" alt="car"></img>
+                 <div class="-ml-5 w-9 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-14 mb-20">
+       <img src="https://cdn-icons-png.flaticon.com/512/12481/12481643.png" alt="car"></img>
        </div>
 
                  <div class="ml-10">
@@ -197,9 +201,20 @@ function Progdetails(){
 
          </div>
 </div>
+<h1 className="text-center text-yellow-500 font-medium text-lg mb-7 md:text-2xl"> your guide info</h1>
+<div className="mx-auto flex gap-6 justify-center mb-10">
+<img src="https://i.pinimg.com/originals/ac/ef/0c/acef0c7bc9188fdf9dd60cecfec5b7c2.png"className="rounded-full w-[90px]" alt="hassan ali" ></img> 
+
+<div className="flex mt-7">
+<img src="https://logos-world.net/wp-content/uploads/2020/05/WhatsApp-Logo.png"  className="w-[60px] h-[35px]"  alt="whatsapp logo"></img>
+<h1 className="font-medium text-sky-800 mt-1" >07730056734</h1>
+
+</div>
+
+</div>
 
         <div class="grid place-items-center">
-        <Link to={`/BookNow`}><button className="text-white mb-6 p-3 font-medium text-sm bg-sky-800 rounded-xl px-5 hover:bg-sky-600 " type="submit">Book Now</button></Link>        </div>
+        <Link to={`/BookNow`}><button className="text-white mb-6 p-2 font-medium text-sm bg-sky-800 rounded-xl px-40 hover:bg-sky-600 " type="submit">Book Now</button></Link>        </div>
 
         </main>
 

@@ -17,8 +17,8 @@ function CustomizeProg (){
 
 <main>
   <div className="flex justify-center mb-6">
-  <h1 className="text-2xl font-medium text-sky-800 mt-9">Where To Go In </h1>
-  <h1 className="text-5xl font-medium text-yellow-500 font-primary mt-9 ml-4 ">Iraq </h1>
+  <h1 className="text-2xl font-medium text-sky-800 mt-9 md:text-5xl">Where To Go In </h1>
+  <h1 className="text-5xl font-medium text-yellow-500 font-primary mt-9 ml-4 md:text-6xl">Iraq </h1>
   </div>
 
 <div className="grid justify-center sm:flex sm:justify-center gap-3 mt-3;">
