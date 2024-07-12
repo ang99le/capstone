@@ -1,5 +1,7 @@
 import {useState } from "react";
 import {Link} from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 // import { signOut } from 'firebase/auth';
 // import { auth } from '../firebase';
 // import {useNavigate } from "react-router-dom";
@@ -7,9 +9,13 @@ import {Link} from "react-router-dom";
 
 
 function Navbar(){
-  // const navigate= useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
+ const { t, i18n } = useTranslation();
+
+ const changeLanguage = (lng) => {
+   i18n.changeLanguage(lng);
+ };
 //   const handleLogout = () => {               
 //     signOut(auth).then(() => {
 //     // Sign-out successful.
@@ -20,7 +26,7 @@ function Navbar(){
 //     });
 // }
  return (
-  <div>
+  <div className="font-markazi">
    
    {/* <div className="fields">
       <input type="file" onChange={handleChange} />
@@ -55,19 +61,29 @@ function Navbar(){
      
         <div className="flex flex-col text-center font-medium md:flex-grow md:flex md:justify-start md:flex-row md:text-lg bg-sky-800 pb-3 pt-3">
           
-         <Link to={`/Home`}><a href="/Home" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2 ml-3">Home</a></Link>
-         <Link to={`/Civilizations`}><a href="/Civilizations" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Civilizations</a></Link>
-         <Link to={`/Events`}><a href="/Events"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Events</a></Link>
-         <Link to={`/Programmes`}><a href="/Programmes" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Programmes</a></Link>
+         <Link to={`/Home`}><a href="/Home" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2 ml-3"><h1>{t('homepage')}</h1></a></Link>
+         <Link to={`/Civilizations`}><a href="/Civilizations" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2"><h1>{t('Civilizationspage')}</h1></a></Link>
+         <Link to={`/Events`}><a href="/Events"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Eventspage')}</a></Link>
+         <Link to={`/Programmes`}><a href="/Programmes" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Programmerspage')}</a></Link>
           </div>
 
           <div className="flex flex-col text-center font-medium md:flex md:flex-row md:justify-end md:text-lg bg-sky-800 pb-3 pt-3">
           <div>
 
    </div>
+
+   <div className="language-selector flex p-2 gap-4">
+   {/* <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="2" y1="12" x2="22" y2="12" />  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
    
-         <Link to={`/Signup`}><a href="/Signup"className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Signup</a></Link>
-         <Link to={`/Login`}><a href="/Login"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">Login</a></Link>
+   </svg> */}
+      
+   <button  className="text-white hover:text-gray-400" onClick={() => changeLanguage('en')}>English</button>
+   <button  className="text-white hover:text-gray-400" onClick={() => changeLanguage('ar')}>العربية</button>
+        </div>
+         <Link to={`/Signup`}><a href="/Signup"className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:text-sky-600 p-2">{t('Signuppage')}</a></Link>
+         <Link to={`/Login`}><a href="/Login"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Loginpage')}</a></Link>
+         
+         
          {/* <button className="text-white" onClick={handleLogout}>Logout</button>
           */}
    
@@ -81,7 +97,8 @@ function Navbar(){
      </div>
    </nav>
 
-  
+
+
    
    </div>
 

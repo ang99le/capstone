@@ -5,7 +5,7 @@ import sarjon from "../assests/sarjon.png"
 import gigamesh from "../assests/gigamesh.png"
 import sanhareeb from "../assests/sanhareeb.png"
 import NebuchadnezzarII from "../assests/NebuchadnezzarII.png"
-import { Tooltip } from 'react-tooltip'
+import { Tooltip } from "react-tooltip";
 
 
 function Civilization() {
@@ -79,10 +79,15 @@ function Civilization() {
               </div>
             </div>
           </div>
-        <img alt="Sarjon" className="lg:rounded-full border-white border-5 w-40 h-24 absolute left-1/2 -translate-y-4 sm:-translate-y-6 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
-        <Tooltip id="my-tooltip" style={{ backgroundColor: "rgb(0, 70, 100)" }} className="-mx-[700px]">
-         <h1>Sarjon Al-akady </h1>
-        </Tooltip> 
+
+
+<a id="sargon">
+<img alt="Sargon" className="lg:rounded-full border-white border-5 w-40 h-24 absolute left-1/2 -translate-y-4 sm:-translate-y-16 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
+</a>
+   <Tooltip anchorSelect="#sargon">
+    Sargon The Greatest
+  </Tooltip> 
+         
         </div>
         <div className="text-center ml-60 -translate-y-72">
         <h4 > The Akaddian civilization</h4>
@@ -100,10 +105,12 @@ function Civilization() {
               </div>
             </div>
           </div>
+  
           <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-10 h-10 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <img src={sanhareeb} alt="sanhareeb"></img>
-        
           </div>
+        
+        
         </div>
         <div className="text-center mr-60 -translate-y-56">
         <h4 > The Assyrian civilization</h4>

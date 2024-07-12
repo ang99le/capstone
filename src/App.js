@@ -16,10 +16,10 @@ import Akkad from './components/Civilization/Akkad';
 
 
 function App() {
+
   return (
     <div className="App">
-   
-    
+       
       <BrowserRouter>
       <Routes>
       <Route path='/' element={<Home />}></Route>

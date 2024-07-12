@@ -59,19 +59,13 @@ function Home() {
 
 <div>
 
-<a id="notclickable" className="bg-sky-800">
+<button id="notclickable">
 <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50" alt="sumerian calender"/>
 {/* <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[430px] md:h-[430px] rounded-full   ml-5 w-1/5 absolute top-1/3 right 1/4 place-items-center drop-shadow-2xl" alt="sumerian calender"/> */}
-
-  </a>
+  </button>
 <Tooltip anchorSelect="#notclickable">
  The First Calender In History
 </Tooltip>
-
-
-
-
-
 </div>
 
 {/* <img src="https://cdn-icons-png.flaticon.com/512/3655/3655147.png" className=" mt-3" alt="mosque"/> */}
@@ -89,7 +83,7 @@ to visit the first civilization of Mesopotamia.we are trusted source for adventu
 and experiential travel inspiration, producing original, insightful and passionate <br/>
 storytelling to challenge its readers to explore Iraq</p>
 </div>
-<div className="bg-yellow-500 mb-40 md:p-[8rem] md:mb-20">
+<div className="bg-yellow-500 mb-40 md:p-[7rem] md:mb-16">
 
 </div>
 {/* </div> */}
