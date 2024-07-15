@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Footer(){
- 
+    const {t} = useTranslation();
     return(
         <div>
         
@@ -18,9 +19,9 @@ function Footer(){
           
           < div className="flex justify-center">
           <div className="md:-mt-20 flex gap-72 absolute text-center">
-       <h1 className="text-lg text-white mt-5 p-3 -ml-72">Copyrights2024</h1>
+       <h1 className="text-lg text-white mt-5 p-3 -ml-72">{t("Copyrights2024")}</h1>
        <div className="flex flex-col justify-center">
-       <h2 className="font-bold  text-xl text-white -ml-24">Contact Us</h2>
+       <h2 className="font-bold  text-xl text-white -ml-24">{t("Contact Us")}</h2>
          <h5 className=" text-l text-white -ml-24">
          Based in Baghdad Iraq <br/>
          Civilizations@gmail.com

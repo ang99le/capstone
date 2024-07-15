@@ -1,7 +1,9 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useTranslation } from "react-i18next";
 
 function BookNow(){
+  const {t} = useTranslation();
     return(
         <>
       <header>
@@ -14,10 +16,10 @@ function BookNow(){
     <div className="bg-amber-100 opacity-95 w-[600px] mt-20  p-12 rounded-md mx-auto">
 
   
-    <h1 className='text-amber-600 font-bold text-center text-lg my-5'>BOOK YOUR TICKET</h1>
-        <h3 className="text-amber-500 font-medium mb-3 mt-5 text-center">Booking through WhatsApp</h3>
+    <h1 className='text-amber-600 font-bold text-center text-lg my-5'>{t("BOOK YOUR TICKET")}</h1>
+        <h3 className="text-amber-500 font-medium mb-3 mt-5 text-center">{t("Booking through WhatsApp")}</h3>
         <img className=" mx-auto w-[60px] mb-3" src="https://th.bing.com/th/id/R.18ba0e411b1586feb65e97d7deb45b5d?rik=OCbvCEPQbXn47g&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fwhatsapp-png-whatsapp-logo-png-1000.png&ehk=7BIVvksu2ccZPkUkoiU9T8Gx7a6xEIJ61o%2fGGN12nNM%3d&risl=&pid=ImgRaw&r=0" alt="whats logo"></img>
-        <h3 className="text-amber-500 font-medium text-center">Booking directly</h3>
+        <h3 className="text-amber-500 font-medium text-center">{t("Booking directly")}</h3>
          
   <form className="mt-5 mb-4 grid justify-center ">
 
@@ -46,7 +48,7 @@ function BookNow(){
   
   </form>
 <div className="flex justify-center">
-        <button type="submit" class="w-[150px]  screen rounded-md bg-yellow-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Submit</button>
+        <button type="submit" class="w-[150px]  screen rounded-md bg-yellow-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">{t("Submit")}</button>
   
 </div>
 </div>

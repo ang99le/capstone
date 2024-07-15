@@ -12,6 +12,7 @@ import CustomizeProg from './components/CustomizeProg';
 import BookNow from './components/BookNow';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 import Akkad from './components/Civilization/Akkad';
+import Guides from './components/Guides';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Route path='/CustomizeProg' element={<CustomizeProg/>}></Route>
       <Route path='/BookNow' element={<BookNow/>}></Route>
       <Route path='/Akkad' element={<Akkad/>}></Route>
+      <Route path='/Guides' element={<Guides/>}></Route>
       </Routes>
       </BrowserRouter>
      

@@ -3,8 +3,9 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import {Carousel} from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import { useTranslation } from "react-i18next";
 function Progdetails(){
+    const {t} = useTranslation();
     return(
     <div>
     <nav>
@@ -12,8 +13,8 @@ function Progdetails(){
     </nav>
 
     <main className="font-markazi">
-    <h1 className="text-center text-sky-800 font-medium text-lg md:text-4xl md:mt-10 font-Markazi Text ">Babylon City Tour</h1>
-    <h1 className="text-center mt-5 text-2xl font-medium text-yellow-500">price:100 IQD </h1>
+    <h1 className="text-center text-sky-800 font-medium text-lg md:text-4xl md:mt-10 font-Markazi Text ">{t("Babylon City Tour")}</h1>
+    <h1 className="text-center mt-5 text-2xl font-medium text-yellow-500">{t("price:100 IQD")} </h1>
      <section className=" mx-auto mt-8">
        <Carousel autoPlay className="w-[700px] mx-auto">
 
@@ -201,7 +202,7 @@ function Progdetails(){
 
          </div>
 </div>
-<h1 className="text-center text-yellow-500 font-medium text-lg mb-7 md:text-2xl"> your guide info</h1>
+<h1 className="text-center text-yellow-500 font-medium text-lg mb-7 md:text-2xl">{t("your guide info")}</h1>
 <div className="mx-auto flex gap-6 justify-center mb-10">
 <img src="https://i.pinimg.com/originals/ac/ef/0c/acef0c7bc9188fdf9dd60cecfec5b7c2.png"className="rounded-full w-[90px]" alt="hassan ali" ></img> 
 
@@ -214,7 +215,7 @@ function Progdetails(){
 </div>
 
         <div class="grid place-items-center">
-        <Link to={`/BookNow`}><button className="text-white mb-6 p-2 font-medium text-sm bg-sky-800 rounded-xl px-40 hover:bg-sky-600 " type="submit">Book Now</button></Link>        </div>
+        <Link to={`/BookNow`}><button className="text-white mb-6 p-2 font-medium text-sm bg-sky-800 rounded-xl px-40 hover:bg-sky-600 " type="submit">{t("Book Now")}</button></Link></div>
 
         </main>
 

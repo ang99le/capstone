@@ -60,6 +60,7 @@ function Navbar(){
          <Link to={`/Civilizations`}><a href="/Civilizations" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2"><h1>{t('Civilizationspage')}</h1></a></Link>
          <Link to={`/Events`}><a href="/Events"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Eventspage')}</a></Link>
          <Link to={`/Programmes`}><a href="/Programmes" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Programmerspage')}</a></Link>
+         <Link to={`/Guides`}><a href="/Guides" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Guides')}</a></Link>
           </div>
 
           <div className="flex flex-col text-center font-medium md:flex md:flex-row md:justify-end md:text-lg bg-sky-800 pb-3 pt-3">
