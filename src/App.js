@@ -11,7 +11,6 @@ import EventsDetails from './components/EventDetails';
 import CustomizeProg from './components/CustomizeProg';
 import BookNow from './components/BookNow';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
-// import { Userprovider } from './Context/Context';
 import Akkad from './components/Civilization/Akkad';
 
 

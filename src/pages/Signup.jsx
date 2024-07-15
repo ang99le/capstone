@@ -3,15 +3,15 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {auth} from "../firebase";
+import {auth,db} from "../firebase";
 import {createUserWithEmailAndPassword} from "firebase/auth";
-
-
+import { setDoc,doc } from "firebase/firestore";
+import { useTranslation } from "react-i18next";
 
 function Signup() {
 
   const navigate= useNavigate();
-  
+  const {t} = useTranslation();
   const [fname,setFname]=useState('');
   const [lname,setLname]=useState(''); 
   const [email, setEmail]=useState('');
@@ -20,20 +20,35 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault()
    
-    await createUserWithEmailAndPassword(auth, email,password)
-      .then((userCredential) => {
-          // Signed in
-          const user = userCredential.user;
-          console.log(user);
-          navigate("/Login")
-          // ...
-      })
-      .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.log(errorCode, errorMessage);
-          // ..
-      });
+    // try {
+    //   await createUserWithEmailAndPassword(auth, email, password);
+    //   const user = auth.currentUser;
+    //   console.log(user);
+    //   if (user) {
+    //     await setDoc(doc(db, "Users", user.uid), {
+    //       email: user.email,
+    //       firstName: fname,
+    //       lastName: lname,
+    //       photo:""
+    //     });
+    //   }
+    //   console.log("users registered Successfully");
+    // }
+
+  //   catch((error){
+  //     const errorCode = error.code;
+  //     const errorMessage = error.message;
+  //     console.log(errorCode, errorMessage);
+   
+  // });
+      // .then((userCredential) => {
+      //     // Signed in
+      //     const user = userCredential.user;
+      //     console.log(user);
+      //     navigate("/Login")
+      //     // ...
+      // })
+      
 
  
   }
@@ -51,7 +66,7 @@ function Signup() {
 
 <div class="flex min-h-full flex-col justify-center items-center w-[100%] h-[100vh] lg:h-[90vh] px-4 lg:px-8 md:mb-20 md:mt-14"  >
   <div class="sm:mx-auto sm:w-full sm:max-w-sm ">
-    <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-sky-800">Create New Account</h2>
+    <h2 class="text-center text-2xl font-bold leading-9 tracking-tight text-sky-800">{t("Create New Account")}</h2>
   </div>
 
 
@@ -62,7 +77,7 @@ function Signup() {
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
     <form class="space-y-6" action="#" method="POST">
     <div>
-        <label for="text" class="block text-sm font-medium leading-6 text-sky-800">First Name</label>
+        <label for="text" class="block text-sm font-medium leading-6 text-sky-800">{t("First Name")}</label>
         <div class="mt-2">
           <input id="text" name="text" type="text" value={fname} onChange={(e)=>setFname(e.target.value)} required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 md:pl-48"/>
         </div>
@@ -70,14 +85,14 @@ function Signup() {
 
 
       <div>
-        <label for="text" class="block text-sm font-medium leading-6 text-sky-800">last Name</label>
+        <label for="text" class="block text-sm font-medium leading-6 text-sky-800">{t("last Name")}</label>
         <div class="mt-2">
           <input id="text" name="text" type="text" value={lname} onChange={(e)=>setLname(e.target.value)} required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
         </div>
       </div>
 
       <div>
-        <label for="email" class="block text-sm font-medium leading-6 text-sky-800">Email address</label>
+        <label for="email" class="block text-sm font-medium leading-6 text-sky-800">{t("Email address")}</label>
         <div class="mt-2">
           <input id="email" name="email"   value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6"/>
         </div>
@@ -85,33 +100,33 @@ function Signup() {
 
       <div>
         <div class="flex items-center justify-between">
-          <label for="password" value={password} onChange={(e) => { setPassword(e.target.value) }} class="block text-sm font-medium leading-6 text-sky-800">Password</label>
+          <label for="password" value={password} onChange={(e) => { setPassword(e.target.value) }} class="block text-sm font-medium leading-6 text-sky-800">{t("Password")}</label>
          
         </div>
         <div class="mt-2">
         <input id="password" name="password"  type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6" />
         </div>
       </div>
-      <h6 className="text-sky-800 font-medium">Please Enter your type correctly:</h6>
+      <h6 className="text-sky-800 font-medium">{t("Please Enter your type correctly")}</h6>
       <div class="flex items-center mb-4">
       
     <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 -mt-4 text-white bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label for="default-radio-1" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300 -mt-4">Guide</label>
+    <label for="default-radio-1" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300 -mt-4">{t("Guide")}</label>
 </div>
 <div class="flex items-center">
     <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 -mt-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-    <label for="default-radio-2" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300 -mt-4">Tourest</label>
+    <label for="default-radio-2" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300 -mt-4">{t("Tourest")}</label>
 </div>
 
       <div>
-        <button type="submit" onClick={handleSubmit} class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">SignUp</button>
+        <button type="submit" onClick={handleSubmit} class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">{t("SignUp")}</button>
       </div>
 
       {/* <h6 className="text-center text-gray-400 text-xs">--- or continue with google ---</h6>  */}
       {/* <Signwithgoogle/> */}
        
       <div class="text-sm">
-        <Link to={`/Login`}><a href="/Login" class="font-semibold text-sky-800 hover:text-sky-600">Already have an account</a></Link>
+        <Link to={`/Login`}><a href="/Login" class="font-semibold text-sky-800 hover:text-sky-600">{t("Already have an account")}</a></Link>
       
           </div>
     </form>

@@ -13,8 +13,7 @@ function Programmes() {
           </nav>
         </header>
        <main >
-        {/* <div className="h-[100vh] p-6  bg-[url(https://img.freepik.com/premium-vector/mesopotamian-goddess-assyrian-culture-gilgamesh-legends_951778-25205.jpg)]">
-       <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
+
        <div className="flex justify-center mb-6">
   <h1 className="text-2xl font-medium text-sky-800 mt-9 md:text-5xl">Where To Go In </h1>
   <h1 className="text-5xl font-medium text-yellow-500 font-primary mt-9 ml-4 md:text-6xl ">Iraq </h1>

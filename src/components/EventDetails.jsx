@@ -1,5 +1,7 @@
-function EventDetails ({setBooking}){
+import { useTranslation } from "react-i18next";
 
+function EventDetails ({setBooking}){
+  const {t} = useTranslation();
 return(
     <div className='w-screen h-screen bg-black bg-opacity-30 fixed top-0 right-0 flex justify-center items-center'>
 
@@ -9,19 +11,19 @@ return(
       <button onClick={()=>setBooking(false)}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF6eqIKPjVO3smnMpCieL6fiPOAbabJsgZgw&s" alt="exit" className="absloute  w-[20px]"></img></button>
       </div>
 
-        <h1 className=' text-sky-900 font-bold text-center text-lg my-5'>BOOK YOUR TICKET</h1>
+        <h1 className=' text-sky-900 font-bold text-center text-lg my-5'>{t("BOOK YOUR TICKET")}</h1>
         <p className="text-sky-800 flex gap-2 mb-2 justify-center">
           <img  className="w-[25px]" src="https://cdn-icons-png.freepik.com/512/821/821285.png" alt="Golden Ticket" ></img>
-          Golden Ticket</p>
+         {t("Golden Ticket")}</p>
           <p className="text-sky-800 flex gap-4 mb-2 justify-center">
-          <img className="w-[25px] " src="https://cdn-icons-png.freepik.com/512/821/821285.png" alt="Silver Ticket"></img> Silver Ticket </p>
+          <img className="w-[25px] " src="https://cdn-icons-png.freepik.com/512/821/821285.png" alt="Silver Ticket"></img> {t("Silver Ticket")} </p>
           <p className="text-sky-800 flex gap-2 mb-2 justify-center">
-          <img className="w-[25px]" src="https://cdn-icons-png.freepik.com/512/821/821285.png" alt="Bronze Ticket"></img> Bronze Ticket</p>
+          <img className="w-[25px]" src="https://cdn-icons-png.freepik.com/512/821/821285.png" alt="Bronze Ticket"></img>{t("Bronze Ticket")}</p>
 
         
-        <h3 className="text-sky-700 font-medium mb-3 mt-5">Booking through WhatsApp</h3>
+        <h3 className="text-sky-700 font-medium mb-3 mt-5">{t("Booking through WhatsApp")}</h3>
         <img className="mx-auto w-[60px] mb-3" src="https://www.mobileworld.it/wp-content/uploads/2016/01/whatsapp-logo-final-1280x886.jpg" alt="whats logo"></img>
-        <h3 className="text-sky-700 font-medium">Booking directly</h3>
+        <h3 className="text-sky-700 font-medium">{t("Booking directly")}</h3>
           {/* form responsivity */}
           {/* <div class="flex min-h-full flex-col justify-center items-center w-[100%] h-[81vh] lg:h-[79vh] px-4  lg:px-8"  ></div> */}
   <form className="mt-5 mb-4">
@@ -51,7 +53,7 @@ return(
   
   </form>
 
-        <button type="submit" class="flex w-full justify-center screen rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Submit</button>
+        <button type="submit" class="flex w-full justify-center screen rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">{t("Submit")}</button>
   
 </div>
 

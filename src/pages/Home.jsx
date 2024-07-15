@@ -4,8 +4,14 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { auth } from "../firebase";
 import {Tooltip} from "react-tooltip";
-function Home() {
+import { useTranslation } from "react-i18next";
 
+
+function Home() {
+  const {t} = useTranslation();
+
+  
+  
   useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -41,20 +47,19 @@ function Home() {
 <div className=" p-6 -mt-14 ">
 <div className="pt-16 text-3xl md:text-5xl text-center md:pt-20">
   {/* <img className="absolute ml-80  blur-sm w-[500px] -z-20" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png" alt="sumeria" /> */}
-<h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12 font-markazi">WELCOME TO IRAQ</h1>
+
+<h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12 font-markazi">{t('Welcome')}</h1>
 </div>
-<h2 className="text-sky-700 -mt-16 md:text-lg text-center md:-mt-11 font-markazi">Where Exploration Never Ends</h2>
+<h2 className="text-sky-700 -mt-16 md:text-lg text-center md:-mt-11 font-markazi">{t('slogen')}</h2>
 <div className="md:flex justify-center md:gap-48">
 <div className="flex flex-col md:py-40">
 <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="mb-9 mx-auto w-[300px] h-[300px] md:hidden rounded-full mt-9 shadow-full" alt="Sumerian calender"/>
 
-<h2 className="text-center text-lg text-yellow-500 font-medium md:text-4xl md:text-left ">Your Guide To See The Beauty Of Iraq</h2>
-  <p className="text-sky-800 pt-2 text-center md:text-left">We are here to tell you the story of the first civilization in history<br/>
-  read our blogs to get know more about our history then you can <br/>
-  join our tours to see the Iraq from our prespective.
-  </p>
+<h2 className="text-center text-lg text-yellow-500 font-medium md:text-4xl md:text-left "> {t("Your Guide To See The Beauty Of Iraq")}</h2>
+  <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar")}</p>
+  <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar1")}</p>
 
-  <button className="mt-8 bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8"> start the journey </button>
+  <button className="mt-8 bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8"> {t("start the journey")} </button>
 </div>
 
 <div>
@@ -73,62 +78,18 @@ function Home() {
 
 </div>
 <div className="bg-sky-800 mt-6 md:h-[13rem] md:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md md:mt-40">
-<h1 className="text-center font-medium text-2xl text-white mb-2">Learn About Us</h1>
+<h1 className="text-center font-medium text-2xl text-white mb-2">{t("Learn About Us")}</h1>
 
-<p className="text-center text-white mb-5">
-We are an Iraqi web application who wants to show the world how beautiful Iraq<br/>
- is and to let them explore the the history of our country and give them the chance <br/>
-
-to visit the first civilization of Mesopotamia.we are trusted source for adventure <br/>
-and experiential travel inspiration, producing original, insightful and passionate <br/>
-storytelling to challenge its readers to explore Iraq</p>
+<p className="text-center text-white">{t("homeL1")}</p>
+  <p className="text-center text-white">{t("homeL2")}</p>
+  <p className="text-center text-white">{t("homeL3")}</p>
+<p className="text-center text-white">{t("homeL4")}</p>
+<p className="text-center text-white">{t("homeL5")}</p>
 </div>
 <div className="bg-yellow-500 mb-40 md:p-[7rem] md:mb-16">
 
 </div>
-{/* </div> */}
-{/* </section> */}
-{/* home page in mobile and tablet screen  */}
-{/* <div  className="sm:block lg:hidden"> */}
-  {/* <div> 
-    <img src="https://www.asor.org/wp-content/uploads/2023/04/Gries_Fig9.jpg" alt="Ishtar Gate"></img>
-    <p className="text-white text-left text-sm absolute bottom-50 -translate-y-12 left-0 right-0 px-4 py-1 bg-sky-800 opacity-55">
-      Ishtar Gate - Babylon city <br/>
-       Built about 575 BC
-    </p>
-  </div>
-  <div>
-    <img src="https://cdn.britannica.com/24/234324-050-06F7B0E3/Dhi-Qar-Iraq-2022-Ziggurat-of-Ur-Sumerian-period.jpg" alt=" Ziggurat Ur"></img>
-    <p className="text-white text-left text-sm absolute bottom-50 -translate-y-12  left-0 right-0 px-4 py-1 bg-sky-800 opacity-55">
-      Ziggurat Ur - Nasiriyah city <br/>
-       Built about 575 BC
-    </p>
-  </div>
-  <div>
-   
-   <img src="  https://upload.wikimedia.org/wikipedia/commons/3/3f/%D8%AD%D8%B5%D9%86_%D8%A7%D9%84%D8%A3%D8%AE%D9%8A%D8%B6%D8%B1.jpg" alt=" Al-ukhaidir Fortress "></img>
-   <p className="text-white text-left text-sm absolute bottom-50 -translate-y-12  left-0 right-0 px-4 py-1 bg-sky-800 opacity-55">
-      Al-ukhaidir Fortress - Karbalaa city <br/>
-       Built about 575 BC
-    </p>
-  </div>
- 
-  <div>
-    <img src="https://cdn.britannica.com/96/182896-050-87DFB24C/Temple-Hatra-Iraq.jpg" alt=" Al-Hadir"></img>
-    <p className="text-white text-left text-sm absolute bottom-50 -translate-y-12  left-0 right-0 px-4 py-1 bg-sky-800 opacity-55">
-      Al-Hadir - Mousel city <br/>
-       Built about 575 BC
-    </p>
-  </div>
-  
-  <div>
-    <img src="  https://imhussain.com/upload/orginal/603109aa386b7.jpg"alt=" Al-Malwiyah" ></img>
-    <p className="text-white text-left text-sm absolute bottom-50 -translate-y-12  left-0 right-0 px-4 py-1 bg-sky-800 opacity-55">
-      Al-Malwiyah - Samaraa city <br/>
-       Built about 575 BC
-    </p>
-  </div>
-</div> */}
+
 
 {/* home page in pc screen */}
 <div className=" block">
@@ -280,8 +241,6 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
 
 
   </div>
-
-
 
 </main>
 <footer>

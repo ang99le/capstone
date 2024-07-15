@@ -1,7 +1,7 @@
 import {useState } from "react";
 import {Link} from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import Translation from "./Translation";
 // import { signOut } from 'firebase/auth';
 // import { auth } from '../firebase';
 // import {useNavigate } from "react-router-dom";
@@ -10,12 +10,7 @@ import { useTranslation } from "react-i18next";
 
 function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
-
- const { t, i18n } = useTranslation();
-
- const changeLanguage = (lng) => {
-   i18n.changeLanguage(lng);
- };
+  const { t} = useTranslation();
 //   const handleLogout = () => {               
 //     signOut(auth).then(() => {
 //     // Sign-out successful.
@@ -76,9 +71,7 @@ function Navbar(){
    {/* <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="2" y1="12" x2="22" y2="12" />  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
    
    </svg> */}
-      
-   <button  className="text-white hover:text-gray-400" onClick={() => changeLanguage('en')}>English</button>
-   <button  className="text-white hover:text-gray-400" onClick={() => changeLanguage('ar')}>العربية</button>
+  <Translation/>
         </div>
          <Link to={`/Signup`}><a href="/Signup"className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:text-sky-600 p-2">{t('Signuppage')}</a></Link>
          <Link to={`/Login`}><a href="/Login"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Loginpage')}</a></Link>
