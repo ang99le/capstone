@@ -6,6 +6,7 @@ import gigamesh from "../assests/gigamesh.png"
 import sanhareeb from "../assests/sanhareeb.png"
 import NebuchadnezzarII from "../assests/NebuchadnezzarII.png"
 import { Tooltip } from "react-tooltip";
+import ScrollUpButton from "../components/Scrollup";
 
 
 function Civilization() {
@@ -94,6 +95,9 @@ function Civilization() {
          <h6>(2334 -2047 BCE)</h6>
          </div>
       </div>
+
+      <ScrollUpButton/>
+      
            {/* <!-- Right section, set by justify-end and sm:pl-8 --> */}
       <div class="mt-6 sm:mt-0 sm:mb-12">
         <div class="flex flex-col sm:flex-row items-center">
@@ -109,9 +113,8 @@ function Civilization() {
           <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-10 h-10 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <img src={sanhareeb} alt="sanhareeb"></img>
           </div>
-        
-        
         </div>
+
         <div className="text-center mr-60 -translate-y-56">
         <h4 > The Assyrian civilization</h4>
          <h6>(1900 BCE - 650 CE)</h6>

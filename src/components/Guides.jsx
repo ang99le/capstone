@@ -1,7 +1,15 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+// import { useState } from "react";
+
 function Guides(){
+  
+    //  <div className="fields">
+    //   <input type="file" onChange={handleChange} />
+    //   <button disabled={loading || !photo} onClick={handleClick}>Upload</button>
+    //   <img src={photoURL} alt="Avatar" className="avatar" />
+    // </div> 
     return(
         <div>
 <nav> 
@@ -40,11 +48,27 @@ function Guides(){
       </div>
     </div>
 
-    {/* <div>
-      <label for="number" class="block text-sm font-medium leading-6 text-sky-800">The name of The Tour</label>
+    <div>
+      <label for="text" class="block text-sm font-medium leading-6 text-sky-800">The Name of The Tour</label>
+      <div class="mt-2">
+        <input id="text" name="number" type="number"  required class="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
+      </div>
+    </div>
+
+    <div>
+      <label for="number" class="block text-sm font-medium leading-6 text-sky-800">please add the price </label>
       <div class="mt-2">
         <input id="number" name="number" type="number"  required class="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"/>
       </div>
+    </div>
+
+    {/* <div>
+      <label for="number" class="block text-sm font-medium leading-6 text-sky-800">Please upload 3 images of the place</label>
+      <div className="App">
+            <h2>Add Image:</h2>
+            <input type="file" onChange={handleChange} />
+            <img src={file} alt="img"/>
+        </div>
     </div> */}
 
     <div>

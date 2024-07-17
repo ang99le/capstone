@@ -2,32 +2,17 @@ import {useState } from "react";
 import {Link} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Translation from "./Translation";
-// import { signOut } from 'firebase/auth';
-// import { auth } from '../firebase';
-// import {useNavigate } from "react-router-dom";
 
 
 
 function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
   const { t} = useTranslation();
-//   const handleLogout = () => {               
-//     signOut(auth).then(() => {
-//     // Sign-out successful.
-//         navigate("/");
-//         console.log("Signed out successfully")
-//     }).catch((error) => {
-//     // An error happened.
-//     });
-// }
+
  return (
   <div className="font-markazi">
    
-   {/* <div className="fields">
-      <input type="file" onChange={handleChange} />
-      <button disabled={loading || !photo} onClick={handleClick}>Upload</button>
-      <img src={photoURL} alt="Avatar" className="avatar" />
-    </div> */}
+  
    <nav className="flex items-center justify-between flex-wrap ">
 
     {/* humburger postion */}
@@ -60,7 +45,7 @@ function Navbar(){
          <Link to={`/Civilizations`}><a href="/Civilizations" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2"><h1>{t('Civilizationspage')}</h1></a></Link>
          <Link to={`/Events`}><a href="/Events"className="block mt-4 l:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Eventspage')}</a></Link>
          <Link to={`/Programmes`}><a href="/Programmes" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Programmerspage')}</a></Link>
-         <Link to={`/Guides`}><a href="/Guides" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Guides')}</a></Link>
+         {/* <Link to={`/Guides`}><a href="/Guides" className="block mt-4 l:inline-block lg:mt-0 text-white  border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">{t('Guides')}</a></Link> */}
           </div>
 
           <div className="flex flex-col text-center font-medium md:flex md:flex-row md:justify-end md:text-lg bg-sky-800 pb-3 pt-3">

@@ -1,6 +1,6 @@
 import Navbar from "../Navbar"
 import Footer from "../Footer"
-
+import ScrollUpButton from "../Scrollup"
 const Akkad= ()=>{
     return(
         <div>
@@ -10,6 +10,7 @@ const Akkad= ()=>{
                 </nav>
             </header>
 <main>
+<ScrollUpButton/>
     <div className="flex gap-10 justify-center bg-sky-800 pb-48">
     {/* <img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" id="my-tooltip" alt="Akd" className=" w-[500px] h-[20rem] rounded-2xl shadow-2xl"></img> */}
 <p className="font-medium text-white text-5xl mt-20 text-center">Welcome To The <br/> Akkadian Civilization</p>
