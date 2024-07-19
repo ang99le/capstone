@@ -5,17 +5,15 @@ import HTTPApi from "i18next-http-backend";
 
 i18next
   .use(initReactI18next)
+  
   .use(LanguageDetector)
   .use(HTTPApi)
   .init({
+
     fallbackLng:"en",
     interpolation: {
       escapeValue: false, 
     },
   });
-
-
- 
-
 
 export default i18next;

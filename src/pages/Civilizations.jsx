@@ -82,9 +82,8 @@ function Civilization() {
           </div>
 
 
-<a id="sargon">
-<img alt="Sargon" className="lg:rounded-full border-white border-5 w-40 h-24 absolute left-1/2 -translate-y-4 sm:-translate-y-16 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
-</a>
+
+<img alt="Sargon" id="sargon" className="lg:rounded-full border-white border-5 w-40 h-24 absolute left-1/2 -translate-y-4 sm:-translate-y-16 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
    <Tooltip anchorSelect="#sargon">
     Sargon The Greatest
   </Tooltip> 

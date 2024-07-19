@@ -2,15 +2,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {auth,db} from "../firebase";
-import {createUserWithEmailAndPassword} from "firebase/auth";
-import { setDoc,doc } from "firebase/firestore";
+// import {useNavigate} from 'react-router-dom';
+// import {auth,db} from "../firebase";
+// import {createUserWithEmailAndPassword} from "firebase/auth";
+// import { setDoc,doc } from "firebase/firestore";
 import { useTranslation } from "react-i18next";
 
 function Signup() {
 
-  const navigate= useNavigate();
+  // const navigate= useNavigate();
   const {t} = useTranslation();
   const [fname,setFname]=useState('');
   const [lname,setLname]=useState(''); 

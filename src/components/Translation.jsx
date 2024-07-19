@@ -1,26 +1,21 @@
 
 import { useTranslation } from "react-i18next"
-// import { useEffect} from "react";
-// import cookies from "js-cookie"
+import { useEffect} from "react";
+
 
 function Translation(){
-    // const languages={dir:"rlt"}
+    
     const {i18n } = useTranslation();
-
     const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
     };
-        
-    // const currentLanguageCode = cookies.get('i18next') || 'en'
-    // const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
 
 
-    // useEffect(() => {
-    //     console.log('Setting page stuff')
-    //     document.body.dir = currentLanguage.dir || 'ltr'
-      
-    //   }, [currentLanguage])
-
+    useEffect(() => {
+        const direction = i18n.language === 'ar' ? 'rtl' : 'ltr';
+        document.documentElement.dir = direction;
+      }, [i18n.language]);
+    
     return(
 
         <div>

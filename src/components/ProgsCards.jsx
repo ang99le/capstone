@@ -1,9 +1,11 @@
 import { Link} from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import BookNow from "./BookNow";
 
 const ProgCards= ()=>{
   const {t} = useTranslation();
-
+  const [popUp, setPopUp] = useState(false);
      const Cards=[
     {
         
@@ -86,8 +88,9 @@ const ProgCards= ()=>{
 
         <div className="flex gap-4 pt-3">
           <Link to={`/Progdetails`}><button  className="text-white  font-medium text-sm bg-sky-800 p-2 rounded-lg hover:bg-sky-600 " type="submit">{t("Show Details")}</button></Link>
-          <Link to={`/BookNow`}><button className="text-white  font-medium text-sm  bg-sky-800 p-2 rounded-lg hover:bg-sky-600 " type="submit">{t("Book Now")}</button></Link>
-      
+          <button type="submit" onClick={() => setPopUp(true)} class="mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{t("Book Now")}</button>
+                {popUp && <BookNow setPopUp={setPopUp} />}
+                
         </div>
       
 			</div>
