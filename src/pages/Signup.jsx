@@ -3,11 +3,13 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useState} from 'react';
 // import {useNavigate} from 'react-router-dom';
-// import {auth,db} from "../firebase";
-// import {createUserWithEmailAndPassword} from "firebase/auth";
-// import { setDoc,doc } from "firebase/firestore";
+import {auth,db} from "../firebase";
+import {createUserWithEmailAndPassword} from "firebase/auth";
+import { setDoc,doc } from "firebase/firestore";
 import { useTranslation } from "react-i18next";
-
+import Signwithgoogle from "../components/Signwithgoogle"
+// import firebase from "../firebase"
+// import { auth } from "../firebase";
 function Signup() {
 
   // const navigate= useNavigate();
@@ -17,41 +19,33 @@ function Signup() {
   const [email, setEmail]=useState('');
   const [password, setPassword]=useState('');
 
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
-   
-    // try {
-    //   await createUserWithEmailAndPassword(auth, email, password);
-    //   const user = auth.currentUser;
-    //   console.log(user);
-    //   if (user) {
-    //     await setDoc(doc(db, "Users", user.uid), {
-    //       email: user.email,
-    //       firstName: fname,
-    //       lastName: lname,
-    //       photo:""
-    //     });
-    //   }
-    //   console.log("users registered Successfully");
-    // }
+    e.preventDefault();
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      const user = auth.currentUser;
+      console.log(user);
+      window.location.href = "/home";
+      alert("User signed up Successfully");
 
-  //   catch((error){
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //     console.log(errorCode, errorMessage);
-   
-  // });
-      // .then((userCredential) => {
-      //     // Signed in
-      //     const user = userCredential.user;
-      //     console.log(user);
-      //     navigate("/Login")
-      //     // ...
-      // })
+      if (user) {
+        await setDoc(doc(db, "Users", user.uid), {
+          email: user.email,
+          firstName: fname,
+          lastName: lname,
+          photo:""
+        });
+      }
       
+    
+      alert("User Registered Successfully!!");
+    } catch (error) {
+      console.log(error.message);
+    
+    }
+  };
 
- 
-  }
  
     return (
       <div>
@@ -75,7 +69,7 @@ function Signup() {
 
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form class="space-y-6" action="#" method="POST">
+    <form class="space-y-6" action="#" method="POST" onSubmit={handleSubmit}>
     <div>
         <label for="text" class="block text-sm font-medium leading-6 text-sky-800">{t("First Name")}</label>
         <div class="mt-2">
@@ -94,17 +88,16 @@ function Signup() {
       <div>
         <label for="email" class="block text-sm font-medium leading-6 text-sky-800">{t("Email address")}</label>
         <div class="mt-2">
-          <input id="email" name="email"   value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6"/>
+          <input id="email" name="email"   value={email} onChange={(e) => {setEmail(e.target.value) }} type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6"/>
         </div>
       </div>
 
       <div>
         <div class="flex items-center justify-between">
-          <label for="password" value={password} onChange={(e) => { setPassword(e.target.value) }} class="block text-sm font-medium leading-6 text-sky-800">{t("Password")}</label>
-         
+          <label for="password"  class="block text-sm font-medium leading-6 text-sky-800">{t("Password")}</label>
         </div>
         <div class="mt-2">
-        <input id="password" name="password"  type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6" />
+        <input id="password" name="password"  value={password} onChange={(e) => {setPassword(e.target.value) }} type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6" />
         </div>
       </div>
       <h6 className="text-sky-800 font-medium">{t("Please Enter your type correctly")}</h6>
@@ -119,20 +112,22 @@ function Signup() {
 </div>
 
       <div>
-        <button type="submit" onClick={handleSubmit} class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">{t("SignUp")}</button>
+        <button type="submit" class="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">{t("SignUp")}</button>
       </div>
 
       {/* <h6 className="text-center text-gray-400 text-xs">--- or continue with google ---</h6>  */}
-      {/* <Signwithgoogle/> */}
-       
+  
+     <Signwithgoogle/>
       <div class="text-sm">
         <Link to={`/Login`}><a href="/Login" class="font-semibold text-sky-800 hover:text-sky-600">{t("Already have an account")}</a></Link>
-      
+       
           </div>
+        
     </form>
-   
+
        
     </div>
+
   </div>
 </div>
 
