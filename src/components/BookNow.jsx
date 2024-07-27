@@ -1,5 +1,3 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import { useTranslation } from "react-i18next";
 import WhatsApp from '../components/Whatsapp';
 import WhatsAppbyFields from "./WhatsappbyFields";
@@ -8,13 +6,8 @@ function BookNow({setPopUp}){
   const {t} = useTranslation();
     return(
         <>
-      <header>
-          <nav>
-          <Navbar/>
-          </nav>
-        </header>
-
-    <main className='w-screen h-screen bg-black bg-opacity-30 fixed top-0 right-0 flex justify-center items-center'>
+  
+    <main className='w-screen h-screen z-60 bg-black bg-opacity-70 fixed top-0 right-0 flex justify-center items-center'>
     <div className='bg-white w-[400px] h-[570px] p-10 rounded-md shadow-md' >
     <div class="grid place-items-left">
       <button onClick={()=>setPopUp(false)}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF6eqIKPjVO3smnMpCieL6fiPOAbabJsgZgw&s" alt="exit" className="absloute  w-[20px]"></img></button>
@@ -25,14 +18,11 @@ function BookNow({setPopUp}){
         <WhatsApp/>
         </div>
         <h3 className="text-sky-700 font-medium text-center">{t("Booking directly")}</h3>
-         
-         
+    
          <WhatsAppbyFields/>
 </div>
 </main>
-<footer>
-          <Footer/>
-        </footer>
+
         </>
     )
 }

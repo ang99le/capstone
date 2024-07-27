@@ -1,10 +1,35 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+// import { eventContext } from "../Context/Context";
+// import db from "../firebase"
+// import { useEffect } from "react";
+// import { collection, onSnapshot } from "firebase/firestore";
+// import { useContext, useState } from "react";
+
 
 function ShowDetails ({setPopUp}){
   const {t} = useTranslation();
+
+  // const [events,setEvents]=useState([])
+
+  // const {eventsData} = useContext(eventContext);
+  
+  //     console.log(events)
+  //     useEffect(()=>
+        
+  //      onSnapshot(collection(db,"events cards"),(Snapshot)=>{
+  //         setEvents(Snapshot.docs.map((doc)=> doc.data ()))
+  //       }),
+  //       []
+        
+  //     );
+  
+
+
     return(
+      
     <div className='w-screen h-screen bg-black bg-opacity-30 fixed top-0 right-0 flex justify-center items-center'>
+ 
       <div className='bg-white p-10 rounded-md shadow-md h-[650px]'>
 
       <div class="grid place-items-left">

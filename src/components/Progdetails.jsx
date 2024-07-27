@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import {Carousel} from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import BookNow from "./BookNow";
+
 function Progdetails(){
     const {t} = useTranslation();
+    const [popUp, setPopUp] = useState(false);
     return(
     <div>
     <nav>
@@ -214,9 +218,11 @@ function Progdetails(){
 
 </div>
 
-        <div class="grid place-items-center">
-        <Link to={`/BookNow`}><button className="text-white mb-6 p-2 font-medium text-sm bg-sky-800 rounded-xl px-40 hover:bg-sky-600 " type="submit">{t("Book Now")}</button></Link></div>
-
+<div className="flex justify-center">
+          <button type="submit" onClick={() => setPopUp(true)} class="mb-2 flex w-[300px] justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{t("Book Now")}</button>
+                {popUp && <BookNow setPopUp={setPopUp} />}
+                
+        </div>
         </main>
 
     <footer>

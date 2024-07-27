@@ -2,51 +2,50 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { useState} from 'react';
-// import {useNavigate} from 'react-router-dom';
 import {auth,db} from "../firebase";
 import {createUserWithEmailAndPassword} from "firebase/auth";
 import { setDoc,doc } from "firebase/firestore";
 import { useTranslation } from "react-i18next";
-import Signwithgoogle from "../components/Signwithgoogle"
-// import firebase from "../firebase"
-// import { auth } from "../firebase";
-function Signup() {
+import { useNavigate} from 'react-router-dom';
 
-  // const navigate= useNavigate();
+
+function Signup() {
   const {t} = useTranslation();
+  const navigate=useNavigate();
+  
   const [fname,setFname]=useState('');
   const [lname,setLname]=useState(''); 
   const [email, setEmail]=useState('');
   const [password, setPassword]=useState('');
-
-
+  const [option,setOption]=useState('tourist');
+ 
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      const user = auth.currentUser;
-      console.log(user);
-      window.location.href = "/home";
-      alert("User signed up Successfully");
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await setDoc(doc(db, 'Users', user.uid), {
+        email: user.email,
+        firstName: fname,
+        lastName: lname,
+        userType: option,
+        photo: "",
+      });
 
-      if (user) {
-        await setDoc(doc(db, "Users", user.uid), {
-          email: user.email,
-          firstName: fname,
-          lastName: lname,
-          photo:""
-        });
+      alert("User Registered Successfully!");
+
+      if (option === "tourist") {
+        navigate("/customizeProg");
+      } else {
+        navigate("/guides");
       }
-      
-    
-      alert("User Registered Successfully!!");
     } catch (error) {
-      console.log(error.message);
-    
+      console.error("Error signing up:", error);
     }
   };
 
- 
+
     return (
       <div>
         <header>
@@ -103,11 +102,11 @@ function Signup() {
       <h6 className="text-sky-800 font-medium">{t("Please Enter your type correctly")}</h6>
       <div class="flex items-center mb-4">
       
-    <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 -mt-4 text-white bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+    <input id="default-radio-1" checked={option ==="Guide"} type="radio" value={option} onChange={(e)=>{setOption(e.target.value)}} name="default-radio" class="w-4 h-4 -mt-4 text-white bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
     <label for="default-radio-1" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300 -mt-4">{t("Guide")}</label>
 </div>
 <div class="flex items-center">
-    <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 -mt-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+    <input checked={option ==="tourist"} id="default-radio-2" type="radio" value={option} onChange={(e)=>{setOption(e.target.value)}} name="default-radio" class="w-4 h-4 -mt-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-white dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
     <label for="default-radio-2" class="ms-2 text-sm font-medium text-sky-800 dark:text-gray-300 -mt-4">{t("Tourest")}</label>
 </div>
 
@@ -117,7 +116,7 @@ function Signup() {
 
       {/* <h6 className="text-center text-gray-400 text-xs">--- or continue with google ---</h6>  */}
   
-     <Signwithgoogle/>
+   
       <div class="text-sm">
         <Link to={`/Login`}><a href="/Login" class="font-semibold text-sky-800 hover:text-sky-600">{t("Already have an account")}</a></Link>
        
