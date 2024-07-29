@@ -62,7 +62,7 @@ function Home() {
 <h2 className="text-center text-lg text-yellow-500 font-medium md:text-4xl md:text-left "> {t("Your Guide To See The Beauty Of Iraq")}</h2>
   <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar")}</p>
   <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar1")}</p>
-<Link to={`/Programmes`}><a href="/Programmes" className=""><button className=" bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8"> {t("start the journey")} </button></a>
+<Link to={`/Programmes`}><a href="/Programmes" className=""><button className=" bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8 w-[570px] md:text-xl"> {t("start the journey")} </button></a>
 </Link>
  
 </div>

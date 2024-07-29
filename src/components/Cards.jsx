@@ -8,7 +8,6 @@ const EventCard = () => {
   const { t } = useTranslation();
   const [popUp, setPopUp] = useState(false);
   const [booking, setBooking] = useState(false);
-
   const { eventsData } = useContext(eventContext);
 
   return (
@@ -17,19 +16,19 @@ const EventCard = () => {
         <div
           key={id}
           className="flex flex-col cursor-pointer bg-white py-5 px-10 text-center items-center mt-6 rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] w-full card-item-div max-w-screen-md min-h-[260px]">
-          <img src={card.img} alt="img" className="w-[250px] md:w-[293px] mb-4 flex flex-col cursor-pointer rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] card-item-div max-w-screen-md min-h-[260px]" />
+          <img src={card.img} alt="img" className="w-[250px] md:w-[200px] lg:w-[293px] mb-4 flex flex-col cursor-pointer rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] card-item-div max-w-screen-md min-h-[260px]" />
           <p className="text-[24px] text-sky-800 font-bold uppercase mb-7">
             {t(card.title)}
           </p>
           <p className="text-[15px] text-sky-600 font-medium leading-2 w-full">
-            {t(card.description)}
+            {t('card.description')}
           </p>
           <div className="flex mt-5 gap-3">
             <p className="text-sky-800 text-[15px] font-medium leading-2">
-              {t(card.time)}
+              {t('card.time')}
             </p>
             <p className="text-sky-800 text-[15px] font-medium leading-2">
-              {t(card.date)}
+              {t('card.date')}
             </p>
           </div>
 

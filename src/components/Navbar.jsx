@@ -77,9 +77,13 @@ function Navbar(){
          <Translation/>
         </div>
         {user ? (
+         
               <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>
                 Logout
               </button>
+              
+
+
             ) : (
               <>
                 <Link to={`/Signup`}>
@@ -92,6 +96,7 @@ function Navbar(){
                     {t('Loginpage')}
                   </a>
                 </Link>
+
               </>
             )}
           </div>

@@ -22,6 +22,7 @@ module.exports =  {
     {
       'primary':['Dancing Script'],
       'markazi':['Markazi Text']
+      
     }
    
  
@@ -30,5 +31,3 @@ module.exports =  {
   },
   plugins: [],
 }
-
-

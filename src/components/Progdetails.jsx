@@ -16,32 +16,47 @@ function Progdetails(){
     <Navbar/>
     </nav>
 
-    <main className="font-markazi">
-    <h1 className="text-center text-sky-800 font-medium text-lg md:text-4xl md:mt-10 font-Markazi Text ">{t("Babylon City Tour")}</h1>
-    <h1 className="text-center mt-5 text-2xl font-medium text-yellow-500">{t("price:100 IQD")} </h1>
-     <section className=" mx-auto mt-8">
-       <Carousel autoPlay className="w-[700px] mx-auto">
-
-
-                <div>
-                    <img src="https://th.bing.com/th/id/OIP.YDMCSFNxPkdcdHMMfcg4XgHaE7?rs=1&pid=ImgDetMain" alt="ancient babylon" className="rounded-lg"/>
-                 
-                </div>
-                <div>
-                    <img src="https://th.bing.com/th/id/OIP.-mJ4JbhowA5g7gM4byHihAHaFb?w=500&h=367&rs=1&pid=ImgDetMain" alt="Ishtar Gate"className="rounded-lg " />
-                  
-                </div>
-                <div>
-                    <img src="https://i2.wp.com/etc.ancient.eu/wp-content/uploads/2014/11/Figure-4.jpg" alt="ancints" className="rounded-lg"/>
-              
-                </div>
-               
-            </Carousel>
-</section>
-
-
-
-
+    <main>
+        <div className="flex justify-center gap-20">
+            <section className="mt-20">
+        <div className="w-full md:w-[600px] mx-auto">
+          <Carousel autoPlay className="h-[300px] md:h-[600px]">
+            <div className="w-full h-full">
+              <img
+                src="https://th.bing.com/th/id/OIP.YDMCSFNxPkdcdHMMfcg4XgHaE7?rs=1&pid=ImgDetMain"
+                alt="ancient babylon"
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
+            <div className="w-full h-full">
+              <img
+                src="https://th.bing.com/th/id/OIP.-mJ4JbhowA5g7gM4byHihAHaFb?w=500&h=367&rs=1&pid=ImgDetMain"
+                alt="Ishtar Gate"
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
+            <div className="w-full h-full">
+              <img
+                src="https://i2.wp.com/etc.ancient.eu/wp-content/uploads/2014/11/Figure-4.jpg"
+                alt="ancients"
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </div>
+          </Carousel>
+        </div>
+      </section>
+      
+      <div className="flex flex-col justify-center text-center mb-24">
+         <h1 className=" text-sky-800 font-medium text-lg md:text-4xl md:mt-10">
+        {t("Babylon City Tour")}
+        </h1>
+       <h1 className="mt-5 text-2xl font-medium text-yellow-500">
+        {t("price:100 IQD")}
+        </h1>
+    
+            </div>
+        </div>
+    
     <div class=" p-6 lg:relative text-sky-800 antialiased text-sm font-semibold sm:flex justify-center">
           
           <div class="p-6 relative text-left ">
