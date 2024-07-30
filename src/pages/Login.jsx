@@ -8,8 +8,8 @@ import { useTranslation } from "react-i18next";
 import Signwithgoogle from "../components/Signwithgoogle";
 import { useAuth } from "../Context/Context";
 import { useNavigate,Navigate} from 'react-router-dom';
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
   const { t } = useTranslation();
@@ -17,6 +17,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { currentUser } = useAuth();
+  const notify = () => toast("Logged in Successfully!")
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +25,9 @@ function Login() {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in Successfully");
       navigate("/home");
-      alert("User logged in Successfully");
+
+      
+
     } 
     catch (error) {
       console.log(error.message);
@@ -70,9 +73,11 @@ function Login() {
                   </div>
                 </div>
                 <div>
-                  <button type="submit" className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                  <button type="submit" onClick={notify} className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                     {t("Sign in")}
                   </button>
+                  <ToastContainer/>
+
                 </div>
                 <Signwithgoogle/>
                 <div className="text-sm">

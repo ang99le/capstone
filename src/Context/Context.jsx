@@ -18,6 +18,7 @@ export function useAuth() {
 export function UserProvider({ children }) {
     //events state
   const [eventsData, setEventsData] = useState([]);
+  
   //programmes State
   const [programmesData, setProgrammesData] = useState([]);
 
@@ -45,6 +46,8 @@ export function UserProvider({ children }) {
 
     fetchEvents();
   }, []);
+
+
 
   //fetching programmes array
   useEffect(() => {

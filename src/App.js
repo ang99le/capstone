@@ -13,7 +13,7 @@ import BookNow from './components/BookNow';
 import {BrowserRouter,Routes, Route} from "react-router-dom";
 import Akkad from './components/Civilization/Akkad';
 import Guides from './components/Guides';
-import { AddEvents } from './components/AddingEvents';
+import { AddingEvents } from './components/AddingEvents';
 import { UserProvider } from './Context/Context';
 import ProtectedRoute from './components/Protected';
 
@@ -39,7 +39,7 @@ function App() {
       <Route path='/Progdetails' element={<Progdetails/>}></Route>
       <Route path='/BookNow' element={<BookNow/>}></Route>
       <Route path='/Akkad' element={<Akkad/>}></Route>
-      <Route path='/AddEvents' element={<AddEvents/>}></Route>
+      <Route path='/AddingEvents' element={<AddingEvents/>}></Route>
       {/* ptotected routing */}
 
       <Route path='/CustomizeProg' element={<ProtectedRoute><CustomizeProg/></ProtectedRoute>}></Route>

@@ -7,10 +7,14 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Signup() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const notify = () => toast("User Registered Successfully!")
 
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
@@ -30,7 +34,7 @@ function Signup() {
         photo: "",
       });
 
-      alert("User Registered Successfully!");
+     
 
       if (option === "tourist") {
         navigate("/customizeProg");
@@ -113,7 +117,9 @@ function Signup() {
                   </div>
 
                   <div>
-                    <button type="submit" className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">{t("SignUp")}</button>
+                    <button type="submit" onClick={notify} className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">{t("SignUp")}</button>
+                    <ToastContainer />
+                  
                   </div>
 
                   <div className="text-sm">

@@ -2,11 +2,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import EventCard from "../components/Cards";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 
 function Events (){
-  const navigate = useNavigate();
+
   const {t} = useTranslation();
 
     return (
@@ -30,11 +30,13 @@ function Events (){
           <EventCard/>
         
           <div>
-          <button type="submit" className="text-sky-800 font-medium flex gap-2 justify-center mt-72 rounded-xl p-2 bg-sky-100 ml-40 hover:bg-sky-200">
-         
+            <Link to={`/AddingEvents`}>
+            <button type="submit" className="text-sky-800 font-medium flex gap-2 justify-center ml-20 md:mt-72 rounded-xl p-2 bg-sky-100 md:ml-40 hover:bg-sky-200">
           <p>Adding Event</p>
           <img src="https://media3.giphy.com/media/JtGqXH8ATDQRwSeHCq/giphy.gif?cid=6c09b952aktbq3qkl3m9fq74ehet2v946fdckei6ag6poavc&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="arrow" className="w-[50px] -mt-1"></img>
           </button>
+            </Link>
+        
           </div>
      
         </div>
