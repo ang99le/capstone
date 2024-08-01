@@ -1,62 +1,27 @@
 import { Link} from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState,useContext } from "react";
+import { useState,useContext,useEffect } from "react";
 import BookNow from "./BookNow";
 import { programmesContext } from "../Context/Context";
-
+import Loading from "./Loading";
 
 const ProgCards= ()=>{
   const {t} = useTranslation();
   const [popUp, setPopUp] = useState(false);
-
   const { programmesData } = useContext(programmesContext);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3300);
+  }, []);
 
-
-  //    const Cards=[
-  //   {
-        
-  //       title:"The Old Babylon City",
-  //       description:"1 day trip to Babylon including food and guide ",
-  //       price:"100 IQD",
-  //       Rate:"4.5"
-  //   },
-  //   {
-        
-  //       title:"The Old Babylon City",
-  //       description:"1 day trip to Babylon including food and guide ",
-  //       price:"100 IQD",
-  //       Rate:"4.5"
-  //   },
-  //   {
-        
-  //       title:"The Old Babylon City",
-  //       description:"1 day trip to Babylon including food and guide ",
-  //       price:"100 IQD",
-  //       Rate:"4.5"
-  //   },
-  //   {
-      
-  //     title:"The Old Babylon City",
-  //     description:"1 day trip to Babylon including food and guide ",
-  //     price:"100 IQD",
-  //     Rate:"4.5"
-  // },
-  // {
-    
-  //   title:"The Old Babylon City",
-  //   description:"1 day trip to Babylon including food and guide ",
-  //   price:"100 IQD",
-  //   Rate:"4.5"
-  // },
-  // {
-    
-  //   title:"The Old Babylon City",
-  //   description:"1 day trip to Babylon including food and guide ",
-  //   price:"100 IQD",
-  //   Rate:"4.5"
-  // },
-  // ]
+  if (loading) {
+    return (
+      <div className="flex w-screen justify-center items-center">
+        <Loading />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -96,7 +61,7 @@ const ProgCards= ()=>{
         <div className="flex gap-4 pt-3">
           <Link to={`/Progdetails`}><button  className="text-white  font-medium text-sm bg-sky-800 p-2 rounded-lg hover:bg-sky-600 " type="submit">{t("Show Details")}</button></Link>
           <button type="submit" onClick={() => setPopUp(true)} class="mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{t("Book Now")}</button>
-                {popUp && <BookNow setPopUp={setPopUp} />}
+            {popUp && <BookNow setPopUp={setPopUp} />}
                 
         </div>
       

@@ -43,7 +43,7 @@ function Login() {
       <nav>
         <Navbar />
       </nav>
-      <main>  
+      <main >   
         <div className="flex min-h-full flex-col justify-center items-center w-[100%] h-[100vh] px-4 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-sky-800">
@@ -52,7 +52,7 @@ function Login() {
           </div>
           <div className="flex gap-[4rem]">
             <img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26673.jpg" className="hidden md:block w-[580px] -ml-28" alt="sumerian people"/>
-            <div className="mt-40 sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className="mt-10 mb-24 md:mt-40 sm:mx-auto sm:w-full sm:max-w-sm">
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium leading-6 text-sky-800">

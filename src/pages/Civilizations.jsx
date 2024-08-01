@@ -7,16 +7,26 @@ import sanhareeb from "../assests/sanhareeb.png"
 import NebuchadnezzarII from "../assests/NebuchadnezzarII.png"
 import { Tooltip } from "react-tooltip";
 import ScrollUpButton from "../components/Scrollup";
+import { useState,useRef } from "react";
+import sarjonvoice from "../assests/sarjonvoice.mp3";
+
 
 
 function Civilization() {
+  const [isTalking, setIsTalking] = useState(false);
+  const audioRef = useRef(null);
 
+  const handleButtonClick = () => {
+    setIsTalking(!isTalking);
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
     return (
      
       <div className="App">
-    
+
          <header>
-          
           <nav>
           <Navbar/>
           </nav>
@@ -57,7 +67,8 @@ function Civilization() {
         
         {/* larg screen UI Design */}
            <section>
-         
+             {/* <div className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]">
+             <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
           <div class="hidden md:block l:block lg:block min-h-screen py-6  flex-col justify-center">
           <div class="lg:py-3 w-full px-2 ">
           <div class="lg:relative text-sky-800 antialiased text-sm font-semibold">
@@ -81,19 +92,36 @@ function Civilization() {
             </div>
           </div>
 
-
-
-<img alt="Sargon" id="sargon" className="lg:rounded-full border-white border-5 w-40 h-24 absolute left-1/2 -translate-y-4 sm:-translate-y-16 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
+<div>
+<button onClick={handleButtonClick}>
+<img alt="Sargon" id="sargon" className="lg:rounded-full border-white border-5 w-40 h-25 absolute left-1/2 -translate-y-4 sm:-translate-y-28 transform -translate-x-1/2 flex items-center justify-center" src={sarjon}></img>
    <Tooltip anchorSelect="#sargon">
     Sargon The Greatest
   </Tooltip> 
-         
+  </button> 
+  <audio ref={audioRef} src={sarjonvoice} />
+</div>
+      
+
         </div>
-        <div className="text-center ml-60 -translate-y-72">
+        {/* <div className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]">
+          <div class=" h-full w-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
+     
+      
+       <div className="text-center ml-60 -translate-y-80">
         <h4 > The Akaddian civilization</h4>
          <h6>(2334 -2047 BCE)</h6>
          </div>
+     
+       
+     
+      
+
+
       </div>
+
+
+
 
       <ScrollUpButton/>
       
@@ -109,8 +137,15 @@ function Civilization() {
             </div>
           </div>
   
-          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-10 h-10 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
-          <img src={sanhareeb} alt="sanhareeb"></img>
+
+          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          <img id="sanhareeb" src={sanhareeb} alt="sanhareeb"></img>
+          <Tooltip anchorSelect="#sanhareeb">
+          Sanhareeb
+          </Tooltip> 
+         
+         
+         
           </div>
         </div>
 
@@ -132,8 +167,13 @@ function Civilization() {
               </div>
             </div>
           </div>
-          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-10 h-10 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
-          <img src={gigamesh} alt="Gilgamesh"></img>
+          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          <img id="gilgamesh" src={gigamesh} alt="Gilgamesh"></img>
+          <Tooltip anchorSelect="#gilgamesh">
+          Gilgamish
+        </Tooltip> 
+         
+        
           </div>
         </div>
         <div className="text-center ml-60 -translate-y-52">
@@ -154,8 +194,11 @@ function Civilization() {
               </div>
             </div>
           </div>
-          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-10 h-10 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
-          <img src={NebuchadnezzarII} alt="NebuchadnezzarII"></img>
+          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          <img id="NebuchadnezzarI" src={NebuchadnezzarII} alt="NebuchadnezzarII"></img>
+          <Tooltip anchorSelect="#NebuchadnezzarI">
+          NebuchadnezzarI
+        </Tooltip> 
          </div>
         </div>
 

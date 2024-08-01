@@ -14,7 +14,7 @@ function Programmes() {
           <Navbar/>
           </nav>
         </header>
-       <main >
+       <main className="">
 
        <div className="flex justify-center mb-6">
   <h1 className="text-2xl font-medium text-sky-800 mt-9 md:text-5xl">{t("Where To Go In")} </h1>

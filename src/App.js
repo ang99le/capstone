@@ -16,11 +16,11 @@ import Guides from './components/Guides';
 import { AddingEvents } from './components/AddingEvents';
 import { UserProvider } from './Context/Context';
 import ProtectedRoute from './components/Protected';
+import Loading from './components/Loading';
+
+
 
 function App() {
- 
-  // const isLoggedIn = window.localStorage.getItem("loggedIn"); // Check if logged in
-  // const userType = window.localStorage.getItem("userType");
 
   return (
     <div className="App">
@@ -39,11 +39,17 @@ function App() {
       <Route path='/Progdetails' element={<Progdetails/>}></Route>
       <Route path='/BookNow' element={<BookNow/>}></Route>
       <Route path='/Akkad' element={<Akkad/>}></Route>
-      <Route path='/AddingEvents' element={<AddingEvents/>}></Route>
+      {/* <Route path='/AddingEvents' element={<AddingEvents/>}></Route> */}
+      <Route path='/Loading' element={<Loading/>}></Route>
       {/* ptotected routing */}
 
       <Route path='/CustomizeProg' element={<ProtectedRoute><CustomizeProg/></ProtectedRoute>}></Route>
       <Route path='/Guides' element={<ProtectedRoute><Guides/></ProtectedRoute>}></Route>
+      <Route path='/AddingEvents' element={<ProtectedRoute><AddingEvents/></ProtectedRoute>}></Route>
+
+
+
+      {/* <Route path='/BookNow' element={<ProtectedRoute><BookNow/></ProtectedRoute>}></Route> */}
       {/* <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} /> */}
 
       </Routes>

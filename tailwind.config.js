@@ -23,9 +23,12 @@ module.exports =  {
       'primary':['Dancing Script'],
       'markazi':['Markazi Text']
       
-    }
+    },
    
- 
+  animation:{
+  spin:'spin 5s linear',
+
+ },
   },
     
   },

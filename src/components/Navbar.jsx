@@ -10,8 +10,9 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
   const [user, setUser] = useState(null);
-  const notify = () => toast("Logged out Successfully!");
+  const loggedout = () => toast("Logged out Successfully!");
 
+  
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -24,11 +25,13 @@ function Navbar() {
     return () => unsubscribe();
   }, []);
 
+
+
   const handleLogout = async () => {
     try {
       await auth.signOut();
       window.location.href = "/login";
-      notify();
+      loggedout();
 
     } catch (error) {
       console.error("Logout error: ", error);
@@ -81,12 +84,7 @@ function Navbar() {
             </div>
             {user ? (
               <>
-                <button
-                  className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </button>
+                <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>Logout</button>
                 <ToastContainer />
               </>
             ) : (

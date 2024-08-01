@@ -4,6 +4,7 @@ import WhatsAppbyFields from "./WhatsappbyFields";
 
 function BookNow({setPopUp}){
   const {t} = useTranslation();
+
     return(
         <>
   
@@ -18,7 +19,6 @@ function BookNow({setPopUp}){
         <WhatsApp/>
         </div>
         <h3 className="text-sky-700 font-medium text-center">{t("Booking directly")}</h3>
-    
          <WhatsAppbyFields/>
 </div>
 </main>

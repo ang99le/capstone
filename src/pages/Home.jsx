@@ -7,19 +7,26 @@ import {Tooltip} from "react-tooltip";
 import { useTranslation } from "react-i18next";
 import ScrollUpButton from "../components/Scrollup";
 import { Link } from "react-router-dom";
+import {useRef,useState } from "react";
+import motion from "../assests/motion.mp3";
+
+
 
 function Home() {
   const {t} = useTranslation();
-// const top= () => {
-// window.scrollTo(0,0)
-// }
-  
-  
+  const [isTalking, setIsTalking] = useState(false);
+  const audioRef = useRef(null);
+
+  const handleButtonClick = () => {
+    setIsTalking(!isTalking);
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
+
   useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
         if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/firebase.User
           const uid = user.uid;
           // ...
           console.log("uid", uid)
@@ -46,8 +53,8 @@ function Home() {
 
 <main className="font-markazi">
   <section className="section1">
-{/* <section className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]"> */}
-{/* <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
+{/* <section className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]">
+<div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
 <div className=" p-6 -mt-14 ">
 <div className="pt-16 text-3xl md:text-5xl text-center md:pt-20">
   {/* <img className="absolute ml-80  blur-sm w-[500px] -z-20" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png" alt="sumeria" /> */}
@@ -69,8 +76,9 @@ function Home() {
 
 <div>
 
-<button id="notclickable">
-<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50" alt="sumerian calender"/>
+<button id="notclickable" onClick={handleButtonClick}>
+<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className={`hidden md:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50 ${isTalking ? 'animate-spin' : ''}`} alt="sumerian calender"/>
+<audio ref={audioRef} src={motion} />
 {/* <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[430px] md:h-[430px] rounded-full   ml-5 w-1/5 absolute top-1/3 right 1/4 place-items-center drop-shadow-2xl" alt="sumerian calender"/> */}
   </button>
 <Tooltip anchorSelect="#notclickable">
@@ -82,6 +90,9 @@ function Home() {
 </div>
 
 </div>
+
+
+{/* </div> */}
 </section>
 <section className="section2">
 <div className="bg-sky-800 mt-6 md:h-[13rem] md:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md md:mt-40">
