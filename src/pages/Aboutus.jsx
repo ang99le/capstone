@@ -1,17 +1,34 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import aboutus from "../assests/aboutus.jpg";
+// import aboutus from "../assests/aboutus.jpg";
+import { MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+
 function AboutUs(){
+    const location = [33.26580, 44.36342]
     return(
         <>
         <header>
         <nav>
         <Navbar/>
         </nav>
-        <h1 className="font-bold ...  -mb-2  text-center sm:text-left  sm:ml-11 sm:mb-3 text-xl text-sky-800">About Us</h1>
+        {/* <h1 className="font-bold ...  -mb-2  text-center sm:text-left  sm:ml-11 sm:mb-3 text-xl text-sky-800">About Us</h1> */}
         </header>
-       <main>
-       <p className="text-justify ...  p-5 -mb-2 sm:text-left sm:ml-11 text-sky-700 sm:mb-4">
+       <main className="flex justify-center">
+
+       <MapContainer center={location} zoom={13} scrollWheelZoom={false}>
+    <TileLayer
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
+    <Marker position={location}>
+      <Popup>
+      the event locattion
+      </Popup>
+    </Marker>
+  </MapContainer>
+  
+
+       {/* <p className="text-justify ...  p-5 -mb-2 sm:text-left sm:ml-11 text-sky-700 sm:mb-4">
         We are an Iraqi web application  who wants to show the
         world how beautiful Iraq is and to let them explore the
         the history of our country and give them the chance to 
@@ -28,7 +45,7 @@ function AboutUs(){
    <h5 className="text-center  sm:text-left sm:ml-11 text-l text-sky-700 mb-4 ">
     Based in Baghdad Iraq <br/>
     Civilizations@gmail.com
-    </h5>
+    </h5> */}
     </main> 
        
 
