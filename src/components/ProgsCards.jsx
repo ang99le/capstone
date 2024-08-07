@@ -5,6 +5,7 @@ import BookNow from "./BookNow";
 import { programmesContext } from "../Context/Context";
 import Loading from "./Loading";
 
+
 const ProgCards= ()=>{
   const {t} = useTranslation();
   const [popUp, setPopUp] = useState(false);
@@ -22,6 +23,12 @@ const ProgCards= ()=>{
       </div>
     );
   }
+
+    
+  // const handleShowDetails = (programme) => {
+  //   setSelectedprogramme(programme);
+  //   setPopUp(true);
+  // };
 
   return (
     <>
@@ -58,8 +65,23 @@ const ProgCards= ()=>{
 					<span class="font-normal text-sky-600 text-base">{t("/day")}</span>
 				</p> 
 
+
+{/* 
+        <div className="md:flex gap-3 mt-3">
+            <button type="button" onClick={() => handleShowDetails(event)} className="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >{t("Show Details")} </button>
+            <button type="submit" onClick={() => setBooking(true)} className="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
+          </div>
+        </div>
+      ))}
+      {popUp && <ShowDetails event={selectedEvent} setPopUp={setPopUp} />}
+      {booking && <EventDetails setBooking={setBooking} />} */}
+
+
+
+
         <div className="flex gap-4 pt-3">
           <Link to={`/Progdetails`}><button  className="text-white  font-medium text-sm bg-sky-800 p-2 rounded-lg hover:bg-sky-600 " type="submit">{t("Show Details")}</button></Link>
+        
           <button type="submit" onClick={() => setPopUp(true)} class="mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{t("Book Now")}</button>
             {popUp && <BookNow setPopUp={setPopUp} />}
                 

@@ -35,10 +35,10 @@ const EventCard = () => {
   }, []);
 
 
-
-
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
+    setTimeout(() => 
+    setLoading(false), 2000);
+    
   }, []);
 
   if (loading) {
@@ -48,8 +48,6 @@ const EventCard = () => {
       </div>
     );
   }
-
-
 
   
   const handleShowDetails = (event) => {
@@ -63,8 +61,9 @@ const EventCard = () => {
       const eventDoc = doc(db, "events", event.id);
       await updateDoc(eventDoc, { title: updatedTitle });
       updated();
-    
+      
     }
+    
   };
 
   const handleDelete = async (event) => {
@@ -91,7 +90,6 @@ const EventCard = () => {
           <button type="button" onClick={() => handleUpdate(event)} className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"><img src="https://www.wintrust.com/content/dam/wintrust/component-imagery/product-icons/adjustablemortgages.png" alt="edit"></img></button>
           <ToastContainer />
           </div>
-          
               </>
             ) : (
               <>
@@ -123,6 +121,9 @@ const EventCard = () => {
       ))}
       {popUp && <ShowDetails event={selectedEvent} setPopUp={setPopUp} />}
       {booking && <EventDetails setBooking={setBooking} />}
+
+
+      
     </>
   );
 };

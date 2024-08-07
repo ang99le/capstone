@@ -37,7 +37,7 @@ function App() {
       <Route path='/Signup' element={<Signup/>}></Route>
       <Route path='/AboutUs' element={<AboutUs/>}></Route>
       <Route path='/Progdetails' element={<Progdetails/>}></Route>
-      <Route path='/BookNow' element={<BookNow/>}></Route>
+      {/* <Route path='/BookNow' element={<BookNow/>}></Route> */}
       <Route path='/Akkad' element={<Akkad/>}></Route>
       {/* <Route path='/AddingEvents' element={<AddingEvents/>}></Route> */}
       <Route path='/Loading' element={<Loading/>}></Route>
@@ -46,7 +46,7 @@ function App() {
       <Route path='/CustomizeProg' element={<ProtectedRoute><CustomizeProg/></ProtectedRoute>}></Route>
       <Route path='/Guides' element={<ProtectedRoute><Guides/></ProtectedRoute>}></Route>
       <Route path='/AddingEvents' element={<ProtectedRoute><AddingEvents/></ProtectedRoute>}></Route>
-
+      <Route path='/BookNow' element={<ProtectedRoute><BookNow/></ProtectedRoute>}></Route>
 
 
       {/* <Route path='/BookNow' element={<ProtectedRoute><BookNow/></ProtectedRoute>}></Route> */}

@@ -8,8 +8,7 @@ import { useTranslation } from "react-i18next";
 import ScrollUpButton from "../components/Scrollup";
 import { Link } from "react-router-dom";
 import {useRef,useState } from "react";
-import motion from "../assests/motion.mp3";
-
+import motion1 from "../assests/motion1.mp3";
 
 
 function Home() {
@@ -69,7 +68,7 @@ function Home() {
 <h2 className="text-center text-lg text-yellow-500 font-medium md:text-4xl md:text-left "> {t("Your Guide To See The Beauty Of Iraq")}</h2>
   <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar")}</p>
   <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar1")}</p>
-<Link to={`/Programmes`}><a href="/Programmes" className=""><button className=" bg-yellow-500 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8 w-[570px] md:text-xl"> {t("start the journey")} </button></a>
+<Link to={`/Programmes`}><a href="/Programmes" className="flex justify-center"><button className=" bg-yellow-500 w-[300px] mt-4 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8 md:w-[570px] md:text-xl"> {t("start the journey")} </button></a>
 </Link>
  
 </div>
@@ -78,7 +77,7 @@ function Home() {
 
 <button id="notclickable" onClick={handleButtonClick}>
 <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className={`hidden md:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50 ${isTalking ? 'animate-spin' : ''}`} alt="sumerian calender"/>
-<audio ref={audioRef} src={motion} />
+<audio ref={audioRef} src={motion1} />
 {/* <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[430px] md:h-[430px] rounded-full   ml-5 w-1/5 absolute top-1/3 right 1/4 place-items-center drop-shadow-2xl" alt="sumerian calender"/> */}
   </button>
 <Tooltip anchorSelect="#notclickable">
