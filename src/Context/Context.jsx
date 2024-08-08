@@ -55,13 +55,12 @@ export function UserProvider({ children }) {
       try {
         const programmesCollectionRef = collection(db, 'programmes');
         const querySnapshot = await getDocs(programmesCollectionRef);
-
-        const programmes = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
+        const programmesList = querySnapshot.docs.map((doc) => ({
+          id: doc.id,...doc.data(),
+         
         }));
 
-        setProgrammesData(programmes);
+        setProgrammesData(programmesList);
       } catch (error) {
         console.error('Error fetching programmes:', error);
       }

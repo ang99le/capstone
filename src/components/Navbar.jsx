@@ -7,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Navbar() {
+  
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
   const [user, setUser] = useState(null);

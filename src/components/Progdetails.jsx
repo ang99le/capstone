@@ -4,18 +4,47 @@ import Navbar from "./Navbar";
 import {Carousel} from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import BookNow from "./BookNow";
+import { db } from '../firebase'; // Make sure this path is correct
+import { doc, getDoc } from 'firebase/firestore';
+import { useParams } from 'react-router-dom';
 
-function Progdetails(){
+// import { useLocation } from "react-router-dom"; 
+
+function Progdetails({card}){
     const {t} = useTranslation();
     const [popUp, setPopUp] = useState(false);
+
+    const { programmeId } = useParams();
+  const [programmeDetails, setProgrammeDetails] = useState(null);
+
+  useEffect(() => {
+    const fetchProgrammeDetails = async () => {
+      if (programmeId) {
+        const programmeDoc = doc(db, 'programmes', programmeId);
+        const programmeSnapshot = await getDoc(programmeDoc);
+
+        if (programmeSnapshot.exists()) {
+          setProgrammeDetails(programmeSnapshot.data());
+        } else {
+          console.log('No such document!');
+        }
+      }
+    };
+
+    fetchProgrammeDetails();
+  }, [programmeId]);
+
+  if (!programmeDetails) {
+    return <div>Loading...</div>;
+  }
+
     return(
     <div>
     <nav>
     <Navbar/>
     </nav>
-
     <main>
         <div className="flex justify-center gap-20">
             <section className="mt-20">
@@ -57,10 +86,10 @@ function Progdetails(){
             </div>
         </div>
     
+<h3 className="text-center text-yellow-500 font-medium text-2xl">your trip timeline</h3>
+
     <div class=" p-6 lg:relative text-sky-800 antialiased text-sm font-semibold sm:flex justify-center">
-          
           <div class="p-6 relative text-left ">
-             
           <div class="flex items-center">
                  <div class="hidden md:block w-20">
                      <div class="font-bold italic text-yellow-500">Step-1</div>
@@ -75,23 +104,25 @@ function Progdetails(){
                  <div class=" w-10 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-12 mb-16">
        <img src="https://www.clipartmax.com/png/full/30-305711_people-icon-blue-png.png" alt="car"></img>
        </div>
-
+   
                  <div class="ml-10">
                      <div class="mb-4 mt-2 md:hidden">
                          <div class="font-bold text-yellow-500">step-1</div>
                          <div class="text-xs text-yellow-500">9:00 AM</div>
                      </div>
+                
                      <div class="mb-3 md:mb-20">
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>                        
-                     </div>                    </div>
-             </div>
+                     <p className="text-sky-800">
+                     {programmeDetails.details.step1}
+                        </p></div></div>
+                     </div>
 
 
              <div class="flex items-center">
                  <div class="hidden md:block w-20">
                      <div class="font-bold italic text-yellow-500">Step-2</div>
                      <div class="md:flex mb-16 space-x-1 text-xs text-yellow-500">
-                         <div>9:00 AM</div>
+                         <div>10:30 AM</div>
                       
                      </div>                        
                  </div>
@@ -105,11 +136,11 @@ function Progdetails(){
                  <div class="ml-10">
                      <div class="mb-4 mt-2 md:hidden">
                          <div class="font-bold text-yellow-500">step-2</div>
-                         <div class="text-xs text-yellow-500">9:00 AM</div>
+                         <div class="text-xs text-yellow-500">10:30 AM</div>
                      </div>
                      <div class="mb-3 md:mb-20 ">
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>                        
-                     </div>                    </div>
+                     <p>{programmeDetails.details.step2}</p>                        
+                     </div></div>
              </div>
 
            
@@ -117,7 +148,7 @@ function Progdetails(){
                  <div class="hidden md:block w-20">
                      <div class="font-bold italic text-yellow-500">Step-3</div>
                      <div class="md:flex mb-16 space-x-1 text-xs text-yellow-500">
-                         <div>9:00 AM</div>
+                         <div>10:35 AM</div>
                       
                      </div>                        
                  </div>
@@ -131,10 +162,10 @@ function Progdetails(){
                  <div class="ml-10">
                      <div class="mb-4 mt-2 md:hidden">
                          <div class="font-bold text-yellow-500">step-3</div>
-                         <div class="text-xs text-yellow-500">9:00 AM</div>
+                         <div class="text-xs text-yellow-500">10:35 AM</div>
                      </div>
-                     <div class="mb-3 md:mb-20">
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>                        
+                     <div class="mb-3 md:mb-20 w-[450px] break-words...">
+                     <p>{programmeDetails.details.step3}</p>                        
                      </div>                    </div>
              </div>
 
@@ -143,7 +174,7 @@ function Progdetails(){
                  <div class="hidden md:block w-20">
                      <div class="font-bold italic text-yellow-500">Step-4</div>
                      <div class="md:flex mb-16 space-x-1 text-xs text-yellow-500">
-                         <div>9:00 AM</div>
+                         <div>1:00 PM</div>
                       
                      </div>                        
                  </div>
@@ -157,10 +188,10 @@ function Progdetails(){
                  <div class="ml-10">
                      <div class="mb-4 mt-2 md:hidden">
                          <div class="font-bold text-yellow-500">step-4</div>
-                         <div class="text-xs text-yellow-500">9:00 AM</div>
+                         <div class="text-xs text-yellow-500">1:00 PM</div>
                      </div>
                      <div class="mb-3 md:mb-20">
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>                        
+                     <p>{programmeDetails.details.step4}</p>                        
                      </div>                    </div>
              </div>
 
@@ -169,7 +200,7 @@ function Progdetails(){
                  <div class="hidden md:block w-20">
                      <div class="font-bold italic text-yellow-500">Step-5</div>
                      <div class="md:flex mb-16 space-x-1 text-xs text-yellow-500">
-                         <div>9:00 AM</div>
+                         <div>2:00 PM</div>
                       
                      </div>                        
                  </div>
@@ -183,10 +214,10 @@ function Progdetails(){
                  <div class="ml-10">
                      <div class="mb-4 mt-2 md:hidden">
                          <div class="font-bold text-yellow-500">step-5</div>
-                         <div class="text-xs text-yellow-500">9:00 AM</div>
+                         <div class="text-xs text-yellow-500">2:00 PM</div>
                      </div>
                      <div class="mb-3 md:mb-20">
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>                        
+                     <p>{programmeDetails.details.step5}</p>                        
                      </div>                    </div>
              </div>
 
@@ -196,7 +227,7 @@ function Progdetails(){
                  <div class="hidden md:block w-20">
                      <div class="font-bold italic text-yellow-500">Step-6</div>
                      <div class="md:flex mb-16 space-x-1 text-xs text-yellow-500">
-                         <div>9:00 AM</div>
+                         <div>3:00 PM</div>
                       
                      </div>                        
                  </div>
@@ -210,10 +241,10 @@ function Progdetails(){
                  <div class="ml-10">
                      <div class="mb-4 mt-2 md:hidden">
                          <div class="font-bold text-yellow-500">step-6</div>
-                         <div class="text-xs text-yellow-500">9:00 AM</div>
+                         <div class="text-xs text-yellow-500">3:00 PM</div>
                      </div>
                      <div class="mb-3 md:mb-20">
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, amet!</p>                        
+                     <p>{programmeDetails.details.step6}</p>                        
                      </div> 
                     </div>
              </div>

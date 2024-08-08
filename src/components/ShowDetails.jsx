@@ -20,12 +20,14 @@ function ShowDetails ({event,setPopUp}){
        <h1 className=' text-sky-900 font-bold text-center text-2xl my-4'>{t(event.title)}</h1>
     
        <img className="w-[160px] rounded-xl mx-auto mb-3" src={event.img} alt="pic"></img>
-     
-      
-       <p className="text-sky-800 text-sm">{t("eventsL1")}</p>
+     <div className="flex justify-center">
+     <p className="text-sky-800 text-sm w-80 break-words text-justify">{event.details}. </p>
+     </div>
+    
+       {/* <p className="text-sky-800 text-sm">{t("eventsL1")}</p>
        <p className="text-sky-800 text-sm">{t("eventsL2")}</p> 
        <p className="text-sky-800 text-sm">{t("eventsL3")}</p>
-       <p className="text-sky-800 text-sm">{t("tickets now")}</p>
+       <p className="text-sky-800 text-sm">{t("tickets now")}</p> */}
           
      
         <div className="flex mt-2 gap-3 md:mt-5 justify-center items-center h-18 text-sm">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import { db, storage } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Navbar from "./Navbar";
@@ -15,8 +15,9 @@ export function AddingEvents() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [uploading, setUploading] = useState(false);
-
   const added = () => toast.success("Event added successfully!");
+
+
   const handleChange = (e) => {
     setFile(e.target.files[0]);
   };
@@ -80,6 +81,7 @@ export function AddingEvents() {
 
     setUploading(false);
   };
+
 
   return (
     <div>

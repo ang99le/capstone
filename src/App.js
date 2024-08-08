@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Civilizations from './pages/Civilizations';
 import Programmes from './pages/Programmes';
-import Login from './pages/Login';
+import { Login } from './pages/Login';
 import Signup from './pages/Signup';
 import AboutUs from './pages/Aboutus';
 import Progdetails from './components/Progdetails';
@@ -33,25 +33,31 @@ function App() {
       <Route path='/Events' element={<Events />}></Route>
       <Route path='/EventDetails/:id' element={<EventsDetails />}></Route>
       <Route path='/Programmes' element={<Programmes/>}></Route>      
-      <Route path='Login' element={<Login/>}></Route>
+      <Route path='/Login' element={<Login/>}></Route>
+      {/* <Route path='/Login'element={<Login/>}></Route> */}
       <Route path='/Signup' element={<Signup/>}></Route>
       <Route path='/AboutUs' element={<AboutUs/>}></Route>
       <Route path='/Progdetails' element={<Progdetails/>}></Route>
-      {/* <Route path='/BookNow' element={<BookNow/>}></Route> */}
+      <Route path='/BookNow' element={<BookNow/>}></Route>
       <Route path='/Akkad' element={<Akkad/>}></Route>
+      <Route path="/programme/:programmeId" element={<Progdetails />} />
       {/* <Route path='/AddingEvents' element={<AddingEvents/>}></Route> */}
       <Route path='/Loading' element={<Loading/>}></Route>
+      
       {/* ptotected routing */}
-
-      <Route path='/CustomizeProg' element={<ProtectedRoute><CustomizeProg/></ProtectedRoute>}></Route>
-      <Route path='/Guides' element={<ProtectedRoute><Guides/></ProtectedRoute>}></Route>
-      <Route path='/AddingEvents' element={<ProtectedRoute><AddingEvents/></ProtectedRoute>}></Route>
-      <Route path='/BookNow' element={<ProtectedRoute><BookNow/></ProtectedRoute>}></Route>
-
-
-      {/* <Route path='/BookNow' element={<ProtectedRoute><BookNow/></ProtectedRoute>}></Route> */}
-      {/* <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} /> */}
-
+      <Route
+          path="/customizeProg"
+          element={<ProtectedRoute component={CustomizeProg} allowedRoles={['tourist']} />}
+        />
+        <Route
+          path="/guides"
+          element={<ProtectedRoute component={Guides} allowedRoles={['guide']} />}
+        />
+        <Route
+          path="/Addingevents"
+          element={<ProtectedRoute component={AddingEvents} allowedRoles={['admin']} />}
+        />
+    
       </Routes>
       </BrowserRouter>
       </UserProvider>
