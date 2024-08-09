@@ -28,11 +28,6 @@ const ProgCards= ()=>{
   const handleCardClick = (programmeId) => {
     navigate(`/programme/${programmeId}`);
   };
-  // const handleShowDetails = (programmesData) => {
-  //   setSelectedTour(programmesData);
-  //   setPopUp(true);
-  // };
-
 
   return (
     <>
@@ -89,9 +84,8 @@ const ProgCards= ()=>{
 				</p> 
 
         <div className="flex gap-4 pt-3">
-       <Link to="/Progdetails"> <button type="button" className="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >{t("Show Details")} </button>
+       <Link to={`/programme/${card.id}`}> <button type="button" className="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" >{t("Show Details")} </button>
        </Link> 
-
 
           <button type="submit" onClick={() => setPopUp(true)} class="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{t("Book Now")}</button>
             {popUp && <BookNow setPopUp={setPopUp} />}

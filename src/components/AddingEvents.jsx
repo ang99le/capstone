@@ -15,8 +15,7 @@ export function AddingEvents() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [uploading, setUploading] = useState(false);
-  const added = () => toast.success("Event added successfully👏!");
-
+  const added = () => toast.info("Event added successfully👏!");
 
   const handleChange = (e) => {
     setFile(e.target.files[0]);
@@ -25,6 +24,7 @@ export function AddingEvents() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setUploading(true);
+   
 
     if (file) {
       const storageRef = ref(storage, `events/${file.name}`);
@@ -67,7 +67,7 @@ export function AddingEvents() {
 
      
       console.log("Document written with ID: ", docRef.id);
-      added();
+       added();
       // Reset form
       setTitle("");
       setDescription("");
@@ -78,7 +78,7 @@ export function AddingEvents() {
       console.error("Error adding document: ", e);
       // toast.error("Error adding document!");
     }
-
+  
     setUploading(false);
   };
 
@@ -96,10 +96,13 @@ export function AddingEvents() {
               <img className="hidden md:block w-[600px] rounded-2xl mb-40" src={horses} alt="sumerian woman" />
               <div className="p-8 sm:w-full sm:max-w-sm z-50 mt-10">
                 <form className="space-y-2" onSubmit={handleSubmit}>
+  
                   <div>
+                    
                     <label htmlFor="title" className="w-[250px] block text-sm font-medium leading-6 text-sky-800">Event Title</label>
                     <div className="mt-2">
-                      <input id="title" name="title" type="text" required value={title} onChange={(e) => setTitle(e.target.value)} className="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
+                      <input id="title" name="title" type="text" required value={title} onChange={(e) => setTitle(e.target.value)} className="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                 
                     </div>
                   </div>
 
@@ -125,18 +128,20 @@ export function AddingEvents() {
                   </div>
 
                   <h2 className="text-sky-800 text-sm font-medium">Please add an image:</h2>
-                  <input type="file" onChange={handleChange} className="bg-white text-sky-800 text-sm" />
+                  <input type="file" id="upload" onChange={handleChange} className="bg-white text-gray-400 font-medium text-sm"/>
                   {file && <img src={URL.createObjectURL(file)} alt="place" className="rounded-xl w-[300px]" />}
 
                   <div>
-                    <button type="submit" className="mb-3 flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600" disabled={uploading}>
+                    <button type="submit" className="mb-3 flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                     disabled={uploading}>
                       {uploading?
                       <div class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-primary motion-reduce:animate-[spin_1.5s_linear_infinite]"
                       role="status">
                       <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
                       loading ...</span></div> : "Add Event"}
+                      <ToastContainer id="a" theme="colored"/>
                     </button>
-                    <ToastContainer containerId="containerA"/>
+         
                   </div>
                 </form>
               </div>

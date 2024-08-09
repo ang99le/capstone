@@ -13,6 +13,20 @@ html{
   height:160px;
   width: 300px;
 }
+
+::-webkit-file-upload-button {
+  padding: 7px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #0284c7;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border:none
+}
+::-webkit-file-upload-button:hover{
+  background-color: #075985;
+}
 /* 
 body {
   margin: 0;

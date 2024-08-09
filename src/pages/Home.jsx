@@ -51,24 +51,22 @@ function Home() {
         </header>
 
 <main className="font-markazi">
+<ScrollUpButton/>
   <section className="section1">
 {/* <section className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]">
 <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
 <div className=" p-6 -mt-14 ">
-<div className="pt-16 text-3xl md:text-5xl text-center md:pt-20">
-  {/* <img className="absolute ml-80  blur-sm w-[500px] -z-20" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png" alt="sumeria" /> */}
-
+<div className="pt-16 text-3xl md:text-5xl text-center lg:pt-20">
 <h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12 font-markazi">{t('Welcome')}</h1>
 </div>
-<h2 className="text-sky-700 -mt-16 md:text-lg text-center md:-mt-11 font-markazi">{t('slogen')}</h2>
-<div className="md:flex justify-center md:gap-48">
-<div className="flex flex-col md:py-40">
-<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="mb-9 mx-auto w-[300px] h-[300px] md:hidden rounded-full mt-9 shadow-full" alt="Sumerian calender"/>
-
-<h2 className="text-center text-lg text-yellow-500 font-medium md:text-4xl md:text-left "> {t("Your Guide To See The Beauty Of Iraq")}</h2>
-  <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar")}</p>
-  <p className="text-sky-800 pt-2 text-center md:text-left">{t("homepar1")}</p>
-<Link to={`/Programmes`}><a href="/Programmes" className="flex justify-center"><button className=" bg-yellow-500 w-[300px] mt-4 hover:bg-yellow-400 rounded-lg text-white p-2 md:-ml-2 md:m-8 md:w-[570px] md:text-xl"> {t("start the journey")} </button></a>
+<h2 className="text-sky-700 -mt-16 md:text-lg text-center lg:-mt-11 font-markazi">{t('slogen')}</h2>
+<div className="lg:flex justify-center lg:gap-48">
+<div className="flex flex-col lg:py-40">
+<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className="mb-9 mx-auto w-[300px] h-[300px] lg:hidden rounded-full mt-9 shadow-full" alt="Sumerian calender"/>
+<h2 className="text-center text-lg text-yellow-500 font-medium md:text-4xl lg:text-left "> {t("Your Guide To See The Beauty Of Iraq")}</h2>
+  <p className="text-sky-800 pt-2 text-center lg:text-left">{t("homepar")}</p>
+  <p className="text-sky-800 pt-2 text-center lg:text-left">{t("homepar1")}</p>
+<Link to={`/Programmes`}><a href="/Programmes" className="flex justify-center"><button className=" bg-yellow-500 w-[300px] mt-4 hover:bg-yellow-400 rounded-lg text-white p-2 lg:-ml-2 md:m-8 md:w-[570px] md:text-xl"> {t("start the journey")} </button></a>
 </Link>
  
 </div>
@@ -76,7 +74,7 @@ function Home() {
 <div>
 
 <button id="notclickable" onClick={handleButtonClick}>
-<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className={`hidden md:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50 ${isTalking ? 'animate-spin' : ''}`} alt="sumerian calender"/>
+<img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className={`hidden lg:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50 ${isTalking ? 'animate-spin' : ''}`} alt="sumerian calender"/>
 <audio ref={audioRef} src={motion1} />
 {/* <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[430px] md:h-[430px] rounded-full   ml-5 w-1/5 absolute top-1/3 right 1/4 place-items-center drop-shadow-2xl" alt="sumerian calender"/> */}
   </button>
@@ -94,7 +92,7 @@ function Home() {
 {/* </div> */}
 </section>
 <section className="section2">
-<div className="bg-sky-800 mt-6 md:h-[13rem] md:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md md:mt-40">
+<div className="bg-sky-800 mt-6 md:h-[13rem] md:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md lg:mt-40">
 <h1 className="text-center font-medium text-2xl text-white mb-2">{t("Learn About Us")}</h1>
 
 <p className="text-center text-white">{t("homeL1")}</p>
@@ -106,9 +104,6 @@ function Home() {
 <div className="bg-yellow-500 mb-40 md:p-[7rem] md:mb-16">
 </div>
 
-
-
-<ScrollUpButton/>
 </section>
 
 {/* home page in pc screen */}

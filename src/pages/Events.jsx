@@ -6,12 +6,9 @@ import { Link} from 'react-router-dom';
 import { auth } from "../firebase";
 import { useEffect,useState } from "react";
 
-
-
 function Events (){
   const {t} = useTranslation();
   const [user, setUser] = useState(null);
-
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {

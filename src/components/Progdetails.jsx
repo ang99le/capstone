@@ -15,7 +15,6 @@ import { useParams } from 'react-router-dom';
 function Progdetails({card}){
     const {t} = useTranslation();
     const [popUp, setPopUp] = useState(false);
-
   const { programmeId } = useParams();
   const [programmeDetails, setProgrammeDetails] = useState(null);
 

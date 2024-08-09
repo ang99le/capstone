@@ -13,7 +13,6 @@ function Navbar() {
   const [user, setUser] = useState(null);
   const loggedout = () => toast.info("Logged out Successfully☹️!");
 
-  
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -27,18 +26,15 @@ function Navbar() {
   }, []);
 
 
-
   const handleLogout = async () => {
     try {
       await auth.signOut();
-      window.location.href = "/login";
-      
-
+      loggedout();
     } catch (error) {
       console.error("Logout error: ", error);
     }
-    loggedout();
   };
+
 
   return (
     <div className="font-markazi">
@@ -86,13 +82,17 @@ function Navbar() {
             </div>
             {user ? (
               <>
-                <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>Logout</button>
-              
+                <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>Logout
+             
+                </button>
+                <ToastContainer id="b" theme="colored"/>
               </>
+              
             ) : (
+              
               <>
-                <ToastContainer/>
-                <Link to="/Signup" className="block mt-4 lg:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:text-sky-600 p-2">
+              
+                <Link to="/Signup" className="block mt-4 lg:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">
                   {t("Signuppage")}
                 </Link>
                 <Link to="/Login" className="block mt-4 lg:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">

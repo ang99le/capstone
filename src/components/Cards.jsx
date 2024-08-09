@@ -23,6 +23,7 @@ const EventCard = () => {
 
 
   useEffect(() => {
+   
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
@@ -49,7 +50,6 @@ const EventCard = () => {
     );
   }
 
-  
   const handleShowDetails = (event) => {
     setSelectedEvent(event);
     setPopUp(true);
@@ -123,8 +123,6 @@ const EventCard = () => {
       {popUp && <ShowDetails event={selectedEvent} setPopUp={setPopUp} />}
       {booking && <EventDetails setBooking={setBooking} />}
 
-
-      
     </>
   );
 };

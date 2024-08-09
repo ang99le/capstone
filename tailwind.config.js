@@ -26,7 +26,7 @@ module.exports =  {
     },
    
   animation:{
-  spin:'spin 5s linear',
+  spin:'spin 5.5s linear',
 
  },
   },
