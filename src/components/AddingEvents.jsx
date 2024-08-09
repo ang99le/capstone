@@ -15,7 +15,7 @@ export function AddingEvents() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [uploading, setUploading] = useState(false);
-  const added = () => toast.success("Event added successfully!");
+  const added = () => toast.success("Event added successfully👏!");
 
 
   const handleChange = (e) => {

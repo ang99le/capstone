@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function Signup() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const notify = () => toast("User Registered Successfully!");
+  const notify = () => toast.info("User Registered Successfully🥳!");
 
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
@@ -33,7 +33,7 @@ function Signup() {
         role: option, // Store the selected role in Firestore
         photo: "",
       });
-
+      
       // Redirect based on selected role
       if (option === "tourist") {
         navigate("/customizeProg");

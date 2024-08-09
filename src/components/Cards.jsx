@@ -16,8 +16,8 @@ const EventCard = () => {
   const [booking, setBooking] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const { eventsData } = useContext(eventContext);
-  const updated = () => toast("Event updated successfully!")
-  const deleted = () => toast("Event deleted successfully!")
+  const updated = () => toast.info("Event updated successfully😎!")
+  const deleted = () => toast.info("Event deleted successfully👀!")
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
 
@@ -88,7 +88,8 @@ const EventCard = () => {
           <div className="flex justify-end gap-1 ml-auto mb-3">
           <button type="button" onClick={() => handleDelete(event)} className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"><img src="https://www.dockendale.com/wp-content/uploads/2018/11/icon13.png" alt="trash can"></img></button>
           <button type="button" onClick={() => handleUpdate(event)} className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"><img src="https://www.wintrust.com/content/dam/wintrust/component-imagery/product-icons/adjustablemortgages.png" alt="edit"></img></button>
-          <ToastContainer />
+        
+          <ToastContainer theme="colored"/>
           </div>
               </>
             ) : (

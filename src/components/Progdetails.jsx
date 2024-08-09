@@ -16,7 +16,7 @@ function Progdetails({card}){
     const {t} = useTranslation();
     const [popUp, setPopUp] = useState(false);
 
-    const { programmeId } = useParams();
+  const { programmeId } = useParams();
   const [programmeDetails, setProgrammeDetails] = useState(null);
 
   useEffect(() => {
@@ -46,27 +46,27 @@ function Progdetails({card}){
     <Navbar/>
     </nav>
     <main>
-        <div className="flex justify-center gap-20">
-            <section className="mt-20">
+        <div className="md:flex justify-center md:gap-20">
+            <section className="md:mt-20">
         <div className="w-full md:w-[600px] mx-auto">
           <Carousel autoPlay className="h-[300px] md:h-[600px]">
             <div className="w-full h-full">
               <img
-                src="https://th.bing.com/th/id/OIP.YDMCSFNxPkdcdHMMfcg4XgHaE7?rs=1&pid=ImgDetMain"
+                src={programmeDetails.details.img1}
                 alt="ancient babylon"
                 className="object-cover w-full h-full rounded-lg"
               />
             </div>
             <div className="w-full h-full">
               <img
-                src="https://th.bing.com/th/id/OIP.-mJ4JbhowA5g7gM4byHihAHaFb?w=500&h=367&rs=1&pid=ImgDetMain"
+                src={programmeDetails.details.img2}
                 alt="Ishtar Gate"
                 className="object-cover w-full h-full rounded-lg"
               />
             </div>
             <div className="w-full h-full">
               <img
-                src="https://i2.wp.com/etc.ancient.eu/wp-content/uploads/2014/11/Figure-4.jpg"
+                src={programmeDetails.details.img3}
                 alt="ancients"
                 className="object-cover w-full h-full rounded-lg"
               />
@@ -75,19 +75,19 @@ function Progdetails({card}){
         </div>
       </section>
       
-      <div className="flex flex-col justify-center text-center mb-24">
-         <h1 className=" text-sky-800 font-medium text-lg md:text-4xl md:mt-10">
-        {t("Babylon City Tour")}
+      <div className="flex flex-col justify-center text-center mb-10 md:mb-24">
+         <h1 className="mt-24 text-sky-800 font-medium text-lg md:text-4xl md:mt-10">
+      {programmeDetails.title}
         </h1>
-       <h1 className="mt-5 text-2xl font-medium text-yellow-500">
-        {t("price:100 IQD")}
+       <h1 className="mt-5 text-2xl font-medium text-yellow-500">Price:
+        {programmeDetails.price}
         </h1>
     
             </div>
         </div>
     
-<h3 className="text-center text-yellow-500 font-medium text-2xl">your trip timeline</h3>
-
+<h3 className="text-center text-sky-800 font-medium text-2xl md:text-3xl">your trip timeline</h3>
+<h1 className="text-yellow-500 font-medium text-center mr-60 text-xl md:mr-80 md:-ml-20 mt-5 -mb-3">Day1:-</h1>
     <div class=" p-6 lg:relative text-sky-800 antialiased text-sm font-semibold sm:flex justify-center">
           <div class="p-6 relative text-left ">
           <div class="flex items-center">
@@ -101,7 +101,7 @@ function Progdetails({card}){
                  
                  <div class="ml-3 border-r-2 border-sky-800 absolute h-full left-1 md:left-20 top-2 -z-10">
                  </div>
-                 <div class=" w-10 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-12 mb-16">
+                 <div class="-ml-7 w-10 h-6 absolute rounded-full bg-white border-white border-1 sm:ml-12 mb-16">
        <img src="https://www.clipartmax.com/png/full/30-305711_people-icon-blue-png.png" alt="car"></img>
        </div>
    
@@ -164,7 +164,7 @@ function Progdetails({card}){
                          <div class="font-bold text-yellow-500">step-3</div>
                          <div class="text-xs text-yellow-500">10:35 AM</div>
                      </div>
-                     <div class="mb-3 md:mb-20 w-[450px] break-words...">
+                     <div class="mb-3 md:mb-20 md:w-[450px] break-words...">
                      <p>{programmeDetails.details.step3}</p>                        
                      </div>                    </div>
              </div>
@@ -252,9 +252,16 @@ function Progdetails({card}){
 
          </div>
 </div>
+
+
+
+
+
+
+
 <h1 className="text-center text-yellow-500 font-medium text-lg mb-7 md:text-2xl">{t("your guide info")}</h1>
 <div className="mx-auto flex gap-6 justify-center mb-10">
-<img src="https://i.pinimg.com/originals/ac/ef/0c/acef0c7bc9188fdf9dd60cecfec5b7c2.png"className="rounded-full w-[90px]" alt="hassan ali" ></img> 
+<img src="https://t3.ftcdn.net/jpg/05/64/69/92/360_F_564699261_sdGpc8qaH0kXwxuMnNYE3XGg3ov0HuYv.jpg"className="rounded-full w-[120px] h-[121px] border-2 border-sky-800" alt="hassan ali" ></img> 
 
 <div className="flex mt-7">
 <img src="https://logos-world.net/wp-content/uploads/2020/05/WhatsApp-Logo.png"  className="w-[60px] h-[35px]"  alt="whatsapp logo"></img>

@@ -16,7 +16,7 @@ export const Login= () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { currentUser } = useAuth();
-  const notify = () => toast("Logged in Successfully!")
+  const notify = () => toast("Logged in Successfully😍!")
 
   const handleSubmit = async (e) => {
     e.preventDefault();
