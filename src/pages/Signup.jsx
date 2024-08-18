@@ -57,7 +57,7 @@ function Signup() {
       </header>
       <main>
         <div>
-          <div className="flex min-h-full flex-col justify-center items-center w-[100%] h-[100vh] lg:h-[90vh] px-4 lg:px-8 md:mb-20 md:mt-14">
+          <div className="flex min-h-full flex-col justify-center items-center w-[100%] h-[100vh] lg:h-[90vh]  mt-10 mb-10 px-4 lg:px-8 lg:mb-20 lg:mt-14">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
               <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-sky-800">
                 {t("Create New Account")}
@@ -65,28 +65,28 @@ function Signup() {
             </div>
 
             <div className="md:flex gap-[4rem] justify-center">
-              <img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26606.jpg" className="hidden md:block w-[580px] -ml-40" alt='sumerian people' />
+              <img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26606.jpg" className="hidden lg:block w-[580px] -ml-40" alt='sumerian people' />
 
               <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="fname" className="block text-sm font-medium leading-6 text-sky-800">{t("First Name")}</label>
                     <div className="mt-2">
-                      <input id="fname" name="fname" type="text" value={fname} onChange={(e) => setFname(e.target.value)} required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 md:w-[300px] md:pl-2" />
+                      <input id="fname" name="fname" type="text" value={fname} onChange={(e) => setFname(e.target.value)} required className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 md:w-[420px] lg:w-[300px] md:pl-2" />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="lname" className="block text-sm font-medium leading-6 text-sky-800">{t("Last Name")}</label>
                     <div className="mt-2">
-                      <input id="lname" name="lname" type="text" value={lname} onChange={(e) => setLname(e.target.value)} required className=" md:pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
+                      <input id="lname" name="lname" type="text" value={lname} onChange={(e) => setLname(e.target.value)} required className=" md:pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 md:w-[420px] lg:w-[300px]"/>
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium leading-6 text-sky-800">{t("Email address")}</label>
                     <div className="mt-2">
-                      <input id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" autoComplete="email" required className=" md:pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
+                      <input id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" autoComplete="email" required className=" md:pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 md:w-[420px] lg:w-[300px]" />
                     </div>
                   </div>
 
@@ -95,7 +95,7 @@ function Signup() {
                       <label htmlFor="password" className="block text-sm font-medium leading-6 text-sky-800">{t("Password")}</label>
                     </div>
                     <div className="mt-2">
-                      <input id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} type="password" autoComplete="current-password" required className=" md:pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
+                      <input id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} type="password" autoComplete="current-password" required className=" md:pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 md:w-[420px] lg:w-[300px]" />
                     </div>
                   </div>
                   <h6 className="text-sky-800 font-medium">{t("Please Enter your type correctly")}</h6>
@@ -126,6 +126,7 @@ function Signup() {
                     </Link>
                   </div>
                 </form>
+
               </div>
             </div>
           </div>

@@ -92,8 +92,8 @@ export function AddingEvents() {
         <div className="h-[100vh]">
           <h1 className="text-sky-800 font-medium text-center text-2xl mt-10">Add Your Event</h1>
           <div className="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm">
-            <div className="-mt-20 mb-20 md:flex justify-center md:mt-14 md:gap-10">
-              <img className="hidden md:block w-[600px] rounded-2xl mb-40" src={horses} alt="sumerian woman" />
+            <div className="-mt-20 md:mb-40 lg:mb-20 md:flex justify-center lg:mt-14 lg:gap-10">
+              <img className="hidden lg:block w-[600px] rounded-2xl mb-40" src={horses} alt="sumerian woman" />
               <div className="p-8 sm:w-full sm:max-w-sm z-50 mt-10">
                 <form className="space-y-2" onSubmit={handleSubmit}>
   

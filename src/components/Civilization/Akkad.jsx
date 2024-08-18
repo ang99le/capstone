@@ -20,10 +20,10 @@ const Akkad = () => {
 
         {/* The kings of Akkad */}
         <section>
-          <div className="flex gap-3 -mt-40 z-50 ml-5 md:ml-28">
+          <div className="flex gap-3 -mt-40 z-50 ml-5 sm:ml-12 lg:ml-28">
             <h1 className="font-primary text-5xl opacity-1 text-yellow-500 font-medium">01</h1>
-            <hr className="w-20 my-6 border-yellow-500 border-1 -ml-5 md:-ml-20" />
-            <h1 className="text-center text-xl font-medium text-yellow-500 mb-5 mt-3">The kings of Akkad</h1>
+            <hr className="w-16 md:w-20 my-6 border-yellow-500 border-1 -ml-16 md:-ml-20" />
+            <h1 className="text-center text-xl font-medium text-yellow-500 mb-5 mt-2 md:mt-2">The kings of Akkad</h1>
           </div>
 
           <div className="flex flex-col gap-4 md:flex-row justify-center m-3 md:gap-9 z-50">
@@ -99,8 +99,8 @@ const Akkad = () => {
         <section>
           <div className="flex gap-3 mt-10 md:mt-24 ml-10 lg:ml-28">
             <h1 className="font-primary text-4xl md:text-5xl opacity-1 text-yellow-500 font-medium">02</h1>
-            <hr className="w-20 my-6 border-yellow-500 border-1 -ml-5 md:-ml-20" />
-            <h1 className="text-xl md:text-2xl mt-3 text-yellow-500 font-medium">Intro To Akkad Empire</h1>
+            <hr className="w-16 md:w-20 my-6 border-yellow-500 border-1 -ml-16 md:-ml-20" />
+            <h1 className="text-xl md:text-2xl mt-2  text-yellow-500 font-medium">Intro To Akkad Empire</h1>
           </div>
           <p className="text-justify px-4 md:px-8 text-sky-800 lg:ml-24">
             Akkad was the northern (or northwestern) division of ancient Babylonia. The region was located roughly in the area where the Tigris and Euphrates rivers (see Tigris-Euphrates river system) are closest to each other, and its northern limit extended beyond the line of the modern cities of Al-Fallūjah and Baghdad. The early inhabitants of this region were predominantly Semitic, and their speech is called Akkadian. To the south of the region of Akkad lay Sumer, the southern (or southeastern) division of ancient Babylonia, which was inhabited by a non-Semitic people known as Sumerians. The name Akkad was taken from the city of Agade, which was founded by the Semitic conqueror Sargon about 2300 BCE. Sargon united the various city-states in the region and extended his rule to encompass much of Mesopotamia. After the fall of Sargon’s dynasty about 2150 BCE, the central Iraq region was ruled by a state jointly composed of Sumerians and Akkadians.
@@ -111,8 +111,8 @@ const Akkad = () => {
         <section>
           <div className="flex gap-3 mt-10 lg:mt-20 ml-10 lg:ml-28">
             <h1 className="font-primary text-4xl md:text-5xl opacity-1 text-yellow-500 font-medium">03</h1>
-            <hr className="w-20 my-6 border-yellow-500 border-1 -ml-5 md:-ml-20" />
-            <h1 className="text-xl font-medium text-yellow-500 mb-5 mt-2 md:mt-3">The Akkadian Ancients</h1>
+            <hr className="w-16 my-5 md:w-20 md:my-6 border-yellow-500 border-1 -ml-16 md:-ml-20" /> 
+            <h1 className="text-xl font-medium text-yellow-500 mb-5 mt-1 md:mt-2">The Akkadian Ancients</h1>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-9 justify-center mx-auto w-full lg:w-[1000px] mb-20 mt-5 px-4">
@@ -131,7 +131,11 @@ const Akkad = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-9 justify-center mx-auto w-full lg:w-[1000px] mt-4 mb-20 px-4">
-          
+          <img
+              src="https://www.cb-gallery.com/wp-content/uploads/2022/10/Old-Akkadian-cuneiform-tablet-1024x1024.jpg"
+              alt="Akkadian Cuneiform Tablet"
+              className="w-full lg:w-[600px] lg:hidden md:h-[450px] rounded-2xl"
+            />
             <div className="lg:pt-40">
               <h1 className="text-sky-800 font-medium text-xl">Akkadian Cuneiform Tablet</h1>
               <hr className="w-full lg:w-[31rem] my-2 border-sky-800 border-2" />
@@ -142,7 +146,7 @@ const Akkad = () => {
             <img
               src="https://www.cb-gallery.com/wp-content/uploads/2022/10/Old-Akkadian-cuneiform-tablet-1024x1024.jpg"
               alt="Akkadian Cuneiform Tablet"
-              className="w-full lg:w-[600px] md:h-[450px] rounded-2xl"
+              className=" hidden w-full lg:w-[600px] lg:block md:h-[450px] rounded-2xl"
             />
           </div>
 

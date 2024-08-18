@@ -89,7 +89,7 @@ const EventCard = () => {
             </div>
           )}
 
-          <img src={event.img} alt="img" className="w-[250px] md:w-[200px] lg:w-[293px] mb-4 flex flex-col cursor-pointer rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] card-item-div max-w-screen-md min-h-[260px]"/>
+          <img src={event.img} alt="img" className="w-[250px] md:w-[265px] lg:w-[293px] mb-4 flex flex-col cursor-pointer rounded-tl-[35px] rounded-br-[35px] shadow-2xl md:min-h-[340px] card-item-div max-w-screen-md min-h-[260px]"/>
           <p className="text-xl text-sky-800 font-bold uppercase mb-5">
             {t(event.title)}
           </p>
@@ -105,8 +105,8 @@ const EventCard = () => {
             </p>
           </div>
           <div className="md:flex gap-3 mt-3">
-            <button type="button" onClick={() => handleShowDetails(event)} className="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{t("Show Details")} </button>
-            <button type="submit" onClick={() => setBooking(true)} className="mt-4 mb-2 flex justify-center rounded-md bg-sky-800 px-5 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
+            <button type="button" onClick={() => handleShowDetails(event)} className="px-12 py-2 mt-4 mb-2 flex justify-center rounded-md bg-sky-800 md:px-3 md:py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{t("Show Details")} </button>
+            <button type="submit" onClick={() => setBooking(true)} className="px-14 py-2 mt-4 mb-2 flex justify-center rounded-md bg-sky-800 md:px-5 md:py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Book Now</button>
           </div>
         </div>
       ))}

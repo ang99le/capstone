@@ -103,9 +103,9 @@ function Civilization() {
            <section>
              {/* <div className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]">
              <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
-          <div class="hidden md:block l:block lg:block min-h-screen py-6  flex-col justify-center">
-          <div class="lg:py-3 w-full px-2 ">
-          <div class="lg:relative text-sky-800 antialiased text-sm font-semibold">
+          <div class="hidden md:block min-h-screen py-6 flex-col justify-center">
+          <div class="md:py-3 w-full px-2 ">
+          <div class="md:relative text-sky-800 antialiased text-sm font-semibold">
           
         {/* <!-- Vertical bar running through middle --> */}
           <div class=" w-1 bg-sky-800 absolute h-full left-1/2 transform -translate-x-1/2"></div>
@@ -117,10 +117,10 @@ function Civilization() {
         <div class="flex flex-col sm:flex-row items-center">
           <div class="flex justify-start w-full mx-auto items-center">
            
-            <div class="sm:w-[710px] sm:pr-10 pl-7 md:hover:w-[730px]">
+            <div class="w-[710px] md:hover:w-[730px] sm:w-1/2 sm:pr-10 pl-5">
             <Link to={`/Akkad`}><img src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" id="my-tooltip" alt="Akd" className="rounded-md "></img></Link>
                
-              <div class="p-4 bg-white rounded text-justifiy">
+              <div class="pt-5 bg-white rounded text-justifiy">
                <p>Akkad was the seat of the Akkadian Empire (2334-2218 BCE), the first multi-national political entity in the world, founded by Sargon the Great (2334-2279 BCE) who unified Mesopotamia under his rule and set the model for later Mesopotamian kings to follow or attempt to surpass. The Akkadian Empire set a number of "firsts' which would later become standard.</p>
            
               </div>
@@ -129,7 +129,7 @@ function Civilization() {
 
 <div>
 <button onClick={handleButtonClick}>
-<img alt="Sargon" id="sargon" className={`${isexpand?'h-[500px] z-50 bg-white bg-opacity-70 rounded-full fixed top-48 right-80 left-66 flex justify-center items-center':'lg:rounded-full border-white border-5 transform -translate-x-1/2 flex items-center justify-center absolute left-1/2 w-40 h-25 -translate-y-4 sm:-translate-y-28'}`} src={sarjon}></img>
+<img alt="Sargon" id="sargon" className={`${isexpand?'h-[500px] z-50 bg-white bg-opacity-70 rounded-full fixed top-48 right-80 left-66 flex justify-center items-center':'lg:rounded-full border-white border-5 transform -translate-x-1/2 flex items-center justify-center absolute left-1/2 w-40 h-25 -translate-y-40 lg:-translate-y-28'}`} src={sarjon}></img>
    <Tooltip anchorSelect="#sargon">
     Sargon The Greatest
   </Tooltip> 
@@ -141,7 +141,7 @@ function Civilization() {
           <div class=" h-full w-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
      
       
-       <div className="text-center ml-60 -translate-y-80">
+       <div className="text-center ml-60 -translate-y-72 lg:-translate-y-80">
         <h4 > The Akaddian civilization</h4>
          <h6>(2334 -2047 BCE)</h6>
          </div>
@@ -151,7 +151,7 @@ function Civilization() {
       <ScrollUpButton/>
       
            {/* <!-- Right section, set by justify-end and sm:pl-8 --> */}
-      <div class="mt-6 sm:mt-0 sm:mb-12">
+      <div class="mt-6 mb-20 lg:mt-0 lg:mb-12">
         <div class="flex flex-col sm:flex-row items-center">
           <div class="flex justify-end w-full mx-auto items-center">
             <div class="w-[710px] sm:w-1/2 sm:pl-10 pr-8 md:hover:w-[730px]">
@@ -162,7 +162,7 @@ function Civilization() {
             </div>
           </div>
   
-          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-8 lg:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <img id="sanhareeb" src={sanhareeb} className="scale-x-[-1]" alt="sanhareeb"></img>
           <Tooltip anchorSelect="#sanhareeb">
           Sanhareeb
@@ -170,7 +170,7 @@ function Civilization() {
           </div>
         </div>
 
-        <div className="text-center mr-60 -translate-y-56">
+        <div className="text-center mr-60 -translate-y-40 lg:-translate-y-56">
         <h4 > The Assyrian civilization</h4>
          <h6>(1900 BCE - 650 CE)</h6>
          </div>
@@ -178,7 +178,7 @@ function Civilization() {
       </div>
           
            {/* <!-- Left section, set by justify-start and sm:pr-8 --> */}
-      <div class="mt-6 lg:mt-0 lg:mb-12">
+      <div class="mt-6 mb-20 lg:mt-0 lg:mb-12">
         <div class="flex flex-col sm:flex-row items-center">
           <div class="flex justify-start w-full mx-auto items-center">
             <div class="w-[710px] md:hover:w-[730px] sm:w-1/2 sm:pr-10 pl-7">
@@ -189,7 +189,7 @@ function Civilization() {
             </div>
           </div>
 
-          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-8 lg:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           {/* <button onClick={handleButtonClick}> */}
           <img id="gilgamesh" src={gigamesh} alt="Gilgamesh"></img>
           <Tooltip anchorSelect="#gilgamesh">
@@ -199,7 +199,7 @@ function Civilization() {
         {/* </button> */}
           </div>
         </div>
-        <div className="text-center ml-60 -translate-y-52">
+        <div className="text-center ml-60  -translate-y-40 lg:-translate-y-52">
         <h4 > The Sumerian civilization</h4>
          <h6>(6500 - 1940 BCE)</h6>
          </div>
@@ -217,7 +217,7 @@ function Civilization() {
               </div>
             </div>
           </div>
-          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          <div class="rounded-full bg-sky-200 border-sky-800 border-2 w-16 h-16 absolute left-1/2 -translate-y-8 lg:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
           <img id="NebuchadnezzarI" src={NebuchadnezzarII} alt="NebuchadnezzarII"></img>
           <Tooltip anchorSelect="#NebuchadnezzarI">
           NebuchadnezzarII
@@ -225,7 +225,7 @@ function Civilization() {
          </div>
         </div>
 
-        <div className="text-center mr-60 -translate-y-60">
+        <div className="text-center mr-60 -translate-y-40 lg:-translate-y-60">
         <h4 > The Babylonian civilization</h4>
          <h6>(1894 - 539 BCE)</h6>
          </div>

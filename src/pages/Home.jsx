@@ -76,14 +76,12 @@ function Home() {
 <button id="notclickable" onClick={handleButtonClick}>
 <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className={`hidden lg:block md:w-[460px] md:h-[460px] rounded-full mt-3 drop-shadow-2xl z-50 ${isTalking ? 'animate-spin' : ''}`} alt="sumerian calender"/>
 <audio ref={audioRef} src={motion1} />
-{/* <img src="https://cdn.britannica.com/60/187660-131-8968114D/Mayan-Calendar.jpg" className=" hidden md:block md:w-[430px] md:h-[430px] rounded-full   ml-5 w-1/5 absolute top-1/3 right 1/4 place-items-center drop-shadow-2xl" alt="sumerian calender"/> */}
   </button>
 <Tooltip anchorSelect="#notclickable">
  The First Calender In History
 </Tooltip>
 </div>
 
-{/* <img src="https://cdn-icons-png.flaticon.com/512/3655/3655147.png" className=" mt-3" alt="mosque"/> */}
 </div>
 
 </div>
@@ -92,7 +90,7 @@ function Home() {
 {/* </div> */}
 </section>
 <section className="section2">
-<div className="bg-sky-800 mt-6 md:h-[13rem] md:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md lg:mt-40">
+<div className="bg-sky-800 md:h-[13rem] lg:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md lg:mt-40">
 <h1 className="text-center font-medium text-2xl text-white mb-2">{t("Learn About Us")}</h1>
 
 <p className="text-center text-white">{t("homeL1")}</p>
@@ -112,10 +110,10 @@ function Home() {
   <h1 className="text-center text-sky-800 font-medium text-3xl">Iraqi Landmarks</h1>
   <hr class="w-40 h-1 mx-auto bg-sky-800 rounded mt-2"/>
 
-<div className="flex flex-col gap-24 mt-10 mb-14 md:flex-row md:flex-wrap md:justify-center">
+<div className="flex flex-col gap-20 mt-10 mb-14 md:flex-row md:flex-wrap md:justify-center">
   <div>
-  <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
+  <div class="mx-auto w-72 h-[40rem] lg:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-80 -mt-[40rem] h-[40rem] lg:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
         <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
@@ -127,8 +125,6 @@ function Home() {
 
         <div>
         <img src="https://www.asor.org/wp-content/uploads/2023/04/Gries_Fig9.jpg"  alt="Ishtar Gate" className="rounded-lg "></img>   
-            {/* <p class="text-center text-5xl font-extrabold text-gray-900">Online Test (Physics)</p>
-            <p class="text-center text-4xl font-extrabold text-[#FE5401]">2 hours</p> */}
         </div>
         <footer class="mb-10 flex justify-center">
         <p className="text-sky-800 text-justify ">
@@ -144,8 +140,8 @@ function Home() {
 
 
 <div>
-    <div class="w-72 mx-auto h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
+    <div class="w-72 mx-auto h-[40rem] lg:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] lg:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0">
         <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
@@ -174,8 +170,8 @@ function Home() {
 
 
     <div>
-    <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"> <div class="flex justify-end">
+    <div class="mx-auto w-72 h-[40rem] lg:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] lg:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"> <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
 
@@ -201,8 +197,8 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
 
 
     <div>
-    <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"><div class="flex justify-end">
+    <div class="mx-auto w-72 h-[40rem] lg:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] lg:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"><div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
 
@@ -227,8 +223,8 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
     </div>
 
     <div>
-    <div class="mx-auto w-72 h-[40rem] md:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
-    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] md:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"> <div class="flex justify-end">
+    <div class="mx-auto w-72 h-[40rem] lg:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
+    <div class="mx-auto w-72 -mt-[40rem] h-[40rem] lg:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"> <div class="flex justify-end">
             <div class="h-4 w-4 rounded-full bg-yellow-500"></div>
         </div>
 

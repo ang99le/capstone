@@ -24,7 +24,7 @@ function Guides(){
 
 <Progsbtns/>
 <div className="flex justify-center gap-8">
-<img  className="sm:flex flex-col justify-center hidden md:block md:w-[500px] -ml-6" alt="Sarjon" src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26648.jpg"/> 
+<img  className="sm:flex flex-col justify-center hidden lg:block lg:w-[500px] -ml-6" alt="Sarjon" src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26648.jpg"/> 
 
 <div class="grid justify-center md:pr-40">
 <div class="p-8 mt-1 sm:mx-auto sm:w-full sm:max-w-sm md:mt-9">
