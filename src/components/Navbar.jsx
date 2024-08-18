@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Translation from "./Translation";
 import { auth } from "../firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
-  
+  const navigate=useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
   const [user, setUser] = useState(null);
@@ -29,12 +29,13 @@ function Navbar() {
   const handleLogout = async () => {
     try {
       await auth.signOut();
-      loggedout();
+      navigate("/Login");
+   
     } catch (error) {
       console.error("Logout error: ", error);
     }
+    loggedout();
   };
-
 
   return (
     <div className="font-markazi">
@@ -82,16 +83,15 @@ function Navbar() {
             </div>
             {user ? (
               <>
-                <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>Logout
-             
-                </button>
+      
+              <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>Logout
+              </button>
                 <ToastContainer id="b" theme="colored"/>
               </>
               
             ) : (
               
               <>
-              
                 <Link to="/Signup" className="block mt-4 lg:inline-block lg:mt-0 text-white border-b-blue-300 px-4 hover:bg-sky-700 rounded-lg p-2">
                   {t("Signuppage")}
                 </Link>

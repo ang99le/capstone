@@ -14,11 +14,11 @@ import { useEffect } from "react";
 
 
 function Civilization() {
+  
   const [issarjonTalking, setIssarjonTalking] = useState(false);
   // const [isgilTalking, setgilTalking] = useState(false);
   const [isexpand,setIsexpand]=useState(false)
   const audioRef = useRef(null);
-
   const handleButtonClick = () => {
     setIssarjonTalking(!issarjonTalking);
     //  setgilTalking(!isgilTalking)

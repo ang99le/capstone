@@ -7,7 +7,6 @@ function BookNow({setPopUp}){
 
     return(
         <>
-  
     <main className='w-screen h-screen z-60 bg-black bg-opacity-70 fixed top-0 right-0 flex justify-center items-center'>
     <div className='bg-white w-[400px] h-[570px] p-10 rounded-md shadow-md' >
     <div class="grid place-items-left">

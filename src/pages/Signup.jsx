@@ -6,13 +6,13 @@ import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { useTranslation } from "react-i18next";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Signup() {
   const { t } = useTranslation();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const notify = () => toast.info("User Registered Successfully🥳!");
 
   const [fname, setFname] = useState('');
@@ -35,13 +35,19 @@ function Signup() {
       });
       
       // Redirect based on selected role
-   
+      if (option === "tourist") {
+        navigate("/customizeProg");
+    
+      } else if (option === "guide") {
+        navigate("/guides");
+      } else {
+        navigate("/events");
+      }
 
     } catch (error) {
       console.error("Error signing up:", error);
     }
   };
-
   return (
     <div>
       <header>

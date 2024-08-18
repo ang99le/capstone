@@ -32,7 +32,6 @@ export function UserProvider({ children }) {
       try {
         const eventsCollectionRef = collection(db, 'events');
         const querySnapshot = await getDocs(eventsCollectionRef);
-
         const events = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -57,7 +56,6 @@ export function UserProvider({ children }) {
         const querySnapshot = await getDocs(programmesCollectionRef);
         const programmesList = querySnapshot.docs.map((doc) => ({
           id: doc.id,...doc.data(),
-         
         }));
 
         setProgrammesData(programmesList);

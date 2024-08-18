@@ -29,7 +29,6 @@ return(
         </div>
         <h3 className="text-sky-700 font-medium">{t("Booking directly")}</h3>
          
-         
          <WhatsAppbyFields/>
        
   
