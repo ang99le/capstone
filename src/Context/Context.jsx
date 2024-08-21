@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs,onSnapshot } from 'firebase/firestore';
 import { db } from "../firebase";
 import {onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
@@ -14,7 +14,6 @@ export function useAuth() {
   return useContext(AuthContext);
 }
 
-
 export function UserProvider({ children }) {
     //events state
   const [eventsData, setEventsData] = useState([]);
@@ -26,24 +25,19 @@ export function UserProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-//fetching the events array
+// fetching the events array
   useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const eventsCollectionRef = collection(db, 'events');
-        const querySnapshot = await getDocs(eventsCollectionRef);
-        const events = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-
+   const fetchEvents = onSnapshot(collection(db, "events"),
+    (snapshot) => {const events = snapshot.docs.map((doc) =>
+     ({ id: doc.id, ...doc.data() }));
         setEventsData(events);
-      } catch (error) {
-        console.error('Error fetching events:', error);
+      },
+      (error) => {
+        console.error("Error fetching events: ", error);
+       
       }
-    };
-
-    fetchEvents();
+    );
+return() => fetchEvents();
   }, []);
 
 

@@ -1,0 +1,26 @@
+.datepicker input {
+border-color: #eab308;
+color: #ca8a04;
+border:1px solid #eab308;
+font-weight: bold;
+}
+.datepicker input:focus{
+border-color: #eab308;
+box-shadow: 0 0 0 2px #ca8a04;
+}
+
+.datepicker ::placeholder{
+    color:#ca8a04;
+    font-weight:bold;
+
+}
+
+.datepicker svg{
+    color: #ca8a04;
+
+}
+
+.Category svg{
+    color:#c9c91c;
+}
+

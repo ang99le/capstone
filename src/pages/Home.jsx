@@ -9,6 +9,7 @@ import ScrollUpButton from "../components/Scrollup";
 import { Link } from "react-router-dom";
 import {useRef,useState } from "react";
 import motion1 from "../assests/motion1.mp3";
+import RevealOnScroll from "../components/RevealOnScroll";
 
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
       audioRef.current.play();
     }
   };
+
 
   useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
@@ -52,7 +54,10 @@ function Home() {
 
 <main className="font-markazi">
 <ScrollUpButton/>
-  <section className="section1">
+
+
+<RevealOnScroll>
+<section className="section1">
 {/* <section className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]">
 <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
 <div className=" p-6 -mt-14 ">
@@ -89,6 +94,9 @@ function Home() {
 
 {/* </div> */}
 </section>
+</RevealOnScroll>
+
+<RevealOnScroll>
 <section className="section2">
 <div className="bg-sky-800 md:h-[13rem] lg:w-[53rem] p-6 mx-auto drop-shadow-2xl -mb-24 z-20 rounded-md lg:mt-40">
 <h1 className="text-center font-medium text-2xl text-white mb-2">{t("Learn About Us")}</h1>
@@ -103,8 +111,12 @@ function Home() {
 </div>
 
 </section>
+</RevealOnScroll>
+
 
 {/* home page in pc screen */}
+<RevealOnScroll>
+
 <section>
 <div className=" block">
   <h1 className="text-center text-sky-800 font-medium text-3xl">Iraqi Landmarks</h1>
@@ -254,6 +266,8 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
 
   </div>
   </section>
+  </RevealOnScroll>
+  
 </main>
 <footer>
 <Footer/>

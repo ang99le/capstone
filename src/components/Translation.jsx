@@ -18,13 +18,9 @@ function Translation() {
   return (
     <div className="mx-auto -mb-5 md:relative md:inline-block md:text-left">
       <div>
-        <button
-          type="button"
-          className="inline-flex justify-center w-full shadow-sm rounded-full text-sm font-medium text-white hover:bg-sky-700 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-    <img src="https://th.bing.com/th/id/R.43d973ac334ab2d7976e14c11c796d27?rik=V6FStiBy7Db4xA&pid=ImgRaw&r=0" alt="globe" className=" w-[30px]"></img>
-        </button>
+      <button type="button" className="inline-flex justify-center w-full shadow-sm rounded-full text-sm font-medium text-white hover:bg-sky-700 focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
+      <img src="https://th.bing.com/th/id/R.43d973ac334ab2d7976e14c11c796d27?rik=V6FStiBy7Db4xA&pid=ImgRaw&r=0" alt="globe" className=" w-[30px]"></img>
+      </button>
       </div>
 
       {isOpen && (

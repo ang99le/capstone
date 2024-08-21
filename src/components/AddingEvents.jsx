@@ -14,6 +14,9 @@ export function AddingEvents() {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [details,setDetais]=useState("");
+  const [category, setCategory] = useState("");
+  const [city,setCity]=useState("");
   const [uploading, setUploading] = useState(false);
   const added = () => toast.info("Event added successfully👏!");
 
@@ -58,10 +61,12 @@ export function AddingEvents() {
     try {
       const docRef = await addDoc(collection(db, "events"), {
         title,
+        category,
         description,
+        city,
         date,
-        
         time,
+        details,
         img: imageUrl,
       });
 
@@ -70,8 +75,11 @@ export function AddingEvents() {
        added();
       // Reset form
       setTitle("");
+      setCategory("")
       setDescription("");
+      setCity("");
       setDate("");
+      setDetais("")
       setTime("");
       setFile(null);
     } catch (e) {
@@ -102,14 +110,29 @@ export function AddingEvents() {
                     <label htmlFor="title" className="w-[250px] block text-sm font-medium leading-6 text-sky-800">Event Title</label>
                     <div className="mt-2">
                       <input id="title" name="title" type="text" required value={title} onChange={(e) => setTitle(e.target.value)} className="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-                 
                     </div>
                   </div>
+
+
+                  <div>
+                    <label htmlFor="category" className="block text-sm font-medium leading-6 text-sky-800">Category of the event </label>
+                    <div className="mt-2">
+                      <input id="category" name="category" type="text" required value={category} onChange={(e) => setCategory(e.target.value)} className="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
+                    </div>
+                  </div>
+
 
                   <div>
                     <label htmlFor="description" className="pl-2 block text-sm font-medium leading-6 text-sky-800">Description</label>
                     <div className="mt-2">
-                      <input id="description" name="description" type="text" required value={description} onChange={(e) => setDescription(e.target.value)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
+                      <input id="description" name="description" type="text" required value={description} onChange={(e) => setDescription(e.target.value)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 pl-2" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="city" className="pl-2 block text-sm font-medium leading-6 text-sky-800">Description</label>
+                    <div className="mt-2">
+                      <input id="city" name="city" type="text" required value={city} onChange={(e) => setCity(e.target.value)} className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6 pl-2" />
                     </div>
                   </div>
 
@@ -124,6 +147,13 @@ export function AddingEvents() {
                     <label htmlFor="time" className="block text-sm font-medium leading-6 text-sky-800">Time Of the Event</label>
                     <div className="mt-2">
                       <input id="time" name="time" type="text" required value={time} onChange={(e) => setTime(e.target.value)} className="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="details" className="block text-sm font-medium leading-6 text-sky-800">Details of the event</label>
+                    <div className="mt-2">
+                      <input id="details" name="details" type="text" required value={details} onChange={(e) => setDetais(e.target.value)} className="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-800 sm:text-sm sm:leading-6" />
                     </div>
                   </div>
 

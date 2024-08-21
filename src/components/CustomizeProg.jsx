@@ -52,7 +52,7 @@ function CustomizeProg (){
 
     <div>
       <label for="guides" class="block text-sm font-medium leading-6 text-sky-800 pt-3">Choose your Guide</label>
-      <select className="email" name="email" type="email" autocomplete="email" required class=" pl-2 block w-full rounded-md border-0 py-1.5 text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6">
+      <select className="text" name="text" type="text" autocomplete="text" required class=" pl-2 block w-full rounded-md border-0 py-1.5 text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  focus:ring-sky-800 sm:text-sm sm:leading-6">
       <option selected>Choose your guide </option>
        <option value="al">Ali Hassan</option>
        <option value="mu">Muhanned Ahmed</option>

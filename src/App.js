@@ -19,7 +19,6 @@ import ProtectedRoute from './components/Protected';
 import Loading from './components/Loading';
 
 
-
 function App() {
 
   return (
@@ -41,6 +40,9 @@ function App() {
       <Route path="/programme/:programmeId" element={<Progdetails />} />
       <Route path='/AddingEvents' element={<AddingEvents/>}></Route>
       <Route path='/Loading' element={<Loading/>}></Route>
+
+
+
       {/* <Route path='/CustomizeProg' element={<CustomizeProg/>}></Route>  */}
       {/* <Route path='/Guides' element={<Guides/>}></Route> 
    */}
