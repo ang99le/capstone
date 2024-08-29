@@ -9,6 +9,8 @@ import { useAuth } from "../Context/Context";
 import { useNavigate,Navigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import RevealOnScroll from "../components/RevealOnScroll";
+
 
 export const Login= () => {
   const { t } = useTranslation();
@@ -40,7 +42,8 @@ export const Login= () => {
        <nav>
          <Navbar />
      </nav>
-       <main >   
+     <RevealOnScroll>
+       <main>   
          <div className="flex min-h-full flex-col justify-center items-center w-[100%] h-[100vh] px-4 lg:px-8">
            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
              <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-sky-800">
@@ -88,6 +91,7 @@ export const Login= () => {
            </div>
          </div>
        </main>
+       </RevealOnScroll>
        <footer>
         <Footer />
      </footer>

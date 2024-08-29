@@ -9,7 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "./Loading";
 import { auth } from "../firebase";
-// import Datepicker from "react-tailwindcss-datepicker";
+
 
 const EventCard = () => {
   const { t } = useTranslation();
@@ -23,10 +23,7 @@ const EventCard = () => {
   const { eventsData } = useContext(eventContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('');
-  // const [value, setValue] = useState({
-  //   startDate: null,
-  //   endDate: null,
-  // });
+  
 
   useEffect(() => {
     const unsubscribeAuth = auth.onAuthStateChanged((user) => {
@@ -39,15 +36,6 @@ const EventCard = () => {
   const filteredData = eventsData.filter((event) => {
     const matchesSearchTerm = searchTerm === '' || event.city.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = categoryFilter === '' || event.category.toLowerCase().includes(categoryFilter.toLowerCase());
-    
-    // const eventDate = new Date(event.test);
-    // const startDate = value.startDate ? new Date(value.startDate) : null;
-    // const endDate = value.endDate ? new Date(value.endDate) : null;
-
-    // const matchesDate = 
-    //   (!startDate || !endDate) ||
-    //   (eventDate >= startDate && eventDate <= endDate);
-
     return matchesSearchTerm && matchesCategory;
   });
 
@@ -57,7 +45,7 @@ const EventCard = () => {
 
   if (loading) {
     return (
-      <div className="flex w-screen justify-center items-center">
+      <div className="flex justify-center items-center">
         <Loading />
       </div>
     );
@@ -112,14 +100,6 @@ const EventCard = () => {
       </select>
       <div className="hidden lg:block"></div>
    
-
-      {/* <div className="datepicker lg:mt-2 lg:ml-7">
-        <Datepicker
-          primaryColor={"yellow"}
-          value={value}
-          onChange={newValue => setValue(newValue)}
-        />
-      </div> */}
 
       {filteredData.map((event, id) => (
         <div

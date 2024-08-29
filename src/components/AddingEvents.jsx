@@ -1,12 +1,13 @@
 import { useState} from "react";
 import { db, storage } from "../firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc} from "firebase/firestore";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import horses from "../assests/horses.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import RevealOnScroll from "./RevealOnScroll";
 
 export function AddingEvents() {
   const [file, setFile] = useState(null);
@@ -96,6 +97,7 @@ export function AddingEvents() {
       <nav>
         <Navbar />
       </nav>
+      <RevealOnScroll>
       <main>
         <div className="h-[100vh]">
           <h1 className="text-sky-800 font-medium text-center text-2xl mt-10">Add Your Event</h1>
@@ -179,6 +181,7 @@ export function AddingEvents() {
           </div>
         </div>
       </main>
+      </RevealOnScroll>
       <footer>
         <Footer />
       </footer>

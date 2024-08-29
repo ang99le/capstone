@@ -1,19 +1,20 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { setDoc, doc } from "firebase/firestore";
+import { setDoc, doc, serverTimestamp } from "firebase/firestore"; // Correct Firebase imports
 import { useTranslation } from "react-i18next";
-import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import RevealOnScroll from "../components/RevealOnScroll";
 
 function Signup() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const notify = () => toast.info("User Registered Successfully🥳!");
+  const notifyError = () => toast.error("User Registered failed☹️");
 
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
@@ -24,20 +25,25 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Create user with email and password
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      await setDoc(doc(db, 'Users', user.uid), {
+
+      // Save user information to Firestore
+      await setDoc(doc(db, "users", user.uid), {
+        uid: user.uid,
         email: user.email,
         firstName: fname,
         lastName: lname,
-        role: option, // Store the selected role in Firestore
-        photo: "",
+        role: option,
+        createdAt: serverTimestamp(),
       });
-      
-      // Redirect based on selected role
+
+      notify(); // Show success notification
+
+      // Redirect based on selected role (Uncomment to enable)
       if (option === "tourist") {
         navigate("/customizeProg");
-    
       } else if (option === "guide") {
         navigate("/guides");
       } else {
@@ -46,6 +52,7 @@ function Signup() {
 
     } catch (error) {
       console.error("Error signing up:", error);
+      notifyError(); // Show error notification
     }
   };
   return (
@@ -55,6 +62,7 @@ function Signup() {
           <Navbar />
         </nav>
       </header>
+      <RevealOnScroll>
       <main>
         <div>
           <div className="flex min-h-full flex-col justify-center items-center w-[100%] h-[100vh] lg:h-[90vh]  mt-10 mb-10 px-4 lg:px-8 lg:mb-20 lg:mt-14">
@@ -132,6 +140,7 @@ function Signup() {
           </div>
         </div>
       </main>
+      </RevealOnScroll>
       <footer>
         <Footer />
       </footer>

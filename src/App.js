@@ -40,20 +40,15 @@ function App() {
       <Route path="/programme/:programmeId" element={<Progdetails />} />
       <Route path='/AddingEvents' element={<AddingEvents/>}></Route>
       <Route path='/Loading' element={<Loading/>}></Route>
-
-
-
       {/* <Route path='/CustomizeProg' element={<CustomizeProg/>}></Route>  */}
       {/* <Route path='/Guides' element={<Guides/>}></Route> 
    */}
+
       {/* ptotected routing */}
-      {/* <Route path='/Guides' element={<ProtectedRoute><Guides /></ProtectedRoute>} /> */}
-      <Route path='/AddingEvents' element={<ProtectedRoute><AddingEvents/></ProtectedRoute> }></Route>
+      <Route path='/AddingEvents' element={<ProtectedRoute ><AddingEvents/></ProtectedRoute> }></Route>
       <Route path='/Guides' element={<ProtectedRoute><Guides/></ProtectedRoute> }></Route>
       <Route path='/CustomizeProg' element={<ProtectedRoute><CustomizeProg/></ProtectedRoute>}></Route> 
-   
-      {/* <Route path='/CustomizeProg ' element={<ProtectedRoute>< CustomizeProg /></ProtectedRoute> }></Route>
-     */}
+     
       </Routes>
       </BrowserRouter>
       </UserProvider>

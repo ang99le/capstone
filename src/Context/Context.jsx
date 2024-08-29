@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { collection, getDocs,onSnapshot } from 'firebase/firestore';
+import { collection, onSnapshot } from 'firebase/firestore';
 import { db } from "../firebase";
 import {onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
@@ -44,22 +44,21 @@ return() => fetchEvents();
 
   //fetching programmes array
   useEffect(() => {
-    const fetchProgrammes = async () => {
-      try {
-        const programmesCollectionRef = collection(db, 'programmes');
-        const querySnapshot = await getDocs(programmesCollectionRef);
-        const programmesList = querySnapshot.docs.map((doc) => ({
-          id: doc.id,...doc.data(),
-        }));
+    const fetchEvents = onSnapshot(collection(db, "programmes"),
+     (snapshot) => {const programmes = snapshot.docs.map((doc) =>
+      ({ id: doc.id, ...doc.data() }));
+      setProgrammesData(programmes);
+       },
+       (error) => {
+         console.error("Error fetching events: ", error);
+        
+       }
+     );
+ return() => fetchEvents();
+   }, []);
+ 
 
-        setProgrammesData(programmesList);
-      } catch (error) {
-        console.error('Error fetching programmes:', error);
-      }
-    };
 
-    fetchProgrammes();
-  }, []);
 
 
   useEffect(() => {
