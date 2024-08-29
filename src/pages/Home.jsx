@@ -58,8 +58,7 @@ function Home() {
 
 <RevealOnScroll>
 <section className="section1">
-{/* <section className="bg-[url(https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291220131/original/1232c3f5b04bab295463f0cc1a5d39afa30ab53b/convert-the-text-you-want-to-sumerian-cuneiform-in-a-printable-pdf.png)]">
-<div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm"> */}
+
 <div className=" p-6 -mt-14 ">
 <div className="pt-16 text-3xl md:text-5xl text-center lg:pt-20">
 <h1 className="bg-gradient-to-b from-sky-800 to-white inline-block text-transparent bg-clip-text mb-6 pb-12 font-markazi">{t('Welcome')}</h1>

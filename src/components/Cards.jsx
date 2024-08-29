@@ -98,8 +98,10 @@ const EventCard = () => {
         <option value="education">Education</option>
         <option value="technology">Technology</option>
       </select>
+
       <div className="hidden lg:block"></div>
    
+
 
       {filteredData.map((event, id) => (
         <div

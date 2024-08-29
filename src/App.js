@@ -17,7 +17,7 @@ import { AddingEvents } from './components/AddingEvents';
 import { UserProvider } from './Context/Context';
 import ProtectedRoute from './components/Protected';
 import Loading from './components/Loading';
-
+import Ashur from './components/Civilization/Ashur';
 
 function App() {
 
@@ -40,6 +40,7 @@ function App() {
       <Route path="/programme/:programmeId" element={<Progdetails />} />
       <Route path='/AddingEvents' element={<AddingEvents/>}></Route>
       <Route path='/Loading' element={<Loading/>}></Route>
+      <Route path='/Ashur' element={<Ashur/>}></Route>
       {/* <Route path='/CustomizeProg' element={<CustomizeProg/>}></Route>  */}
       {/* <Route path='/Guides' element={<Guides/>}></Route> 
    */}
