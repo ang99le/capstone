@@ -132,10 +132,7 @@ const EventCard = () => {
                 onClick={() => handleDelete(event)}
                 className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"
               >
-                <img
-                  src="https://www.dockendale.com/wp-content/uploads/2018/11/icon13.png"
-                  alt="trash can"
-                />
+                <img src="https://www.dockendale.com/wp-content/uploads/2018/11/icon13.png" alt="trash"/>
               </button>
               <button
                 type="button"

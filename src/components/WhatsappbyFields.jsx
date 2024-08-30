@@ -5,10 +5,11 @@ const WhatsAppbyFields = () => {
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
     const [message,setMessage]=useState('');
+
+
     const initiateWhatsApp = () => {
       // You can change 964 with your country code
       const url = `https://wa.me/964${mobileNumber}?text=${encodeURIComponent(`${firstname} ${lastname} ${message}`)}`;
-      
       window.open(url, '_blank').focus();
     };
   
@@ -38,9 +39,9 @@ const WhatsAppbyFields = () => {
       </textarea>
       </div>
 
-        <button onClick={initiateWhatsApp} className='mt-3 class="flex w-full justify-center screen rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600'>
-     submit
-        </button>
+      <button onClick={initiateWhatsApp} className='mt-3 class="flex w-full justify-center screen rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600'>
+       submit
+      </button>
       </div>
     );
   };

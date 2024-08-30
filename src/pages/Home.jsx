@@ -205,8 +205,6 @@ blend with Eastern decorative features,attest to the greatness of its civilizati
         </footer>
     </div>
     </div>
-
-
     <div>
     <div class="mx-auto w-72 h-[40rem] lg:w-80 rotate-6 rounded-2xl bg-gray-200"></div>
     <div class="mx-auto w-72 -mt-[40rem] h-[40rem] lg:w-80 space-y-6 rounded-2xl bg-gray-50 p-6 transition duration-300 rotate-0"><div class="flex justify-end">

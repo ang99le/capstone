@@ -19,16 +19,22 @@ export const Login= () => {
   const [password, setPassword] = useState('');
   const { currentUser } = useAuth();
   const notify = () => toast.info("Logged in Successfully😍!")
-
+  const errormessage =()=> toast.error("invalid email or password!")
+  
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      notify();
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in Successfully");
       navigate("/home");
+       
     } 
     catch (error) {
       console.log(error.message);
+      errormessage();
+
     }
   };
 
@@ -72,7 +78,7 @@ export const Login= () => {
                   </div>
                 </div>
                 <div>
-                   <button type="submit" onClick={notify} className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                   <button type="submit"  className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                      {t("Sign in")}
                    </button>
                   <ToastContainer theme="colored"/>
