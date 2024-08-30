@@ -9,6 +9,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from "./Loading";
 import { auth } from "../firebase";
+import EditEventModal from "./EditEventModal";
+import DeleteEventModal from "./DeleteEventModal";
 
 
 const EventCard = () => {
@@ -23,7 +25,8 @@ const EventCard = () => {
   const { eventsData } = useContext(eventContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('');
-  
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
     const unsubscribeAuth = auth.onAuthStateChanged((user) => {
@@ -125,30 +128,29 @@ const EventCard = () => {
             </div>
        
 
-          {user && (
-            <div className="flex justify-end gap-1 ml-auto mb-3">
-              <button
-                type="button"
-                onClick={() => handleDelete(event)}
-                className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"
-              >
-                <img src="https://www.dockendale.com/wp-content/uploads/2018/11/icon13.png" alt="trash"/>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleUpdate(event)}
-                className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"
-              >
-                <img
-                  src="https://www.wintrust.com/content/dam/wintrust/component-imagery/product-icons/adjustablemortgages.png"
-                  alt="edit"
-                />
-              </button>
-              <ToastContainer theme="colored" />
-            </div>
-          )}
-</div>
-          
+            {user && (
+              <div className="flex justify-end gap-1 ml-auto mb-3">
+                <button
+                  type="button"
+                  onClick={() => { setSelectedEvent(event); setShowDeleteModal(true); }}
+                  className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"
+                >
+                  <img src="https://www.dockendale.com/wp-content/uploads/2018/11/icon13.png" alt="trash"/>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setSelectedEvent(event); setShowEditModal(true); }}
+                  className="w-[32px] hover:bg-sky-200 rounded-full border-2 border-sky-700 hover:border-sky-200"
+                >
+                  <img
+                    src="https://www.wintrust.com/content/dam/wintrust/component-imagery/product-icons/adjustablemortgages.png"
+                    alt="edit"
+                  />
+                </button>
+                <ToastContainer theme="colored" />
+              </div>
+            )}
+          </div>
 
           <img
             src={event.img}
@@ -194,6 +196,22 @@ const EventCard = () => {
       ))}
       {popUp && <ShowDetails event={selectedEvent} setPopUp={setPopUp} />}
       {booking && <EventDetails setBooking={setBooking} />}
+      {showEditModal && (
+        <EditEventModal
+          event={selectedEvent}
+          onClose={() => setShowEditModal(false)}
+          onUpdate={handleUpdate}
+        />
+      )}
+      {showDeleteModal && (
+        <DeleteEventModal
+          event={selectedEvent}
+          onClose={() => setShowDeleteModal(false)}
+          onDelete={handleDelete}
+        />
+      )}
+
+
     </>
   );
 };
