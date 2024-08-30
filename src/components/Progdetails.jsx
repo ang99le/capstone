@@ -45,7 +45,7 @@ function Progdetails({card}){
     <Navbar/>
     </nav>
     <main>
-        <div className="md:flex justify-center md:gap-20">
+        <div className="lg:flex justify-center lg:gap-20">
             <section className="md:mt-20">
         <div className="w-full md:w-[600px] mx-auto">
           <Carousel autoPlay className="h-[300px] md:h-[600px]">

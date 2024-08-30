@@ -73,11 +73,11 @@ function Civilization() {
           <main className="font-markazi">
             {/* mobile UI Design */}
           <section>
-          <div className="px-5 sm:block  md:hidden l:hidden ">
+          <div className="px-5 block lg:hidden ">
           <div className="relative">
-          <Link to={`/Progdetails'`}> <img class="rounded-xl contrast-50 drop-shadow-sm py-2 scale-100 hover:scale-105 ease-in duration-300"
-            src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" alt="Akd"></img>
-            <h4 className="absolute text-xl text-white top-2/4 left-1/4">Akkdian Civilization</h4></Link>
+          <Link to={`/Akkad`}> <img class="rounded-xl contrast-50 drop-shadow-sm py-2 scale-100 hover:scale-105 ease-in duration-300"
+            src="https://th.bing.com/th/id/R.dee54552520847f50d0f0a57000382fe?rik=0PEFOO3hbbneuA&pid=ImgRaw&r=0" alt="Akd"></img></Link>
+            <h4 className="absolute text-xl text-white top-2/4 left-1/4">Akkdian Civilization</h4>
            
             </div>  
 
@@ -102,9 +102,9 @@ function Civilization() {
         
         {/* larg screen UI Design */}
            <section >
-          <div class="hidden md:block min-h-screen py-6 flex-col justify-center w-full">
-          <div class="md:py-3 w-full px-2 ">
-          <div class="md:relative text-sky-800 antialiased text-sm font-semibold">
+          <div class="hidden lg:block min-h-screen py-6 flex-col justify-center w-full">
+          <div class="lg:py-3 w-full px-2 ">
+          <div class="lg:relative text-sky-800 antialiased text-sm font-semibold">
           
         {/* <!-- Vertical bar running through middle --> */}
           <div class=" w-1 bg-sky-800 absolute h-full left-1/2 transform -translate-x-1/2"></div>

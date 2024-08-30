@@ -24,12 +24,6 @@ function ShowDetails ({event,setPopUp}){
      <p className="text-sky-800 text-sm w-80 break-words text-justify">{event.details}. </p>
      </div>
     
-       {/* <p className="text-sky-800 text-sm">{t("eventsL1")}</p>
-       <p className="text-sky-800 text-sm">{t("eventsL2")}</p> 
-       <p className="text-sky-800 text-sm">{t("eventsL3")}</p>
-       <p className="text-sky-800 text-sm">{t("tickets now")}</p> */}
-          
-     
         <div className="flex mt-2 gap-3 md:mt-5 justify-center items-center h-18 text-sm">
         <p className=" text-sky-800 font-medium leading-2 ">
         {t(event.date)}
@@ -38,7 +32,6 @@ function ShowDetails ({event,setPopUp}){
         {t(event.time)}
         </p>
         </div>
-{/* <Link><button><iframe className="rounded-2xl md:ml-7 mt-3 w-[300px] h-[130px] md:mt-8" title="event location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.0738277012306!2d44.359980675547384!3d33.264559473463756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1559d561d6f1a171%3A0x6875c0693d809fe4!2sPalms%20Of%20Baghdad!5e0!3m2!1sen!2siq!4v1717356317979!5m2!1sen!2siq" alt="location"></iframe></button></Link> */}
 
 <div className="flex justify-center mt-3">
 

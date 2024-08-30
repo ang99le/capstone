@@ -84,7 +84,7 @@ function Navbar() {
             {user ? (
               <>
       
-              <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>Logout
+              <button className="text-white mt-4 lg:mt-0 px-4 hover:bg-sky-700 rounded-lg p-2" onClick={handleLogout}>{t("Logout")}
               </button>
                 <ToastContainer id="b" theme="colored"/>
               </>

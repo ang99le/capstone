@@ -19,7 +19,7 @@ export const Login= () => {
   const [password, setPassword] = useState('');
   const { currentUser } = useAuth();
   const notify = () => toast.info("Logged in Successfully😍!")
-  const errormessage =()=> toast.error("invalid email or password!")
+  const errormessage =()=> toast.error("invalid email or password☹️!")
   
   
   const handleSubmit = async (e) => {
@@ -56,7 +56,7 @@ export const Login= () => {
                {t("Log in to your account")}
              </h2>
            </div>
-           <div className="flex gap-[4rem]">
+           <div className="flex gap-[8rem]">
             <img src="https://img.freepik.com/premium-vector/first-civilization-origin-ancient-sumerian-language-writing-clay-tablets-written-cuneiform_951778-26673.jpg" className="hidden lg:block lg:w-[580px] lg:-ml-28" alt="sumerian people"/>
            <div className="mt-10 lg:mb-24 lg:mt-40 sm:mx-auto sm:w-full sm:max-w-sm">
                <form className="space-y-6" onSubmit={handleSubmit}>
@@ -78,11 +78,7 @@ export const Login= () => {
                   </div>
                 </div>
                 <div>
-                   <button type="submit"  className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                     {t("Sign in")}
-                   </button>
-                  <ToastContainer theme="colored"/>
-
+                <button type="submit" className="flex w-full justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"> {t("Sign in")}</button>
                  </div>
        
                  <div className="text-sm">
@@ -93,6 +89,8 @@ export const Login= () => {
                  </Link>
                </div>
                </form>
+               <ToastContainer theme="colored"/>
+
          </div>
            </div>
          </div>
